@@ -42,7 +42,7 @@ _The **Internet** is the global system of interconnected computer networks that 
 - `<!DOCTYPE html>`: must be the very first thing in your HTML document, before the `<html>` tag.
 The `<!DOCTYPE>` declaration is not an **HTML** tag; it is an instruction to the web browser about what version of **HTML** the page is written in.
 - Element: `<tag>content</tag>`. Example: `<p>This is a paragraph</p>`.
-  - _Empty_ element: can be opened and closed in one tag. Example: `<img src="bunny.jpg" alt="bunny" />`.
+  - _Empty_ element: can be opened and closed in one tag. Example: `<img src="bunny.jpg" alt="bunny" />` (`<img ...></img>` NOT allowed).
 - Attribute: `<tag name="value">`. Example: `<a href="page2.html">Next page</a>`.
 - [Entities](https://www.w3schools.com/charsets/ref_html_entities_4.asp): `&lt;`, `&#x3C;` for **<** 
 ]
@@ -77,6 +77,19 @@ Lookup:
 ]
 ---
 .left-column[
+  ## Block vs Inline
+]
+.right-column[
+![Block vs. Inline](block_vs_inline.png "Block vs. Inline")
+
+**Block** elements contain an entire large region of content. Examples: paragraphs, lists, tables, ...
+
+**Inline** elements affect a small amount of content. Examples: bold text, images, links, ...
+
+**Inline** elements are NOT allowed to have **block** elements inside.
+]
+---
+.left-column[
   ## Key elements
 ]
 .right-column[
@@ -84,11 +97,38 @@ Lookup:
 - `<head>`
 - `<body>`
 - `<title>`
-- `<meta>`
-- `<h1>`, `<h2>`, ...`<h6>` 
+- `<h1>`, `<h2>`, ...`<h6>` (_block_)
 - `<p>`
-- `<a>`
-- `<img>`
+- `<a>` (_inline_): links, or **anchors**, to other pages.
+- `<img>` (_inline_)
+- `<meta>`: describes meta data of the web page.
+]
+---
+.left-column[
+  ## Key elements
+  ### image
+]
+.right-column[
+```xml
+<a href="default.asp" title="Go to W3Schools HTML section">
+  <img src="smiley.gif" alt="HTML tutorial" />
+</a>
+```]
+---
+.left-column[
+  ## Key elements
+  ### image
+  ### meta
+]
+.right-column[
+  ```xml
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="John Doe">
+  </head>
+  ```
 ]
 ---
 .left-column[
@@ -106,8 +146,8 @@ Lookup:
 .right-column[
 - `<em>` (`<i>`)
 - `<strong>` (`<b>`)
-- `<br />`
-- `<hr />`
+- `<br />` (_inline_): should be immediately closed with `/>`.
+- `<hr />` (_block_): horizontal rule. Should be immediately closed with `/>`.
 ]
 ---
 .left-column[
@@ -122,14 +162,58 @@ Lookup:
 ]
 ---
 .left-column[
-  ## Block vs Inline
+  ## Semantic web
 ]
 .right-column[
-![Block vs. Inline](block_vs_inline.png "Block vs. Inline")
+**Semantics** is the study of the meanings of words and phrases in a language.
 
-**Block** elements contain an entire large region of content. Examples: paragraphs, lists, tables, ...
+**Semantic** elements = elements with a meaning.
 
-**Inline** elements affect a small amount of content. Examples: bold text, images, links, ...
+Examples:
 
-**Inline** elements are NOT allowed to have **block** elements inside.
+- `<nav>`
+- `<footer>`
+- `<address>`
+- `<article>`
+- `<section>`
 ]
+---
+.left-column[
+  ## Which is Which?
+]
+.right-column[
+- `<html><body></html></body>`
+- `<html><body  </body></html>`
+- `<span><div></div></span>`
+- `<p><em>x</em></p>`
+- `<p><em>x<p>`
+]
+---
+.left-column[
+  ## HTML is forgiving
+]
+.right-column[
+- Unknown tags are ignored
+- Unknown attributes are ignored
+- ... and browsers display almost anything
+]
+---
+.left-column[
+  ## Global attributes
+]
+.right-column[
+- `id`
+- `class`
+- `style`
+- `title`
+- `data-*`
+]
+---
+.left-column[
+  ## Exercises
+]
+.right-column[
+- https://www.w3schools.com/html/html_exercises.asp
+- https://www.w3schools.com/html/html_quiz.asp
+]
+

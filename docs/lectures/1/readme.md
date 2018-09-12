@@ -206,21 +206,28 @@ Examples:
 - `class`
 - `style`
 - `title`
-- `data-*`
+- `data-*`: The **data-*** attributes is used to store custom data private to the page or application. The **data-*** attributes gives us the ability to embed custom data attributes on all HTML elements.
 ]
 ---
 .left-column[
   ## Exercises
+  ### Assignment 1
 ]
 .right-column[
-
-## Assignment 1: 
+### Assignment 1
 
 - https://www.w3schools.com/html/html_exercises.asp
 - https://www.w3schools.com/html/html_quiz.asp
 - Validate your work with https://validator.w3.org
-
-## Assignment 3:
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+]
+.right-column[
+### Assignment 2
 
 Choose one of the following topics and create an **HTML** solution that you can extend over the course
 of this semester.
@@ -231,12 +238,19 @@ Possible topics:
 - A web solution to keep track of your programming errors.
 - A web solution to keep track of your plans in life.
 - ...
-
-## Training for aspiring professionals
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+  ### Training for aspiring professionals
+]
+.right-column[
+### Training for aspiring professionals
 
 - Create an **HTML** page with a form
-- Make the form action sending an email to christian.ribeaud@karakun.com
+- Make the form action sending an email to <a href="mailto:christian.ribeaud@karakun.com">christian.ribeaud@karakun.com</a>
 - On the web, find the resource about HTML that you like best
 - Use the form to submit a link to that resource and a description on why you like it
 ]
-

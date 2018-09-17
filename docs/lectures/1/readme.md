@@ -225,9 +225,9 @@ Examples:
 .right-column[
 ### Assignment 1
 
-- https://www.w3schools.com/html/html_exercises.asp
-- https://www.w3schools.com/html/html_quiz.asp
-- Validate your work with https://validator.w3.org
+- Extend/change [first.html](https://ribeaud.github.io/WebEngineering/lectures/1/first.html) and view in the browser
+- Correct [first.html](https://ribeaud.github.io/WebEngineering/lectures/1/first.html) to be valid HTML
+and validate your work with https://validator.w3.org
 ]
 ---
 .left-column[
@@ -237,6 +237,19 @@ Examples:
 ]
 .right-column[
 ### Assignment 2
+
+- https://www.w3schools.com/html/html_exercises.asp
+- https://www.w3schools.com/html/html_quiz.asp
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+  ### Assignment 3  
+]
+.right-column[
+### Assignment 3
 
 Choose one of the following topics and create an **HTML** solution that you can extend over the course
 of this semester.
@@ -253,6 +266,7 @@ Possible topics:
   ## Exercises
   ### Assignment 1
   ### Assignment 2
+  ### Assignment 3  
   ### Training for aspiring professionals
 ]
 .right-column[

@@ -44,11 +44,12 @@ The `<!DOCTYPE>` declaration is not an **HTML** tag; it is an instruction to the
 - Element: `<tag>content</tag>`. Example: `<p>This is a paragraph</p>`.
   - _Empty_ element: can be opened and closed in one tag. Example: `<img src="bunny.jpg" alt="bunny" />` (`<img ...></img>` NOT allowed).
 - Attribute: `<tag name="value">`. Example: `<a href="page2.html">Next page</a>`.
-- [Entities](https://www.w3schools.com/charsets/ref_html_entities_4.asp): `&lt;`, `&#x3C;` for **<** 
+- [Entities](https://www.w3schools.com/html/html_entities.asp): `&copy;`, `&#169;` for **©** 
 ]
 ???
 - Not the same as the **presentation** (appearance on screen)
-- Most whitespace is insignificant in HTML (ignored or collapsed to a single space)
+- Most whitespace is insignificant in HTML (ignored or collapsed to a single space).
+  What could you use to enforce a space?
 - Current version is **HTML 5**. This is the one we are going to use.
 ---
 .left-column[
@@ -65,6 +66,11 @@ Lookup:
 - https://html5test.com/
 - [Can I use](https://caniuse.com/)
 ]
+???
+- W3C is the main international standards organization for the W3. Founded and currently led by Tim Berners-Lee.
+- https://html5test.com/: how well does your browser support html5?
+- https://caniuse.com/: "Can I use" provides up-to-date browser support tables for support of front-end web technologies
+on desktop and mobile web browsers.
 ---
 .left-column[
   ## Know your readers!
@@ -75,6 +81,9 @@ Lookup:
 - Search Engines
 - [Web crawlers](https://en.wikipedia.org/wiki/Web_crawler)
 ]
+???
+- Screen readers are for blind people
+- http://www.ribeaud.ch/podcasts/nosey.log
 ---
 .left-column[
   ## Block vs Inline

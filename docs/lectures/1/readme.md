@@ -3,6 +3,7 @@ layout: true
 class: center, middle, inverse
 ---
 # Web Engineering
+## HTML
 
 .footnote[<a href="mailto:christian.ribeaud@karakun.com">Christian Ribeaud</a>]
 ---
@@ -110,7 +111,7 @@ on desktop and mobile web browsers.
 - `<p>`
 - `<a>` (_inline_): links, or **anchors**, to other pages.
 - `<img>` (_inline_)
-- `<meta>`: describes meta data of the web page.
+- `<meta>`: describes meta data of the web page. Metadata will not be displayed on the page, but will be machine parsable.
 ]
 ---
 .left-column[
@@ -132,10 +133,11 @@ on desktop and mobile web browsers.
 .right-column[
   ```xml
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><!-- HTML5 specific! -->
     <meta name="description" content="Free Web tutorials">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="John Doe">
+    <meta http-equiv="refresh" content="30">
   </head>
   ```
 ]

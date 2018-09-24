@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS var</title>
+    <style>
+        .one {
+            color: white;
+            background-color: var(--main-bg-color);
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+
+        :root {
+            --main-bg-color: brown;
+        }
+
+        .two {
+            color: white;
+            background-color: black;
+            margin: 10px;
+            width: 150px;
+            height: 70px;
+            display: inline-block;
+        }
+
+        .three {
+            color: white;
+            background-color: var(--main-bg-color);
+            margin: 10px;
+            width: 75px;
+        }
+
+        .four {
+            color: white;
+            background-color: var(--main-bg-color);
+            margin: 10px;
+            width: 100px;
+        }
+
+        .five {
+            background-color: var(--main-bg-color);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="one">1:</div>
+    <div class="two">2: Text <span class="five">5 - more text</span></div>
+    <input class="three">
+    <textarea class="four">4: Lorem Ipsum</textarea>
+</div>
+</body>

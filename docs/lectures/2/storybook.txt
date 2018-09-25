@@ -8,10 +8,10 @@
 06.11.18 12:15 - 15:00 REST, Services
 13.11.18 12:15 - 15:00 Role-based Security
 20.11.18 12:15 - 15:00 Übungsvorbereitung ** Anwesenheitspflicht **
-
+Frei
 04.12.18 12:15 - 15:00 Übungsanlass
 11.12.18 12:15 - 15:00 Responsive / Mobile Web
 18.12.18 12:15 - 15:00 Weihnachtsvorlesung, ** Übungsabgabe **
-
+Weihnachtsferien
 08.01.19 12:15 - 15:00 Deployment
 15.01.19 12:15 - 15:00 Prüfungsvorbereitung

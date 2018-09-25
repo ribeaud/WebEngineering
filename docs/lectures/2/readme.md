@@ -2,8 +2,8 @@
 
 ## Goals
 ### Abilities
-- Styling of HTML pages wrt appearance and layout 
-- Being able to use CSS rules creatively
+- Styling of HTML pages with respect to appearance and layout 
+- Being able to use **CSS** rules creatively
 - Avoiding duplication in style information
 - Separating _what_ from _how_
 - Writing maintainable web documents

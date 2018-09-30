@@ -3,6 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Storybook for the Web Engineering Module</title>
+    <style>
+        table {
+            table-layout: auto;
+            width: 80%;
+            border-collapse: collapse;
+        }
+
+        table, th, tr, td {
+            --my-grey: #f2f2f2;
+            border: 1px solid var(--my-grey);
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: var(--my-grey);
+        }
+
+        tbody tr:hover {
+            background-color: #cccccc;
+        }
+    </style>
 </head>
 <body>
 <header>

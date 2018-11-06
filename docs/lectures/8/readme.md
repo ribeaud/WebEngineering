@@ -11,11 +11,21 @@
 
 ## Resources
 
-REST by Roy Fielding
-http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
+Seven keys
+- https://www.theguardian.com/technology/2014/feb/28/seven-people-keys-worldwide-internet-security-web
+- https://www.icann.org/news/blog/the-problem-with-the-seven-keys
+
+Robustness principles
+https://en.wikipedia.org/wiki/Robustness_principle
+
+REST
+- By Roy Fielding: http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
+- Best practices: https://restfulapi.net/resource-naming/
 
 REST in Grails
-http://docs.grails.org/latest/guide/webServices.html
+- http://docs.grails.org/latest/guide/webServices.html
+- http://guides.grails.org/rest-hibernate/guide/index.html
+- https://docs.grails.org/latest/guide/REST.html
 
 Rest docs usage
 https://github.com/jlstrater/grails-spring-restdocs-example
@@ -31,12 +41,12 @@ Going through the proposed solution for Booking requests.
 
 - Show how to expose Grails domain classes and controller actions
   as REST endpoints with @Resource and "respond".
- 
+
 ## practical work
 
 - Extend the solution to fetch the next 10 photos when needed.
 
-## Homework 
+## Homework
 
 Finish the practical work
 

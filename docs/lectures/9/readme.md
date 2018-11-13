@@ -57,7 +57,7 @@ https://docs.grails.org/latest/guide/gettingStarted.html
 ---
 .left-column[
   ## Grails CLI
-  ## s2-quicktart
+  ## s2-quickstart
 ]
 .right-column[
 Creates a user and role class (and optionally a requestmap class) in the specified package.
@@ -66,7 +66,7 @@ See [here](https://grails-plugins.github.io/grails-spring-security-core/latest/#
 ---
 .left-column[
   ## Grails CLI
-  ## s2-quicktart
+  ## s2-quickstart
   ## feature/ security
 ]
 .right-column[
@@ -91,6 +91,7 @@ template: inverse
 - Current user and logout on _main.gsp_ using `<sec:ifLoggedIn>`
 - Setup a new user `admin` which has role `ROLE_ADMIN`
 - Make users manageable for principals having role `ROLE_ADMIN`
+- How to beautify the login view (`login/auth.gsp`)
 ]
 ---
 template: inverse
@@ -106,4 +107,5 @@ template: inverse
 - [How to do user login, logout and signup in GRAILS 3](https://www.youtube.com/watch?v=nOxeKwGoMf4)
 - [Spring Security Core Plugin](http://grails-plugins.github.io/grails-spring-security-core/latest)
 - [Spring Security UI Plugin](https://grails-plugins.github.io/grails-spring-security-ui/latest)
+- [How to integrate it into my project?](https://github.com/Dierk/WebEngineering-HS18/commits/dk_security) (review the last commits)
 ]

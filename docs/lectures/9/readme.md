@@ -72,6 +72,7 @@ See [here](https://grails-plugins.github.io/grails-spring-security-core/latest/#
 .right-column[
 Checkout `feature/security` branch (after a `git fetch upstream` if needed).
 Have a look at following parts:
+- `build.gradle`
 - `BootStrap`
 - `resources.groovy`
 - `application.groovy`
@@ -86,8 +87,23 @@ template: inverse
 ]
 .right-column[
 - Make `/dbconsole` _publicly_ accessible
+- How are passwords stored in the database?
 - Current user and logout on _main.gsp_ using `<sec:ifLoggedIn>`
 - Setup a new user `admin` which has role `ROLE_ADMIN`
 - Make users manageable for principals having role `ROLE_ADMIN`
 ]
 ---
+template: inverse
+
+## Links
+---
+.left-column[
+  ## Links
+]
+.right-column[
+- [Eine kurze Frage an T-Mobile Österreich endete für den Mobilfunkanbieter im Fiasko](https://www.watson.ch/digital/online-sicherheit/521968741-eine-frage-an-den-t-mobile-kundendienst-endete-fuer-den-mobilfunkanbieter-im-fiasko)
+- [Grails Basic Auth](http://guides.grails.org/grails-basicauth/guide/index.html)
+- [How to do user login, logout and signup in GRAILS 3](https://www.youtube.com/watch?v=nOxeKwGoMf4)
+- [Spring Security Core Plugin](http://grails-plugins.github.io/grails-spring-security-core/latest)
+- [Spring Security UI Plugin](https://grails-plugins.github.io/grails-spring-security-ui/latest)
+]

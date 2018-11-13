@@ -91,6 +91,7 @@ template: inverse
 - Current user and logout on _main.gsp_ using `<sec:ifLoggedIn>`
 - Setup a new user `admin` which has role `ROLE_ADMIN`
 - Make users manageable for principals having role `ROLE_ADMIN`
+- Write integration tests for `UserController`
 - How to beautify the login view (`login/auth.gsp`)
 ]
 ---

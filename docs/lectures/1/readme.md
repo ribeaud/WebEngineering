@@ -201,6 +201,19 @@ Examples:
 - https://www.pluralsight.com/guides/semantic-html
 ---
 .left-column[
+  ## DOM
+]
+.right-column[
+Document Object Model
+
+![DOM](dom.png "DOM")
+]
+???
+- https://javascript.info/dom-nodes#see-it-for-yourself
+- http://software.hixie.ch/utilities/js/live-dom-viewer/
+- https://javascript.info/article/dom-nodes/elks.html in the browser console
+---
+.left-column[
   ## Which is Which?
 ]
 .right-column[
@@ -240,7 +253,7 @@ Examples:
 
 - Extend/change [first.html](https://ribeaud.github.io/WebEngineering/lectures/1/first.html) and view in the browser
 - Correct [first.html](https://ribeaud.github.io/WebEngineering/lectures/1/first.html) to be valid HTML
-and validate your work with https://validator.w3.org
+and validate your work with https://validator.nu/
 ]
 ---
 .left-column[
@@ -286,7 +299,7 @@ Possible topics:
 ### Training for aspiring professionals
 
 - Create an **HTML** page with a form
-- Make the form action sending an email to <a href="mailto:christian.ribeaud@karakun.com">christian.ribeaud@karakun.com</a>
+- Make the form action sending an email to <a href="mailto:christian.ribeaud@fhnw.ch">christian.ribeaud@fhnw.ch</a>
 - On the web, find the resource about HTML that you like best
 - Use the form to submit a link to that resource and a description on why you like it
 ]

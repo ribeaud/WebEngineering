@@ -12,14 +12,11 @@ layout: false
   ## The Internet
 ]
 .right-column[
-From [Wikipedia](https://en.wikipedia.org/wiki/Internet):
-
-_The **Internet** is the global system of interconnected computer networks that use the Internet protocol suite (TCP/IP) to link devices worldwide._
-
-![TCP/IP](tcp.jpg "TCP/IP")
+The **Internet** is an enormous global network of billions of servers, computers, and other hardware devices. It is _decentralised_.
 ]
+
 ???
-- Transmission Control Protocol/Internet Protocol
+- We need an IP address and some protocols (TCP, email, HTTP, ...)
 ---
 .left-column[
   ## The Web
@@ -27,13 +24,15 @@ _The **Internet** is the global system of interconnected computer networks that 
 .right-column[
   The **World Wide Web (WWW)**, or simply **Web**, is a way of accessing information over the medium of the **Internet**.
 - WWW = HTML.red[*] + HTTP(S)
-- http://info.cern.ch/ (first website)
+
+The **Web** is a _portion_ of the **Internet**.
 
 .footnote[.red[*] including CSS, JavaScript, and other browser enabled contents]
 ]
 ???
 - WWW created in 1989-91 by Tim Berners-Lee
-- Popular web browsers released: Netscape 1994, IE 1995
+- We have a standard and we can link to other pages
+- Browsers (the first browser designed by Tim Berners-Lee - https://www.w3.org/People/Berners-Lee/WorldWideWeb.html)
 ---
 .left-column[
   ## HTML
@@ -45,13 +44,14 @@ The `<!DOCTYPE>` declaration is not an **HTML** tag; it is an instruction to the
 - Element: `<tag>content</tag>`. Example: `<p>This is a paragraph</p>`.
   - _Empty_ element: can be opened and closed in one tag. Example: `<img src="bunny.jpg" alt="bunny" />` (`<img ...></img>` NOT allowed).
 - Attribute: `<tag name="value">`. Example: `<a href="page2.html">Next page</a>`.
-- [Entities](https://www.w3schools.com/html/html_entities.asp): `&copy;`, `&#169;` for **©** 
+- [Entities](https://www.w3schools.com/html/html_entities.asp): `&copy;`, `&#169;` for **©**
 ]
 ???
 - Not the same as the **presentation** (appearance on screen)
 - Most whitespace is insignificant in HTML (ignored or collapsed to a single space).
   What could you use to enforce a space?
 - Current version is **HTML 5**. This is the one we are going to use.
+- **HTML** is part of a bigger family **SGML** (Standard Generalised Markup Language), like **XML** (Extensible Markup Language)
 ---
 .left-column[
   ## Web Standards
@@ -61,30 +61,34 @@ It is important to write proper **HTML** code and follow proper syntax. Why?
 
 Lookup:
 - [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)
-- https://validator.w3.org/
+- https://validator.nu/
 - https://www.w3schools.com/
 - [selfHTML](https://wiki.selfhtml.org/) (german)
 - https://html5test.com/
-- [Can I use](https://caniuse.com/)
 ]
 ???
-- W3C is the main international standards organization for the W3. Founded and currently led by Tim Berners-Lee.
+- W3C is the main international standards organisation for the W3. Founded and currently led by Tim Berners-Lee.
 - https://html5test.com/: how well does your browser support html5?
-- https://caniuse.com/: "Can I use" provides up-to-date browser support tables for support of front-end web technologies
-on desktop and mobile web browsers.
+- Why validation?
+  - Rendering time
+  - Non uniform browser correction
+  - Google prefers valid code
+  - ...
 ---
 .left-column[
   ## Know your readers!
 ]
 .right-column[
-- People with browsers
-- [Screen readers](https://en.wikipedia.org/wiki/Screen_reader)
-- Search Engines
-- [Web crawlers](https://en.wikipedia.org/wiki/Web_crawler)
+- People with... all kinds of browsers
+- [Screen Readers](https://en.wikipedia.org/wiki/Screen_reader)
+- [Web Crawlers](https://en.wikipedia.org/wiki/Web_crawler), Search Engines
+- OS Integration
+- [Web Scrapers](https://en.wikipedia.org/wiki/Web_scraping)
 ]
 ???
 - Screen readers are for blind people
 - http://www.ribeaud.ch/podcasts/nosey.log
+- Every search engine makes use of a web crawler to index the content of the websites
 ---
 .left-column[
   ## Block vs Inline
@@ -104,7 +108,7 @@ on desktop and mobile web browsers.
 ]
 .right-column[
 - `<html>`
-- `<head>`
+- `<head>` (NOT the same than `<header>`!)
 - `<body>`
 - `<title>`
 - `<h1>`, `<h2>`, ...`<h6>` (_block_)
@@ -160,7 +164,11 @@ on desktop and mobile web browsers.
 - `<br />` (_inline_): should be immediately closed with `/>`.
 - `<hr />` (_block_): horizontal rule. Should be immediately closed with `/>`.
 ]
+???
+- `This is <strong>my</strong> cat` vs. `This is my <strong>cat</strong>`
+- One example at https://gist.github.com/thomd/9220049
 ---
+
 .left-column[
   ## Form
 ]
@@ -183,11 +191,14 @@ on desktop and mobile web browsers.
 Examples:
 
 - `<nav>`
+- `<header>`
 - `<footer>`
 - `<address>`
 - `<article>`
 - `<section>`
 ]
+???
+- https://www.pluralsight.com/guides/semantic-html
 ---
 .left-column[
   ## Which is Which?
@@ -248,7 +259,7 @@ and validate your work with https://validator.w3.org
   ## Exercises
   ### Assignment 1
   ### Assignment 2
-  ### Assignment 3  
+  ### Assignment 3
 ]
 .right-column[
 ### Assignment 3
@@ -268,7 +279,7 @@ Possible topics:
   ## Exercises
   ### Assignment 1
   ### Assignment 2
-  ### Assignment 3  
+  ### Assignment 3
   ### Training for aspiring professionals
 ]
 .right-column[

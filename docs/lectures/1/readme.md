@@ -5,7 +5,7 @@ class: center, middle, inverse
 # Web Engineering
 ## HTML
 
-.footnote[<a href="mailto:christian.ribeaud@karakun.com">Christian Ribeaud</a>]
+.footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
 ---
 layout: false
 .left-column[
@@ -52,6 +52,22 @@ The `<!DOCTYPE>` declaration is not an **HTML** tag; it is an instruction to the
   What could you use to enforce a space?
 - Current version is **HTML 5**. This is the one we are going to use.
 - **HTML** is part of a bigger family **SGML** (Standard Generalised Markup Language), like **XML** (Extensible Markup Language)
+- **HTML4** starts with `<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">`
+---
+.left-column[
+  ## HTML5
+]
+.right-column[
+![fh_HTML5](html5.jpg "HTML5")
+
+```html
+<!DOCTYPE html>
+<html>
+  <head><title>Title</title></head>
+  <body><p>Body</p></body>
+</html>
+```
+]
 ---
 .left-column[
   ## Web Standards
@@ -87,7 +103,6 @@ Lookup:
 ]
 ???
 - Screen readers are for blind people
-- http://www.ribeaud.ch/podcasts/nosey.log
 - Every search engine makes use of a web crawler to index the content of the websites
 ---
 .left-column[
@@ -145,6 +160,8 @@ Lookup:
   </head>
   ```
 ]
+???
+- Replaces `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">` (**HTML4** specific)
 ---
 .left-column[
   ## Collections
@@ -206,7 +223,7 @@ Examples:
 .right-column[
 Document Object Model
 
-![DOM](dom.png "DOM")
+![fh_DOM](dom.png "DOM")
 ]
 ???
 - https://javascript.info/dom-nodes#see-it-for-yourself
@@ -251,9 +268,14 @@ Document Object Model
 .right-column[
 ### Assignment 1
 
-- Extend/change [first.html](https://ribeaud.github.io/WebEngineering/lectures/1/first.html) and view in the browser
-- Correct [first.html](https://ribeaud.github.io/WebEngineering/lectures/1/first.html) to be valid HTML
-and validate your work with https://validator.nu/
+- Extend/change [first.html](first.html) and view in the browser
+- Correct [first.html](first.html) to be valid HTML and **validate** your work
+- Create a [GitHub](https://github.com/) account
+- [Create](https://help.github.com/articles/create-a-repo/) a **GitHub** repository
+- Copy [example.html](example.html) into the `/docs` folder of that repo
+- Change/adapt _example.html_ document
+- Commit and push
+- View change in browser
 ]
 ---
 .left-column[

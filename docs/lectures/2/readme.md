@@ -1,14 +1,87 @@
-# WebEngineering Module, CSS
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+# Web Engineering
+## CSS
 
-## Goals
-### Abilities
-- Styling of HTML pages with respect to appearance and layout 
+.footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
+---
+layout: false
+.left-column[
+  ## CSS
+]
+.right-column[
+- **C**ascading **S**tyle **S**heet
+- Contains the rules for the _presentation_ of **HTML**
+- **CSS** + **HTML** = **Web Page**
+]
+
+???
+- Separation of concerns: **CSS** (_presentation_) vs. **HTML** (_content_)
+---
+.left-column[
+  ## CSS Rule
+]
+.right-column[
+![fh_css_rule](css_rule.png "CSS Rule")
+]
+---
+.left-column[
+  ## CSS Selectors
+  ### element
+]
+.right-column[
+```
+p {
+  text-align: center;
+  color: red;
+}
+```
+]
+---
+.left-column[
+  ## CSS Selectors
+  ### element
+  ### id
+]
+.right-column[
+```
+#para1 {
+  text-align: center;
+  color: red;
+}```
+]
+---
+.left-column[
+  ## CSS Selectors
+  ### element
+  ### id
+  ### class
+]
+.right-column[
+```
+.center {
+  text-align: center;
+  color: red;
+}```
+]
+---
+.left-column[
+  ## Abilities
+]
+.right-column[
+- Styling of HTML pages with respect to appearance and layout
 - Being able to use **CSS** rules creatively
 - Avoiding duplication in style information
 - Separating _what_ from _how_
 - Writing maintainable web documents
-
-### Knowledge
+]
+---
+.left-column[
+  ## Knowledge
+]
+.right-column[
 - Basic selectors: element, class, id
 - Selector combinations: collection, descendant, child
 - Sourcing: inline, style element, link element
@@ -16,52 +89,5 @@
 - CSS box model
 - Basic knowledge of CSS units
 - Knowing the limits of our knowledge
+]
 
-## Assignment 1
-- Change Storybook.html document
-- Include the `storybook.txt` by in am HTML table
-- put a style element in the header
-- improve some element styles (e.g h1, h2, section, article) to make them look nicer 
-- make ABBR and DFN elements indicating in the same way that they both have popup-info
-
-## Assignment 2:
-- In the table introduce style classes to make the holidays less prominent 
-- In the table introduce style classes to make the exercise-related dates more prominent 
-
-## Challenge
-- make sure that your result from assignment 2 is visible through the github-pages feature
-- email a link to the html page to christian.ribeaud@fhnw.ch.
-- The best result wins a price!
-
-## Training for aspiring professionals 1:
-
-If you are not yet confident with using basic HTML and CSS
-consider working through http://www.codecademy.com.
-
-## Training for aspiring professionals 2:
-
-Take your personal solution from lecture-1-HTML and style it with CSS. 
-
-## Training for aspiring professionals 3:
-
-- Use divs with different background-color to create the rectangles below.
-- Use only CSS (and no external dependencies) to create the following layout
-        
-        +-----------------------------------------------+
-        |           |           |           |           |   Header, 1/4, 1/4, 1/4, 1/4
-        +-----------------------------------------------+
-        |                             |                 |   Content, Golden Ratio
-        |                             |                 |            ~ 61.8, 38.2
-        |                             |                 |
-        |                             |                 |
-        |                             |                 |
-        |                             |                 |
-        +-----------------------------------------------+
-        |           |                       |           |   Footer, 1/4, 2/4, 1/4
-        |           |                       |           |
-        |           |                       |           |
-        +-----------------------------------------------+
-        
-- Can you make it so that it fills the full browser page?        
-- Can you make it so that the proportions remain when the browser resizes?    
-- Can you do it with css grid layout?    

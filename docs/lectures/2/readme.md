@@ -32,13 +32,24 @@ layout: false
   ### element
 ]
 .right-column[
-```
-p {
+### CSS
+```css
+div {
   text-align: center;
   color: red;
 }
 ```
+### HTML excerpt
+```html
+<div>Hello</div>
+<div>Again</div>
+<p>
+  <div>Enjoying the day...</div>
+</p>
+```
 ]
+???
+- https://jsfiddle.net/a5bw10Lf/
 ---
 .left-column[
   ## CSS Selectors
@@ -46,11 +57,18 @@ p {
   ### id
 ]
 .right-column[
-```
-#para1 {
+### CSS
+```css
+#flower {
   text-align: center;
   color: red;
-}```
+}
+```
+### HTML excerpt
+```html
+<div id="flower">rose</div>
+<div id="language">JavaScript</div>
+```
 ]
 ---
 .left-column[
@@ -60,18 +78,31 @@ p {
   ### class
 ]
 .right-column[
-```
+### CSS
+```css
 .center {
   text-align: center;
   color: red;
-}```
+}
+```
+### HTML excerpt
+```html
+<div class="center">center</div>
+<div class="left">left</div>
+<footer class="center">
+&copy; Karakun AG
+</footer>
+```
 ]
+???
+- Could be a list like `right top`
+- `*` selects **all** elements
 ---
 .left-column[
   ## Abilities
 ]
 .right-column[
-- Styling of HTML pages with respect to appearance and layout
+- Styling of **HTML** pages with respect to appearance and layout
 - Being able to use **CSS** rules creatively
 - Avoiding duplication in style information
 - Separating _what_ from _how_
@@ -82,12 +113,11 @@ p {
   ## Knowledge
 ]
 .right-column[
-- Basic selectors: element, class, id
+- Basic selectors: _element_, _class_, _id_
 - Selector combinations: collection, descendant, child
 - Sourcing: inline, style element, link element
 - Basic knowledge of cascading and specificity
 - CSS box model
 - Basic knowledge of CSS units
-- Knowing the limits of our knowledge
 ]
 

@@ -15,10 +15,11 @@ layout: false
 - **C**ascading **S**tyle **S**heet
 - Contains the rules for the _presentation_ of **HTML**
 - **CSS** + **HTML** = **Web Page**
+- One **HTML** Page - Multiple Styles!
 ]
-
 ???
 - Separation of concerns: **CSS** (_presentation_) vs. **HTML** (_content_)
+- https://www.w3schools.com/css/css_intro.asp
 ---
 .left-column[
   ## CSS Rule
@@ -97,6 +98,205 @@ div {
 ???
 - Could be a list like `right top`
 - `*` selects **all** elements
+---
+.left-column[
+  ## Special Selectors
+  ### attribute
+]
+.right-column[
+### CSS
+```css
+[title] {
+  text-align: center;
+  color: red;
+}
+```
+### HTML excerpt
+```html
+<div title="My Div">One</div>
+<div title>Two</div>
+<div class="left">left</div>
+```
+]
+---
+.left-column[
+  ## Special Selectors
+  ### attribute
+  ### attribute/value
+]
+.right-column[
+### CSS
+```css
+[title="x"] {
+  text-align: center;
+  color: red;
+}
+```
+### HTML excerpt
+```html
+<div title="x">One</div>
+<div title>Two</div>
+<div class="left">left</div>
+```
+]
+???
+- `^=`, `$=`, `*=`, `~=`
+---
+.left-column[
+  ## Special Selectors
+  ### attribute
+  ### attribute/value
+  ### pseudo-class
+]
+.right-column[
+### CSS
+```css
+div:hover {
+  color: red;
+}
+```
+### HTML excerpt
+```html
+<div title="x">One</div>
+<div title>Two</div>
+<div>left</div>
+```
+]
+???
+- `:first-child`
+---
+.left-column[
+  ## Combinators
+  ### next sibling
+]
+.right-column[
+### CSS
+```css
+p + em {
+  color: red;
+}
+```
+### HTML excerpt
+```html
+<p><em>Some text</em></p>
+<em>Another text</em><br />
+<em>Is this red?</em>
+```
+]
+---
+.left-column[
+  ## Combinators
+  ### next sibling
+  ### all siblings
+]
+.right-column[
+### CSS
+```css
+p ~ em {
+  color: red;
+}
+```
+### HTML excerpt
+```html
+<p><em>Some text</em></p>
+<em>Another text</em><br />
+<em>Is this red?</em>
+```
+]
+---
+.left-column[
+  ## Combinators
+  ### next sibling
+  ### all siblings
+  ### descendant
+]
+.right-column[
+### CSS
+```css
+p em {
+  color: red;
+}
+```
+### HTML excerpt
+```html
+<p><em>Some text</em><br /><em>Some text</em></p>
+<em>Another text</em><br />
+<em>Is this red?</em>
+```
+]
+---
+.left-column[
+  ## Combinators
+  ### next sibling
+  ### all siblings
+  ### descendant
+  ### direct child
+]
+.right-column[
+### CSS
+```css
+p > em {
+  color: red;
+}
+```
+### HTML excerpt
+```html
+<p><em>Some text</em><br /><em>Some text</em></p>
+<em>Another text</em><br />
+<em>Is this red?</em>
+```
+]
+---
+.left-column[
+  ## More ...
+  ### union
+]
+.right-column[
+### CSS
+```css
+span, em {
+  color: red;
+}
+```
+### HTML excerpt
+```html
+```
+]
+---
+.left-column[
+  ## More ...
+  ### union
+  ### element with class
+]
+.right-column[
+### CSS
+```css
+a.red {
+  color: red;
+}
+```
+### HTML excerpt
+```html
+```
+]
+---
+.left-column[
+  ## More ...
+  ### union
+  ### element with class
+  ### element with attribute
+]
+.right-column[
+### CSS
+```css
+a[data-red] {
+  color: red;
+}
+```
+### HTML excerpt
+```html
+```
+]
 ---
 .left-column[
   ## Abilities

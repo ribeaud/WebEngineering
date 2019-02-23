@@ -246,6 +246,8 @@ p > em {
 <em>Is this red?</em>
 ```
 ]
+???
+- [Video](CSS_Combinator_Selectors.mp4)
 ---
 .left-column[
   ## More ...
@@ -254,12 +256,15 @@ p > em {
 .right-column[
 ### CSS
 ```css
-span, em {
+span, h3 {
   color: red;
 }
 ```
 ### HTML excerpt
 ```html
+<p>This text is <span>red</span></p>
+<h2>That one is NOT red</h2>
+<h3>This header is red as well</h3>
 ```
 ]
 ---
@@ -271,12 +276,14 @@ span, em {
 .right-column[
 ### CSS
 ```css
-a.red {
+h2.red {
   color: red;
 }
 ```
 ### HTML excerpt
 ```html
+<h2 class="red">This header is red</h2>
+<h2>This header is black (default)</h2>
 ```
 ]
 ---
@@ -289,13 +296,78 @@ a.red {
 .right-column[
 ### CSS
 ```css
-a[data-red] {
+h2[red] {
   color: red;
 }
 ```
 ### HTML excerpt
 ```html
+<h2 red="true">This header is red</h2>
+<h2>This header is black (default)</h2>
 ```
+]
+???
+- Is that valid?
+---
+.left-column[
+  ## Adding CSS
+  ### inline
+]
+.right-column[
+- An _inline_ **CSS** is used to apply an unique style to a single **HTML** element.
+- An _inline_ **CSS** uses the style attribute of a **HTML** element.
+```html
+<p style="font-size:20px">Lorem ipsum dolor sit
+amet, consectetur adipiscing elit.</p>
+```
+]
+---
+.left-column[
+  ## Adding CSS
+  ### inline
+  ### internal
+]
+.right-column[
+- An _internal_ **CSS** is used to define a style for a single **HTML** page.
+- An _internal_ **CSS** is defined in the `<head>` section of an **HTML** page, within a `<style>` element
+```html
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+```
+]
+---
+.left-column[
+  ## Adding CSS
+  ### inline
+  ### internal
+  ### external
+]
+.right-column[
+- An _external_ style sheet is used to define the style for many **HTML** pages.
+- With an _external_ style sheet, you can change the look of an entire web site, by changing one file!
+```html
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+```
+]
+???
+- The `@import` rule allows you to import a style sheet into another style sheet (see https://way2tutorial.com/css/how_to_write_css_style.php#import_css_style)
+- Exercises on https://www.w3schools.com/css/css_exercises.asp
+---
+.left-column[
+  ## Precendence
+]
+.right-column[
+1. _Inline_ overrides **CSS** rules in `<style>` tag and **CSS** file.
+1. A _more_ specific selector takes precedence over a _less_ specific one.
+1. Rules that appear later in the code override earlier rules if both have the same specificity.
+1. A **CSS** rule with `!important` always takes precedence.
 ]
 ---
 .left-column[

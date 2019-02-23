@@ -18,6 +18,7 @@ layout: false
 - One **HTML** Page - Multiple Styles!
 ]
 ???
+- https://worldwideweb.cern.ch/browser/
 - Separation of concerns: **CSS** (_presentation_) vs. **HTML** (_content_)
 - https://www.w3schools.com/css/css_intro.asp
 ---
@@ -368,6 +369,28 @@ p    {color: red;}
 1. A _more_ specific selector takes precedence over a _less_ specific one.
 1. Rules that appear later in the code override earlier rules if both have the same specificity.
 1. A **CSS** rule with `!important` always takes precedence.
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+]
+.right-column[
+1. Change [storybook.html](storybook.html) document.
+1. Include the [storybook.txt](storybook.txt) into a **HTML** table.
+1. Put a style element in the header.
+1. Improve some element styles (e.g `h1`, `h2`, `section`, `article`) to make them look nicer.
+1. make `abbr` and `dfn` elements indicating in the same way that they both have popup-info.
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+]
+.right-column[
+1. In the table introduce style classes to make the holidays less prominent.
+1. In the table introduce style classes to make the exercise-related dates more prominent.
 ]
 ---
 .left-column[

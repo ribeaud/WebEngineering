@@ -1,174 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Storybook for the Web Engineering Module</title>
-    <style>
-        table {
-            table-layout: auto;
-            width: 80%;
-            border-collapse: collapse;
-        }
-
-        table, th, tr, td {
-            --my-grey: #f2f2f2;
-            border: 1px solid var(--my-grey);
-        }
-
-        th, td {
-            padding: 5px;
-            text-align: left;
-        }
-
-        tbody tr:nth-child(odd) {
-            background-color: var(--my-grey);
-        }
-
-        tbody tr:hover {
-            background-color: #cccccc;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Storybook for the Web Engineering Module</title>
 </head>
 <body>
-<header>
+  <header>
     <dfn title="Drehbuch">Storybook</dfn> for the Web Engineering Module
-</header>
-<main>
+  </header>
+  <main>
     <section id="context">
-        <h1>Module delivery mode</h1>
-        <p> This installment of the <dfn title="WebEngineering">webeC</dfn> module is
-            delivered in the fall semester of 2018.
-        </p>
+      <h1>Module delivery mode</h1>
+      <p>This installment of the <dfn title="WebEngineering">webeC</dfn> module is
+        delivered in the spring semester of 2019.
+      </p>
     </section>
     <section id="content">
-        <h1>Delivery dates and examination details</h1>
-        <article>
-            <h2>Overview</h2>
-            <table>
-                <caption>Delivery dates</caption>
-                <thead>
-                <tr>
-                    <th> Date</th>
-                    <th>#</th>
-                    <th>Topic</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>18.09.18 12:15 - 15:00</td>
-                    <td>1</td>
-                    <td>HTML</td>
-                </tr>
-                <tr>
-                    <td>25.09.18 12:15 - 15:00</td>
-                    <td>2</td>
-                    <td>CSS</td>
-                </tr>
-                <tr>
-                    <td>02.10.18 12:15 - 15:00</td>
-                    <td>3</td>
-                    <td>Grails, Web, MVC, Test</td>
-                </tr>
-                <tr>
-                    <td>09.10.18 12:15 - 15:00</td>
-                    <td>4</td>
-                    <td>GSP, Template, Taglib, Layout</td>
-                </tr>
-                <tr>
-                    <td>16.10.18 12:15 - 15:00</td>
-                    <td>5</td>
-                    <td>Javascript</td>
-                </tr>
-                <tr>
-                    <td>23.10.18 12:15 - 15:00</td>
-                    <td>6</td>
-                    <td>Consolidation training</td>
-                </tr>
-                <tr>
-                    <td>30.10.18 12:15 - 15:00</td>
-                    <td>7</td>
-                    <td>Persistence, DB-Access (GORM)</td>
-                </tr>
-                <tr>
-                    <td>06.11.18 12:15 - 15:00</td>
-                    <td>8</td>
-                    <td>REST, Services</td>
-                </tr>
-                <tr>
-                    <td>13.11.18 12:15 - 15:00</td>
-                    <td>9</td>
-                    <td>Role-based Security</td>
-                </tr>
-                <tr>
-                    <td>20.11.18 12:15 - 15:00</td>
-                    <td>10</td>
-                    <td>Übungsvorbereitung ** Anwesenheitspflicht **</td>
-                </tr>
-                <tr>
-                    <td colspan="3">Frei</td>
-                </tr>
-                <tr>
-                    <td>04.12.18 12:15 - 15:00</td>
-                    <td>11</td>
-                    <td>Übungsanlass</td>
-                </tr>
-                <tr>
-                    <td>11.12.18 12:15 - 15:00</td>
-                    <td>12</td>
-                    <td>Responsive / Mobile Web</td>
-                </tr>
-                <tr>
-                    <td>18.12.18 12:15 - 15:00</td>
-                    <td>13</td>
-                    <td>Weihnachtsvorlesung, ** Übungsabgabe **</td>
-                </tr>
-                <tr>
-                    <td colspan="3">Weihnachtsferien</td>
-                </tr>
-                <tr>
-                    <td>08.01.19 12:15 - 15:00</td>
-                    <td>14</td>
-                    <td>Deployment</td>
-                </tr>
-                <tr>
-                    <td>15.01.19 12:15 - 15:00</td>
-                    <td>15</td>
-                    <td>Prüfungsvorbereitung</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td colspan="3"> MSP date to be announced</td>
-                </tr>
-                </tfoot>
-            </table>
-        </article>
-        <article>
-            <h2> Total Effort</h2>
-            <p> Classroom lectures add up to <code>15 * 3h = 45h</code>.</p>
-            <p> Prework and afterwork, including homework adds up to <code>15 * 1h = 15h</code>.</p>
-            <p> The exercise for the continuous assessment grade takes <code>4 * 5h = 20h</code>.</p>
-            <p> Preparation for the final exam will take approximately <code>8h</code>.</p>
-            <p> Writing the final exam takes <code>2h</code>.</p>
-            <p> This makes a total of <code>90h</code>.</p>
-        </article>
-        <article id="criteria">
-            <h2> Passing criteria </h2>
-            <ul>
-                <li>You have to attend the exercise preparation event.</li>
-                <li>You have to do the exercise and deliver before the deadline.</li>
-                <li>You have to attend the <dfn title="Modulschlussprüfung">final exam (MSP)</dfn>.</li>
-            </ul>
-            <p> Your exercise will determine your <abbr title="Erfahrungsnote">continuous assessment grade (EN)</abbr>.
-            </p>
-            <p> EN and MSP together make your final grade. </p>
-
-        </article>
+      <h1>Delivery dates and examination details</h1>
+      <article>
+        <h2>Overview</h2>
+        <table>
+          <caption>Delivery dates</caption>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>#</th>
+              <th>Topic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- fill from storybook.txt here -->
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3"> MSP date to be announced</td>
+            </tr>
+          </tfoot>
+        </table>
+      </article>
+      <article>
+        <h2>Total Effort</h2>
+        <p>Classroom lectures add up to <code>14 * 3h = 42h</code>.</p>
+        <p>Prework and afterwork, including homework adds up to <code>14 * 1h = 14h</code>.</p>
+        <p>The exercise for the continuous assessment grade takes <code>4 * 6h = 24h</code>.</p>
+        <p>Preparation for the final exam will take approximately <code>8h</code>.</p>
+        <p>Writing the final exam takes <code>2h</code>.</p>
+        <p>This makes a total of <code>90h</code>.</p>
+      </article>
+      <article id="criteria">
+        <h2>Passing criteria</h2>
+        <ul>
+          <li>You have to attend the exercise preparation event.</li>
+          <li>You have to do the exercise and deliver before the deadline.</li>
+          <li>You have to attend the <dfn title="Modulschlussprüfung">final exam (MSP)</dfn>.</li>
+        </ul>
+        <p> Your exercise will determine your <abbr title="Erfahrungsnote">continuous assessment grade (EN)</abbr>. </p>
+        <p> EN and MSP together make your final grade. </p>
+      </article>
     </section>
-</main>
-<footer>
+  </main>
+  <footer>
     <address>Dierk König, 5.2B16, mailto:dierk.koenig@fhnw.ch</address>
     <address>Christian Ribeaud, mailto:christian.ribeaud@fhnw.ch</address>
-</footer>
+  </footer>
 </body>
 </html>

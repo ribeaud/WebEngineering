@@ -415,10 +415,13 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
 - https://jsfiddle.net/rwe8z3yp/
 ---
 .left-column[
-  ## Margins collapse
+  ## Margins Collapse
 ]
 .right-column[
+![margin_collapsing](margin_collapsing.png "Margins Collapse")
 ]
+???
+- https://css-tricks.com/what-you-should-know-about-collapsing-margins/
 ---
 .left-column[
   ## Units
@@ -456,7 +459,7 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
 ]
 .right-column[
 1. Make sure that your result from _Assignment 2_ is visible through the [GitHub Pages](https://pages.github.com/) feature
-1. Email a link to the **HTML** page to christian.ribeaud@fhnw.ch.
+1. Email a link to the **HTML** page to [christian.ribeaud@fhnw.ch](mailto:christian.ribeaud@fhnw.ch).
 1. **The best result wins a price!**
 ]
 ---

@@ -7,7 +7,7 @@ Mi, 27.03.19	08:15 - 11:00 Persistence, DB-Access (GORM)
 Mi, 03.04.19	08:15 - 11:00 REST, Services
 Mi, 10.04.19	08:15 - 11:00 Role-based Security
 Mi, 17.04.19	08:15 - 11:00 Übungsvorbereitung ** Anwesenheitspflicht **
-
+Ferien
 Mi, 15.05.19	08:15 - 11:00 Übungsanlass
 Mi, 22.05.19	08:15 - 11:00 Javascript, Übungsabgabe
 Mi, 29.05.19	08:15 - 11:00 Responsive / Mobile Web

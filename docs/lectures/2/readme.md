@@ -247,8 +247,21 @@ p > em {
 <em>Is this red?</em>
 ```
 ]
-???
-- [Video](CSS_Combinator_Selectors.mp4)
+---
+.left-column[
+  ## Combinators
+  ### next sibling
+  ### all siblings
+  ### descendant
+  ### direct child
+  ### recap
+]
+.right-column[
+<video width="600" controls>
+  <source src="CSS_Combinator_Selectors.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+]
 ---
 .left-column[
   ## More ...
@@ -363,12 +376,46 @@ p    {color: red;}
 ---
 .left-column[
   ## Precendence
+  ### Sheet importance
+]
+.right-column[
+Incrementally:
+1. _User agent_ declarations
+1. _User_ normal declarations
+1. _Author_ normal declarations
+1. _Author_ important declarations
+1. _User_ important declarations
+]
+---
+.left-column[
+  ## Precendence
+  ### Sheet importance
+  ### Specificity
 ]
 .right-column[
 1. _Inline_ overrides **CSS** rules in `<style>` tag and **CSS** file.
 1. A _more_ specific selector takes precedence over a _less_ specific one.
 1. Rules that appear later in the code override earlier rules if both have the same specificity.
 1. A **CSS** rule with `!important` always takes precedence.
+]
+???
+- https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css
+---
+.left-column[
+  ## Box Model
+]
+.right-column[
+Total width = Margin left + Border left + Padding left + Content Width + Padding right + Border right + Margin right
+![fh_400_box_model](box_model.png "Box Model")
+]
+???
+- https://hackernoon.com/css-box-model-45ecf4ac219e
+- https://jsfiddle.net/rwe8z3yp/
+---
+.left-column[
+  ## Units
+]
+.right-column[
 ]
 ---
 .left-column[
@@ -378,9 +425,9 @@ p    {color: red;}
 .right-column[
 1. Change [storybook.html](storybook.html) document.
 1. Include the [storybook.txt](storybook.txt) into a **HTML** table.
-1. Put a style element in the header.
+1. Put a `<style>` element in the header.
 1. Improve some element styles (e.g `h1`, `h2`, `section`, `article`) to make them look nicer.
-1. make `abbr` and `dfn` elements indicating in the same way that they both have popup-info.
+1. Notice usage of `abbr` and `dfn` elements. What do they stand for? And how to use them?
 ]
 ---
 .left-column[
@@ -391,6 +438,67 @@ p    {color: red;}
 .right-column[
 1. In the table introduce style classes to make the holidays less prominent.
 1. In the table introduce style classes to make the exercise-related dates more prominent.
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+  ### Challenge
+]
+.right-column[
+1. Make sure that your result from _Assignment 2_ is visible through the [GitHub Pages](https://pages.github.com/) feature
+1. Email a link to the **HTML** page to christian.ribeaud@fhnw.ch.
+1. **The best result wins a price!**
+]
+---
+.left-column[
+  ## Fo aspiring professionals
+  ### Training 1
+]
+.right-column[
+- If you are not yet confident with using basic **HTML** and **CSS** consider working through http://www.codecademy.com.
+]
+---
+.left-column[
+  ## Fo aspiring professionals
+  ### Training 1
+  ### Training 2
+]
+.right-column[
+- Take your personal solution from _Lecture 1_ and style it with **CSS**.
+]
+---
+.left-column[
+  ## Fo aspiring professionals
+  ### Training 1
+  ### Training 2
+  ### Training 3
+]
+.right-column[
+- Use `<div>`s with different background colours to create the rectangles below.
+- Use only **CSS** (and no external dependencies) to create the following layout
+
+        Header, 1/4, 1/4, 1/4, 1/4
+        +-----------------------------------------------+
+        |           |           |           |           |
+        +-----------------------------------------------+
+        | Content, Golden Ratio       |                 |
+        |          ~ 61.8, 38.2       |                 |
+        |                             |                 |
+        |                             |                 |
+        |                             |                 |
+        |                             |                 |
+        +-----------------------------------------------+
+        |           |                       |           |
+        |           |                       |           |
+        |           |                       |           |
+        +-----------------------------------------------+
+        Footer, 1/4, 2/4, 1/4
+
+- Can you make it so that it fills the full browser page?
+- Can you make it so that the proportions remain when the browser resizes?
+- Can you do it with **CSS** grid layout?
 ]
 ---
 .left-column[

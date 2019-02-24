@@ -23,6 +23,7 @@ h1, h2, h3 {
 .footnote {
     position: absolute;
     bottom: 3em;
+    text-align: left;
 }
 
 li p {

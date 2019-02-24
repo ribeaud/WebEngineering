@@ -400,17 +400,25 @@ Incrementally:
 ]
 ???
 - https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css
+- [precedence.html](precedence.html)
 ---
 .left-column[
   ## Box Model
 ]
 .right-column[
+![fh_500_box_model](box_model.png "Box Model")
+
 Total width = Margin left + Border left + Padding left + Content Width + Padding right + Border right + Margin right
-![fh_400_box_model](box_model.png "Box Model")
 ]
 ???
 - https://hackernoon.com/css-box-model-45ecf4ac219e
 - https://jsfiddle.net/rwe8z3yp/
+---
+.left-column[
+  ## Margins collapse
+]
+.right-column[
+]
 ---
 .left-column[
   ## Units

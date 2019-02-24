@@ -17,6 +17,5 @@
 /* LAST declared, so these property/values win */
 .module-bar {
     background: lightblue; /* I win! */
-
     /* I still have all the _other_ styles as well */
 }

@@ -220,7 +220,12 @@ p em {
 ```
 ### HTML excerpt
 ```html
-<p><em>Some text</em><br /><em>Some text</em></p>
+<p>
+  <em>Some text</em><br />
+  <span>
+    <em>Some text</em>
+  </span>
+</p>
 <em>Another text</em><br />
 <em>Is this red?</em>
 ```
@@ -242,7 +247,12 @@ p > em {
 ```
 ### HTML excerpt
 ```html
-<p><em>Some text</em><br /><em>Some text</em></p>
+<p>
+  <em>Some text</em><br />
+  <span>
+    <em>Some text</em>
+  </span>
+</p>
 <em>Another text</em><br />
 <em>Is this red?</em>
 ```

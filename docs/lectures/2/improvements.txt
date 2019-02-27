@@ -1,0 +1,2 @@
+- Why do we have margin collapsing?
+- I need more stuff. 15-20mn are missing.

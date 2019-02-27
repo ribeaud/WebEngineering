@@ -427,7 +427,39 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
   ## Units
 ]
 .right-column[
+- A whitespace cannot appear between the number and the unit. However, if the value is 0, the unit can be omitted.
+- For some CSS properties, negative lengths are allowed.
+- We have following units:
+  - _Absolute_ lengths: `cm`, `mm`, `in`, `pt` (_1pt_ = 1/72 of _1in_), `px` (_1px_ = 1/96th of _1in_).red[*]
+  - _Relative_ lengths: `em`, `rem` (size of **M**), `%` (relative to parent)
+
+  .footnote[.red[*] `px` are relative to the viewing device.]
 ]
+???
+- https://www.w3schools.com/cssref/css_units.asp
+---
+.left-column[
+  ## Functions
+]
+.right-column[
+- Formula: `calc(100% / 12)`
+- Attribute value: `attr(name)`
+- External reference: `url(“backg.jpg”)`
+- Variable: `var(--left-indent)`
+]
+???
+- [var.html](var.html)
+---
+.left-column[
+  ## Further topics
+]
+.right-column[
+- Display: `inline`, `block`, `none`, ...
+- Position: `static`, `relative`, `absolute`, `fixed`, ...
+- float, clear: `left`, `right`, ...
+]
+???
+- [display.html](display.html)
 ---
 .left-column[
   ## Exercises

@@ -1,6 +1,6 @@
 Mi, 20.02.19	08:15 - 11:00 HTML
 Mi, 27.02.19	08:15 - 11:00 CSS
-Mi, 06.03.19	08:15 - 11:00 Grails, Web, MVC,
+Mi, 06.03.19	08:15 - 11:00 Grails, Web, MVC
 Mi, 13.03.19	08:15 - 11:00 GSP, Template, Taglib, Layout
 Mi, 20.03.19	08:15 - 11:00 Consolidation training, Testing
 Mi, 27.03.19	08:15 - 11:00 Persistence, DB-Access (GORM)

@@ -76,19 +76,19 @@ layout: false
 - Example:
 ```java
 def transform(List elements, Closure action) {
-  def result = []
-  elements.each {
-    result << action(it)
-  }
-  result
+      def result = []
+      elements.each {
+        result << action(it)
+      }
+      result
 }
 String describe(Person p) {
-  "$p.name is $p.age"
+      "$p.name is $p.age"
 }
 def action = this.&describe
 def list = [
-  new Person(name: 'Bob',   age: 42),
-  new Person(name: 'Julia', age: 35)]
+      new Person(name: 'Bob',   age: 42),
+      new Person(name: 'Julia', age: 35)]
 assert transform(list, action)
     == ['Bob is 42', 'Julia is 35']
 ```
@@ -99,6 +99,60 @@ layout: false
   ## Spring Boot
 ]
 .right-column[
+- https://spring.io/projects/spring-boot
+- **Spring Boot** is a project built on the top of the **Spring** framework. It provides a simpler and faster way to set up, configure, and run both simple and web-based applications.
+- auto-configuration, standalone, opinionated
+- A lot of magic ...
+]
+---
+layout: false
+.left-column[
+  ## Gradle
+]
+.right-column[
+]
+---
+layout: false
+.left-column[
+  ## Exercises
+  ### Assignment 1
+]
+.right-column[
+1. Make sure that you have a Java **JDK 1.8** installed and `JAVA_HOME` set appropriately. Check by running `java -version`
+1. Fork and clone the boilerplate project located at https://github.com/Dierk/WebEngineering-HS18.
+1. Import the project into **IntelliJ IDEA** as described on project's [README.md](https://github.com/Dierk/WebEngineering-HS18) page
+1. Run the automatically loaded run configuration and browse to http://localhost:8080/static/GradeCalculator.html.
+]
+---
+layout: false
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+]
+.right-column[
+1. Write a test, that goes to http://www.fhnw.ch and clicks on any link of the navigation bar.
+1. Validate the page title.
+]
+---
+layout: false
+.left-column[
+## Exercises
+### Assignment 1
+### Assignment 2
+### Assignment 3
+]
+.right-column[
+Checkout branch _feature/calculator_ (`git checkout feature/calculator`) and have a look at:
+
+- `http://localhost:8080/static/GradeCalculator.html`
+- `src/main/resources/public/GradeCalculator.html`
+- `src/test/groovy/mvc/CalculatorControllerSpec.groovy`
+- `src/integration-test/groovy/mvc/CalculatorSpec.groovy` (note line 26 with _placeholder goes here_)
+- `grails-app/controllers/mvc/CalculatorController.groovy`
+- `grails-app/views/calculator/CalculatorOutput.gsp` (note the _output_ placeholder)
+
+Use `${result}` in **CalculatorOutput.gsp** to put that calculated result in the right place. Verify that the test is still green.
 ]
 ---
 layout: false

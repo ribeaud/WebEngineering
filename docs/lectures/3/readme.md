@@ -12,9 +12,12 @@ layout: false
   ## MVC
 ]
 .right-column[
-- **Model-View-Controller**
+**Model-View-Controller**
+
 ![fh_500_mvc](mvc.png "MVC")
-- Avantages? Disadvantages?
+
+Discussion
+- Avantages vs. Disadvantages?
 ]
 ???
 - **Avantages**:
@@ -22,28 +25,27 @@ layout: false
 - **Disadvantages**:
   - Increased complexity.
 ---
-layout: false
 .left-column[
   ## MVC
   ### Model
 ]
 .right-column[
+Roles:
 - Handles data and business logic.
 - Interacts with the database (using **SQL**) or perform complex operations.
 ]
 ---
-layout: false
 .left-column[
   ## MVC
   ### Model
   ### View
 ]
 .right-column[
+Roles:
 - Presents data to the user in any supported format and layout.
 - Could be _static_ **HTML** pages or _dynamic_ server pages.
 ]
 ---
-layout: false
 .left-column[
   ## MVC
   ### Model
@@ -51,12 +53,12 @@ layout: false
   ### Controller
 ]
 .right-column[
+Roles:
 - Receives user requests and calls appropriate resources to carry them out.
-- Validates the input
+- Validates the input.
 - Calls the appropriate _model_ for the task and then selects the proper _view_.
 ]
 ---
-layout: false
 .left-column[
   ## Grails
 ]
@@ -66,12 +68,12 @@ layout: false
 - _Convention-over-configuration_ with sensible defaults
 ]
 ---
-layout: false
 .left-column[
   ## Groovy
 ]
 .right-column[
 - http://groovy-lang.org/
+- JVM-based language, dynamic, optional types and meta-programming
 - https://www.manning.com/books/groovy-in-action-second-edition
 - Example:
 ```java
@@ -94,53 +96,73 @@ assert transform(list, action)
 ```
 ]
 ---
-layout: false
 .left-column[
   ## Spring Boot
 ]
 .right-column[
 - https://spring.io/projects/spring-boot
 - **Spring Boot** is a project built on the top of the **Spring** framework. It provides a simpler and faster way to set up, configure, and run both simple and web-based applications.
-- auto-configuration, standalone, opinionated
+- Auto-configuration, standalone, opinionated
 - A lot of magic ...
 ]
 ---
-layout: false
 .left-column[
   ## Gradle
 ]
 .right-column[
+- https://gradle.org/
+- Build tool like **Maven** and similar
 ]
 ---
-layout: false
 .left-column[
   ## Exercises
   ### Assignment 1
 ]
 .right-column[
 1. Make sure that you have a Java **JDK 1.8** installed and `JAVA_HOME` set appropriately. Check by running `java -version`
-1. Fork and clone the boilerplate project located at https://github.com/Dierk/WebEngineering-HS18.
-1. Import the project into **IntelliJ IDEA** as described on project's [README.md](https://github.com/Dierk/WebEngineering-HS18) page
-1. Run the automatically loaded run configuration and browse to http://localhost:8080/static/GradeCalculator.html.
+1. Fork and clone the boilerplate project located at https://github.com/ribeaud/WebEngineering-HS19.
+1. Import the project into **IntelliJ IDEA** as described on project's [README.md](https://github.com/ribeaud/WebEngineering-HS19) page.
+1. Run the automatically loaded run configuration and browse to http://localhost:8080/.
 ]
+???
+1. Explain forking, cloning and so on ...
+1. Explain **Grails** project structure (code level).
+1. Explain what we see at http://localhost:8080/.
+1. _CalculatorController_ has been generated via `grails create-controller Calculator`
+1. Create corresponding view and run the application
 ---
-layout: false
 .left-column[
-  ## Exercises
-  ### Assignment 1
-  ### Assignment 2
+  ## Testing
 ]
 .right-column[
-1. Write a test, that goes to http://www.fhnw.ch and clicks on any link of the navigation bar.
-1. Validate the page title.
+- Is a core tenet of engineering.
+- Provides validatable specification s opposed to _just give it a try_.
 ]
 ---
-layout: false
+.left-column[
+  ## Testing
+  ### Unit testing
+]
+.right-column[
+- [Spock](http://spockframework.org/)
+- A unit is the smallest testable part of any software.
+- Unit tests to validate controllers, models, and services in isolation.
+]
+---
+.left-column[
+  ## Testing
+  ### Integration testing
+]
+.right-column[
+- [Geb](http://www.gebish.org/)
+- Individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units.
+- Functional integration tests to validate the behaviour as seen by the user.
+]
+---
 .left-column[
 ## Exercises
 ### Assignment 1
 ### Assignment 2
-### Assignment 3
 ]
 .right-column[
 Checkout branch _feature/calculator_ (`git checkout feature/calculator`) and have a look at:
@@ -157,8 +179,14 @@ Use `${result}` in **CalculatorOutput.gsp** to put that calculated result in the
 ---
 layout: false
 .left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+  ### Assignment 3
 ]
 .right-column[
+1. Write a test, that goes to http://www.fhnw.ch and clicks on any link of the navigation bar.
+1. Validate the page title.
 ]
 ---
 .left-column[

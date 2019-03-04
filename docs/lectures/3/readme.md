@@ -176,24 +176,81 @@ assert transform(list, action)
 ]
 ---
 .left-column[
+  ## Recap
+  ### Web View-Controller
+]
+.right-column[
+### Web View-Controller
+
+![fh_web_view-controller](web_view-controller.png "Web View-Controller")
+]
+---
+.left-column[
+  ## Recap
+  ### Web View-Controller
+  ### Dispatch
+]
+.right-column[
+### Dispatch
+
+![fh_dipatch](dispatch.png "Dispatch")
+]
+---
+.left-column[
+  ## Recap
+  ### Web View-Controller
+  ### Dispatch
+  ### View Selection
+]
+.right-column[
+### View Selection
+
+![fh_view_selection](view_selection.png "View Selection")
+]
+---
+.left-column[
+  ## Recap
+  ### Web View-Controller
+  ### Dispatch
+  ### View Selection
+  ### View Binding
+]
+.right-column[
+### View Binding
+
+![fh_view_binding](view_binding.png "View Binding")
+]
+---
+.left-column[
+  ## Recap
+  ### Web View-Controller
+  ### Dispatch
+  ### View Selection
+  ### View Binding
+  ### GSP View
+]
+.right-column[
+### GSP View
+
+![fh_gsp_view](gsp_view.png "GSP View")
+]
+---
+.left-column[
 ## Exercises
 ### Assignment 1
 ### Assignment 2
 ]
 .right-column[
 Checkout branch _feature/calculator_ (`git checkout feature/calculator`) and have a look at:
-
 - `http://localhost:8080/static/GradeCalculator.html`
 - `src/main/resources/public/GradeCalculator.html`
 - `src/test/groovy/mvc/CalculatorControllerSpec.groovy`
 - `src/integration-test/groovy/mvc/CalculatorSpec.groovy` (note line 26 with _placeholder goes here_)
 - `grails-app/controllers/mvc/CalculatorController.groovy`
 - `grails-app/views/calculator/CalculatorOutput.gsp` (note the _output_ placeholder)
-
 Use `${result}` in **CalculatorOutput.gsp** to put that calculated result in the right place. Verify that the test is still green.
 ]
 ---
-layout: false
 .left-column[
   ## Exercises
   ### Assignment 1
@@ -203,6 +260,31 @@ layout: false
 .right-column[
 1. Write a test, that goes to http://www.fhnw.ch and clicks on any link of the navigation bar.
 1. Validate the page title.
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+  ### Assignment 3
+  ### Assignment 4
+]
+.right-column[
+- In the `GradeCalculator`: what happens when _en_ or _exam_ do not represent numbers?
+- Extend the integration test to cover the invalid input scenario.
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+  ### Assignment 3
+  ### Assignment 4
+  ### Assignment 5
+]
+.right-column[
+- What happens when _en_ or _exam_ do not fall into `1.0` - `6.0`?
+- Write down how you would address this issue. **Unit** or **integration** test? Which code needs change: _test_, _controller_, _view_?
 ]
 ---
 .left-column[
@@ -224,4 +306,3 @@ layout: false
 - Understanding the web **MVC** cycle, _request-response_ paradigm.
 - Using models for request data binding and response view creation.
 ]
-

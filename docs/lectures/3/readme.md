@@ -176,6 +176,22 @@ assert transform(list, action)
 ]
 ---
 .left-column[
+## Exercises
+### Assignment 1
+### Assignment 2
+]
+.right-column[
+Checkout branch _feature/calculator_ (`git checkout feature/calculator`) and have a look at:
+- `http://localhost:8080/static/GradeCalculator.html`
+- `src/main/resources/public/GradeCalculator.html`
+- `src/test/groovy/mvc/CalculatorControllerSpec.groovy`
+- `src/integration-test/groovy/mvc/CalculatorSpec.groovy` (note line 26 with _placeholder goes here_)
+- `grails-app/controllers/mvc/CalculatorController.groovy`
+- `grails-app/views/calculator/CalculatorOutput.gsp` (note the _output_ placeholder)
+Use `${result}` in **CalculatorOutput.gsp** to put that calculated result in the right place. Verify that the test is still green.
+]
+---
+.left-column[
   ## Recap
   ### Web View-Controller
 ]
@@ -233,22 +249,6 @@ assert transform(list, action)
 ### GSP View
 
 ![fh_gsp_view](gsp_view.png "GSP View")
-]
----
-.left-column[
-## Exercises
-### Assignment 1
-### Assignment 2
-]
-.right-column[
-Checkout branch _feature/calculator_ (`git checkout feature/calculator`) and have a look at:
-- `http://localhost:8080/static/GradeCalculator.html`
-- `src/main/resources/public/GradeCalculator.html`
-- `src/test/groovy/mvc/CalculatorControllerSpec.groovy`
-- `src/integration-test/groovy/mvc/CalculatorSpec.groovy` (note line 26 with _placeholder goes here_)
-- `grails-app/controllers/mvc/CalculatorController.groovy`
-- `grails-app/views/calculator/CalculatorOutput.gsp` (note the _output_ placeholder)
-Use `${result}` in **CalculatorOutput.gsp** to put that calculated result in the right place. Verify that the test is still green.
 ]
 ---
 .left-column[

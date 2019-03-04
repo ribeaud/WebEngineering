@@ -1,2 +1,3 @@
 - Why do we have margin collapsing?
+- Better examples for 'ul li' vs 'ul > li'
 - I need more stuff. 15-20mn are missing.

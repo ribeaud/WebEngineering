@@ -144,19 +144,35 @@ assert transform(list, action)
   ### Unit testing
 ]
 .right-column[
-- [Spock](http://spockframework.org/)
 - A unit is the smallest testable part of any software.
 - Unit tests to validate controllers, models, and services in isolation.
+- [Spock](http://spockframework.org/): structures test cases in  _given_ - _when_ - _then_ - _expect_ and allow data-driven tests.
 ]
 ---
 .left-column[
   ## Testing
+  ### Unit testing
   ### Integration testing
 ]
 .right-column[
-- [Geb](http://www.gebish.org/)
 - Individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units.
 - Functional integration tests to validate the behaviour as seen by the user.
+- [Geb](http://www.gebish.org/): user interactions with the **HTML** page
+]
+---
+.left-column[
+  ## Testing
+  ### Unit testing
+  ### Integration testing
+  ### Geb selectors
+]
+.right-column[
+| Geb                | HTML                 |
+| : ---------------- | : ------------------ |
+| `$("div.cool")`    | `<div class="cool">` |
+| `$("a", href:"x")` | `<a href="x">`       |
+| `$("a", text:"x")` | `<a>x</a>`           |
+| `$("form").en`     | `<input name="en">`  |
 ]
 ---
 .left-column[

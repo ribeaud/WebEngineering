@@ -252,6 +252,21 @@ Use `${result}` in **CalculatorOutput.gsp** to put that calculated result in the
 ]
 ---
 .left-column[
+  ## Recap
+  ### Web View-Controller
+  ### Dispatch
+  ### View Selection
+  ### View Binding
+  ### GSP View
+  ### Web MVC
+]
+.right-column[
+### GSP View
+
+![fh_web_mvc](web_mvc.png "Web MVC")
+]
+---
+.left-column[
   ## Exercises
   ### Assignment 1
   ### Assignment 2

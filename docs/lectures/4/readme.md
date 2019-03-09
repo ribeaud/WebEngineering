@@ -34,7 +34,23 @@ template: inverse
   ## GSP
 ]
 .right-column[
-  Server pages with values.
+- Server pages with values
+- [Documentation](https://gsp.grails.org/)
+- Example:
+```gsp
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title>Render Domain</title>
+</head>
+<body>
+Last Name: ${person.lastName} <br/>
+First Name: ${person.firstName} <br/>
+Age: ${person.age} <br/>
+</body>
+</html>
+```
 ]
 ---
 .left-column[
@@ -42,7 +58,21 @@ template: inverse
   ## Template
 ]
 .right-column[
-  Local composition.
+- **Local** composition.
+- Useful for partitioning your views into maintainable chunks.
+- Convention: _underscore_ before the name of a view.
+- Example:
+  - `_bookTemplate.gsp`:
+```gsp
+<div class="book" id="${book?.id}">
+   <div>Title: ${book?.title}</div>
+   <div>Author: ${book?.author?.name}</div>
+</div>
+```
+  - Usage:
+```gsp
+<tmpl:bookTemplate book="${myBook}" />
+```
 ]
 ---
 .left-column[
@@ -51,7 +81,23 @@ template: inverse
   ## TagLib
 ]
 .right-column[
-  Global composition.
+- **Global** composition.
+- [Documentation](https://gsp.grails.org/latest/guide/taglibs.html)
+- **Groovy** class that ends with the convention `TagLib`
+- Example:
+  - `grails-app/taglib/SimpleTagLib.groovy`:
+```gsp
+class SimpleTagLib {
+  def emoticon = { attrs, body ->
+    out << body() << (attrs.happy == 'true' ?
+      " :-)" : " :-(")
+  }
+}
+```
+  - Usage:
+```gsp
+<g:emoticon happy="true">Hi John</g:emoticon>
+```
 ]
 ---
 .left-column[
@@ -61,7 +107,7 @@ template: inverse
   ## Layout
 ]
 .right-column[
-  Inverse composition.
+- **Inverse** composition.
 ]
 ---
 .left-column[

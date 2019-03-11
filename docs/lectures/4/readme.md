@@ -167,6 +167,64 @@ class SimpleTagLib {
 - `layoutBody`: outputs the target page’s body tag contents
 ---
 .left-column[
+  ## Validation
+]
+.right-column[
+]
+---
+.left-column[
+  ## Internationalization
+]
+.right-column[
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+]
+.right-column[
+1. Ensure that you're synchronized with _upstream_: `git fetch upstream`.
+1. `git checkout feature/inplacecalculator` and have a look at all the artifacts. Write corresponding tests.
+1. `git checkout feature/genericvalidation` and have a look at all the artifacts. Write an _unit_ resp. _integration_ test.
+1. `git checkout feature/templating` and have a look at all the artifacts.
+1. `git checkout feature/taglib` and have a look at all the artifacts.
+1. `git checkout feature/layout` and have a look at all the artifacts.
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+]
+.right-column[
+Make a **Fahrenheit** to **Celsius** converter.
+
+You best make a copy of each artifact that we used for the **InPlaceCalculator**
+(_model_, _view_, _controller_, tests, _form_row.gsp_ as template).
+Just copy the file into the same directory as the original and rename accordingly.
+
+You can reuse the _form_ layout.
+
+You can make use of the following conversion functions:
+
+    double c2f(double c) { c * 1.8d + 32 }
+    double f2c(double f) { (f-32) / 1.8d }
+
+It is probably best to work with two input fields: one for **Fahrenheit**, one for **Celsius**,
+and calculate a result for each of the inputs separately.
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+  ### Assignment 3
+]
+.right-column[
+Watch this [video]( http://guides.grails.org/grails-quickcasts-developing-grails-3-applications-with-intellij-idea/guide/index.html). It is a good 20 minutes introduction to **Grails**.
+]
+---
+.left-column[
   ## Abilities
 ]
 .right-column[

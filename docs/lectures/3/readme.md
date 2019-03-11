@@ -121,6 +121,13 @@ assert transform(list, action)
 .right-column[
 1. Make sure that you have a Java **JDK 1.8** installed. This is the on which should be specified as project SDK in **IntelliJ**.
 1. Fork and clone the boilerplate project located at https://github.com/ribeaud/WebEngineering-HS19.
+1. Register _upstream_ as following: `git remote add upstream https://github.com/ribeaud/WebEngineering-HS19.git`.
+1. **git remote -v** should display the following:
+        $ git remote -v
+        origin https://github.com/<user>/WebEngineering-HS19.git (fetch)
+        origin https://github.com/<user>/WebEngineering-HS19.git (push)
+        upstream https://github.com/<user>/WebEngineering-HS19.git (fetch)
+        upstream https://github.com/<user>/WebEngineering-HS19.git (push)
 1. Import the project into **IntelliJ IDEA** as described on project's [README.md](https://github.com/ribeaud/WebEngineering-HS19) page.
 1. Run the automatically loaded run configuration and browse to http://localhost:8080/.
 ]
@@ -130,6 +137,7 @@ assert transform(list, action)
 1. Explain what we see at http://localhost:8080/.
 1. _CalculatorController_ has been generated via `grails create-controller Calculator`
 1. Create corresponding view and run the application
+1. This is the state of branch _feature/calculator_
 ---
 .left-column[
   ## Testing

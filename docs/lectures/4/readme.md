@@ -6,6 +6,8 @@ class: center, middle, inverse
 ## Server Pages
 
 .footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
+???
+- 30 Jahre World Wide Web
 ---
 layout: false
 .left-column[
@@ -26,6 +28,8 @@ layout: false
 * Static Pages: **HTML**, **CSS**
 * **MVC**: _Model_, _View_, _Controller_
 * **View**: Could be a _static_ or a _server_ page
+
+![fh_static_vs_dynamic](static_vs_dynamic.jpeg "Static vs. Dynamic")
 ]
 ---
 .left-column[
@@ -170,12 +174,39 @@ class SimpleTagLib {
   ## Validation
 ]
 .right-column[
+- [https://docs.grails.org/latest/guide/validation.html](documentation)
+- Branch _feature/validation_
+- _Imperative_:
+```groovy
+if (0.0 == model.en) {
+      model.result = "Cannot calculate." +
+        " En value was invalid."
+}
+if (0.0 == model.exam) {
+      model.result = "Cannot calculate." +
+        " Exam value was invalid."
+}
+```
+- _Declarative_:
+```groovy
+static constraints = {
+      login size: 5..15, blank: false, unique: true
+      password size: 5..15, blank: false
+      email email: true, blank: false
+      age min: 18
+}
+```
 ]
 ---
 .left-column[
   ## Internationalization
 ]
 .right-column[
+- [http://docs.grails.org/latest/guide/i18n.html](documentation)
+- - Branch _feature/i18n_
+- Understanding Message Bundles
+- Changing Locales
+- `<g:message code="my.localized.content" args="${ ['Juan', 'lunes'] }" />`
 ]
 ---
 .left-column[
@@ -185,7 +216,8 @@ class SimpleTagLib {
 .right-column[
 1. Ensure that you're synchronized with _upstream_: `git fetch upstream`.
 1. `git checkout feature/inplacecalculator` and have a look at all the artifacts. Write corresponding tests.
-1. `git checkout feature/genericvalidation` and have a look at all the artifacts. Write an _unit_ resp. _integration_ test.
+1. `git checkout feature/validation` and have a look at all the artifacts. Write an _unit_ resp. _integration_ test.
+1. `git checkout feature/i18n` and have a look at all the artifacts.
 1. `git checkout feature/templating` and have a look at all the artifacts.
 1. `git checkout feature/taglib` and have a look at all the artifacts.
 1. `git checkout feature/layout` and have a look at all the artifacts.

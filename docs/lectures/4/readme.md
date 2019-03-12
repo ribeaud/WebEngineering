@@ -217,10 +217,10 @@ static constraints = {
 1. Ensure that you're synchronized with _upstream_: `git fetch upstream`.
 1. `git checkout feature/inplacecalculator` and have a look at all the artifacts. Write an _unit_ resp. _integration_ test.
 1. `git checkout feature/validation` and have a look at all the artifacts. Adapt, extend current tests.
-1. `git checkout feature/i18n` and have a look at all the artifacts.
-1. `git checkout feature/templating` and have a look at all the artifacts.
+1. `git checkout feature/templating` and have a look at all the artifacts. Are the tests still green? If NOT, fix them!
 1. `git checkout feature/taglib` and have a look at all the artifacts.
 1. `git checkout feature/layout` and have a look at all the artifacts.
+1. `git checkout feature/i18n` and have a look at all the artifacts.
 ]
 ---
 .left-column[

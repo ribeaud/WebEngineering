@@ -199,13 +199,13 @@ static constraints = {
 ]
 ---
 .left-column[
-  ## Internationalization
+  ## Internatio-<br />nalization
 ]
 .right-column[
 - [http://docs.grails.org/latest/guide/i18n.html](documentation)
-- - Branch _feature/i18n_
-- Understanding Message Bundles
-- Changing Locales
+- Branch _feature/i18n_
+- Understanding _message bundles_
+- Changing _locales_
 - `<g:message code="my.localized.content" args="${ ['Juan', 'lunes'] }" />`
 ]
 ---

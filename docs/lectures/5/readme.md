@@ -33,6 +33,8 @@ In **Spock**, you write _specifications_. Every test class must extend from `spo
 [Blocks](http://spockframework.org/spock/docs/1.0/spock_primer.html) (inspired by [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development)):
 
 ![fh_350_blocks](blocks.png "Blocks")
+
+Sometimes `given:` is used instead of `setup:`. It is an alias.
 ]
 ???
 - https://www.pluralsight.com/guides/introduction-to-testing-with-bdd-and-the-spock-framework
@@ -137,6 +139,7 @@ https://dzone.com/articles/learn-how-to-setup-a-cicd-pipeline-from-scratch
 
 ![fh_video](video.png "Times Tables, Mandelbrot and the Heart of Mathematics")
 - https://www.youtube.com/watch?v=qhbuKbxJsk8
+- https://github.com/ribeaud/Mathologer
 ]
 ---
 .left-column[

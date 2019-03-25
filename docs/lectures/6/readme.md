@@ -12,8 +12,10 @@ layout: false
   ## Web MVC, Server Pages
 ]
 .right-column[
-![fh_from](from.png "2-tier architecture")
+![fh_from](from.png "Web MVC, Server Pages")
 ]
+???
+**MVC** is an architectural pattern commonly used for developing user interfaces that divides an application into three interconnected parts.
 ---
 layout: false
 .left-column[
@@ -21,6 +23,93 @@ layout: false
 ]
 .right-column[
 ![fh_to](to.png "3-tier architecture")
+]
+???
+Multilayered architecture is a client–server architecture in which presentation, application processing, and data management functions are physically separated.
+---
+.left-column[
+  ## Domain classes
+]
+.right-column[
+```Groovy
+package mvc
+
+class Room {
+
+    String name
+    int    max
+
+    String toString() {
+        "$name ($max)"   // Groovy :-)
+    }
+
+    static constraints = {
+        name(blank: false)
+        max(min: 1)
+    }
+}
+```
+]
+---
+.left-column[
+  ## CRUD methods
+]
+.right-column[
+**GORM** Data Services will implement queries for you using a number of different strategies and conventions.
+
+| Method Stem                                    | Description                                                |
+| -----------------------------------------------|------------------------------------------------------------|
+| count*                                         | Count the number of results                                |
+| countBy*                                       | Dynamic Finder Count the number of results                 |
+| delete*                                        | Delete an instance for the given arguments                 |
+| find\*, get\*, list\* or retrieve\*            | Query for the given parameters                             |
+| findBy\*, listBy\*, findAllBy\* or getBy\*     | Dynamic finder query for given parameters                  |
+| save\*, store\*, or persist\*                  | Save a new instance                                        |
+| update\*                                       | Updates an existing instance. First parameter should be id |
+
+```Groovy
+new Room(description: "5.3A17", capacity: 40).save()
+Room.list()
+Room.findAllByCapacityGreaterThan(20)
+def firstRoom = Room.get(1)
+firstRoom.delete()
+```
+]
+---
+.left-column[
+  ## Grails ORM
+]
+.right-column[
+- [Object Relational Mapping (GORM)](http://docs.grails.org/latest/guide/GORM.html)
+- [GORM for Hibernate](http://gorm.grails.org/latest/hibernate/manual/)
+- Domain classes serve as [DAO](https://en.wikipedia.org/wiki/Data_access_object)/[DTO](https://en.wikipedia.org/wiki/Data_transfer_object)/Model
+- Database is set up automatically
+- Dynamic finder methods simplify usage
+- Keep it simple
+]
+---
+.left-column[
+  ## Scaffolding
+]
+.right-column[
+```Groovy
+package mvc
+
+class PersonController {
+    static scaffold = Person
+}
+```
+Controller actions and views are created transparently behind the scenes. And we can selectively override
+
+]
+---
+.left-column[
+  ## Testing
+]
+.right-column[
+- Refer to https://testing.grails.org/latest/guide/index.html
+- `HibernateSpec`: Specification for **Hibernate** tests (`... extends HibernateSpec`)
+- `DomainUnitTest`: _trait_ for domain model testing (`... extends Specification implements DomainUnitTest<...>`). Similar to `ControllerUnitTest`.
 ]
 ---
 .left-column[

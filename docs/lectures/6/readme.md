@@ -134,11 +134,21 @@ Controller actions and views are created transparently behind the scenes. And we
   ## Demo/Live-coding
 ]
 .right-column[
-- Creating a room reservation system
-- Domain classes: `Room`, `Person`, `Booking` (very simple)
-- Static scaffolding
-- Setting up bootstrap data
-- Use Controller actions to interact with the domain model
+1. Creating a room reservation system:
+  - `grails create-app RoomReservation`
+1. Domain classes: `Room`, `Person`, `Booking` (very simple)
+  - `./grailsw create-domain-class Room`
+  - `./grailsw create-domain-class Person`
+  - ...
+1. Static scaffolding
+  - `./grailsw create-scaffold-controller Person`
+  - ...
+1. Viewing the current status of the _embedded_ database via **/dbconsole**
+
+  ![fh_250_dbconsole](dbconsole.png "DB console")
+
+1. Setting up bootstrap data
+1. Use Controller actions to interact with the domain model
 ]
 ---
 .left-column[

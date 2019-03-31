@@ -1,58 +1,112 @@
-# WebEngineering Module, Services
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+# Web Engineering
+## Security
 
-## Goals
+.footnote[<a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
+---
+layout: false
+.left-column[
+  ## Authenti-cation
+]
+.right-column[
+Authentication is the process of verifying who you are. When you log on to a PC with a user name and password you
+are authenticating.
+]
+---
+.left-column[
+  ## Authenti-cation
+  ## Authorization
+]
+.right-column[
+Authorization is the process of verifying that you have access to something. Gaining access to a resource
+(e.g. directory on a hard disk) because the permissions configured on it allow you access is authorization.
+]
+---
+.left-column[
+  ## User
+]
+.right-column[
+- `username`
+- `password`
+- `...`
+]
+---
+.left-column[
+  ## User
+  ## Role
+]
+.right-column[
+The **Spring Security** plugin uses an _authority_ class to represent a user’s roles in the application.
+In general this class restricts URLs to users who have been assigned the required access rights.
+A user can be granted multiple roles to indicate various access rights in the application, and should have at least one. 
+]
+---
+template: inverse
 
-### Abilities
-- Being able to use simple services from both client (smart view) and server (controller).
-- Implementing the full range of REST services for a persistent Grails domain model.
+## grails s2-quickstart
+---
+.left-column[
+  ## Grails CLI
+]
+.right-column[
+https://docs.grails.org/latest/guide/gettingStarted.html
+]
+---
+.left-column[
+  ## Grails CLI
+  ## s2-quickstart
+]
+.right-column[
+Creates a user and role class (and optionally a requestmap class) in the specified package.
+See [here](https://grails-plugins.github.io/grails-spring-security-core/latest/#s2-quickstart).
+]
+---
+.left-column[
+  ## Grails CLI
+  ## s2-quickstart
+  ## feature/ security
+]
+.right-column[
+Checkout `feature/security` branch (after a `git fetch upstream` if needed).
+Have a look at following parts:
+- `build.gradle`
+- `BootStrap`
+- `resources.groovy`
+- `application.groovy`
+]
+---
+template: inverse
 
-### Knowledge
-- Understanding REST principles on top of HTTP verbs.
+## Exercises
+---
+.left-column[
+  ## Exercises
+]
+.right-column[
+- Make `/dbconsole` _publicly_ accessible
+- How are passwords stored in the database?
+- Current user and logout on _main.gsp_ using `<sec:ifLoggedIn>`
+- Setup a new user `admin` which has role `ROLE_ADMIN`
+- Make users manageable for principals having role `ROLE_ADMIN`
+- Write integration tests for `UserController`
+- How to beautify the login view (`login/auth.gsp`)
+]
+---
+template: inverse
 
-## Resources
-
-Seven keys
-- https://www.theguardian.com/technology/2014/feb/28/seven-people-keys-worldwide-internet-security-web
-- https://www.icann.org/news/blog/the-problem-with-the-seven-keys
-
-Robustness principles
-https://en.wikipedia.org/wiki/Robustness_principle
-
-REST
-- By Roy Fielding: http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
-- Best practices: https://restfulapi.net/resource-naming/
-
-REST in Grails
-- http://docs.grails.org/latest/guide/webServices.html
-- http://guides.grails.org/rest-hibernate/guide/index.html
-- https://docs.grails.org/latest/guide/REST.html
-
-Rest docs usage
-https://github.com/jlstrater/grails-spring-restdocs-example
-
-## Homework recap
-
-Going through the proposed solution for Booking requests.
-
-## Demo / Live-coding
-
-- Go to the static page Pictures.html
-- Work through the JavaScript solution to fetch flickr photos.
-
-- Show how to expose Grails domain classes and controller actions
-  as REST endpoints with @Resource and "respond".
-
-## practical work
-
-- Extend the solution to fetch the next 10 photos when needed.
-
-## Homework
-
-Finish the practical work
-
-By following the approach of the practical work from above,
-change the search page for the Room reservation app such that
-a click on a link shows the results not in a new page but
-right in the search page itself.
-You will also need to prepare the respective Booking controller
-if you want to fetch the booking data as JSON.
+## Links
+---
+.left-column[
+  ## Links
+]
+.right-column[
+- [Eine kurze Frage an T-Mobile Österreich endete für den Mobilfunkanbieter im Fiasko](https://www.watson.ch/digital/online-sicherheit/521968741-eine-frage-an-den-t-mobile-kundendienst-endete-fuer-den-mobilfunkanbieter-im-fiasko)
+- [Grails Basic Auth](http://guides.grails.org/grails-basicauth/guide/index.html)
+- [How to do user login, logout and signup in GRAILS 3](https://www.youtube.com/watch?v=nOxeKwGoMf4)
+- [Spring Security Core Plugin](http://grails-plugins.github.io/grails-spring-security-core/latest)
+- [Spring Security UI Plugin](https://grails-plugins.github.io/grails-spring-security-ui/latest)
+- [How to integrate it into my project?](https://github.com/Dierk/WebEngineering-HS18/commits/dk_security) (review the last commits)
+]

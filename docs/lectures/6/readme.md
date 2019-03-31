@@ -68,7 +68,7 @@ class Room {
 | update\*                                       | Updates an existing instance. First parameter should be id |
 
 ```Groovy
-new Room(description: "5.3A17", capacity: 40).save()
+new Room(name: "5.3A17", max: 40).save()
 Room.list()
 Room.findAllByCapacityGreaterThan(20)
 def firstRoom = Room.get(1)
@@ -163,10 +163,9 @@ Controller actions and views are created transparently behind the scenes. And we
   ## Homework
 ]
 .right-column[
-Finish the practical work
+Finish the practical work (https://github.com/ribeaud/RoomReservation)
 
-Build on the practical work from above to
-create a full Web MVC-Cycle (without scaffolding) that shows:
+Build on the practical work from above to create a full Web **MVC**-Cycle (_without_ scaffolding) that shows:
 - All bookings from today until eternity for a given person
 - All available rooms for a requested day and time slot
 ]

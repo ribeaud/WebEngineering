@@ -9,10 +9,56 @@ class: center, middle, inverse
 ---
 layout: false
 .left-column[
+  ## 3-tier architecture
+]
+.right-column[
+![fh_three_tier_architecture](three_tier_architecture.png "Three Tier Architecture")
+]
+---
+.left-column[
+  ## Server with service
+]
+.right-column[
+![fh_server_with_service](server_with_service.png "Server With Service")
+]
+---
+.left-column[
+  ## Smart UI with service
+]
+.right-column[
+![fh_smart_ui_with_service](smart_ui_with_service.png "Smart UI With Service")
+]
+---
+.left-column[
+  ## REST API
+]
+.right-column[
+- https://www.flickr.com/services/api/request.rest.html
+- Get a key (for now use following one `865ae530a7dbb28c085dee3ef95e9986`)
+]
+---
+.left-column[
+  ## REST call
+  ### REST client
+]
+.right-column[
+![fh_rest_client](rest_client.png "REST client")
+]
+---
+.left-column[
+  ## REST API
+  ### REST client
+  ### Response
+]
+.right-column[
+![fh_rest_call_result](rest_call_result.png "REST call result")
+]
+---
+.left-column[
   ## Abilities
 ]
 .right-column[
-- Being able to use simple services server (controller).
+- Being able to use simple services from both client (smart view) and server (controller).
 - Implementing the full range of **REST** services for a persistent **Grails** domain model.
 ]
 ---

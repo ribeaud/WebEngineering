@@ -86,14 +86,82 @@ Fetch Resource URL Pattern:
   ### Verbs
 ]
 .right-column[
-| Verb      | Change | Use                                         |
-|-----------|--------|---------------------------------------------|
-| GET       | No     | Single or collective read,<br>may be cached |
-| PUT/PATCH | Yes    | Modify resource in place                    |
-| POST      | Yes    | Create new resource                         |
-| DELETE    | Yes    | Delete resource                             |
-| HEAD      | No     |                                             |
-| OPTIONS   | No     |                                             |
+| Verb      | Safe | Use                                         |
+|-----------|------|---------------------------------------------|
+| GET       | No   | Single or collective read,<br>may be cached |
+| PUT/PATCH | Yes  | Modify resource in place                    |
+| POST      | Yes  | Create new resource                         |
+| DELETE    | Yes  | Delete resource                             |
+| HEAD      | No   | Retrieve metadata about the resource        |
+| OPTIONS   | No   | Available HTTP verbs for a given resource   |
+
+_Safe_ methods are **HTTP** methods that do not modify resources.
+
+An _idempotent_ **HTTP** method is a **HTTP** method that can be called many times without different outcomes. It would not matter if the method is called only once, or ten times over. The result should be the same.
+]
+???
+- https://spring.io/understanding/REST
+- http://restcookbook.com/HTTP%20Methods/idempotency/
+---
+.left-column[
+  ## HTTP(S)
+  ### URL
+  ### Request
+  ### Verbs
+  ### Status codes
+]
+.right-column[
+- **2XX**: Success
+- **3XX**: Redirection
+- **4XX**: Client error
+- **5XX**: Server error
+]
+???
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+---
+.left-column[
+  ## REST
+]
+.right-column[
+**Re**presentational **S**tate **T**ransfer
+
+- Resource addressing by **URL**, resources easily understood directory structure **URIs**.
+- Uniform operations by **HTTP** verbs
+- Self-containment (no conversational state), stateless interactions store no client context on the server between requests.
+- Choice of format (**XML**, **JSON**, ...)
+]
+---
+.left-column[
+  ## REST
+  ### Issues
+]
+.right-column[
+- Easy to get started - easy to get lost.
+- Type safety, Versioning, Documentation (https://swagger.io)
+- Addressing Operations (like _search_) as Resources
+]
+---
+.left-column[
+  ## REST
+  ### Issues
+  ### Alternatives
+]
+.right-column[
+- SOAP (WSDL - Determines operations, NOT resources)
+- CORBA (IDL)
+- EJB, \*-RPC, RMI
+- Local services (method invocation)
+]
+---
+.left-column[
+  ## REST
+  ### Issues
+  ### Alternatives
+  ### Grails
+]
+.right-column[
+- http://docs.grails.org/latest/guide/webServices.html
+- Note the usage of `@Resource` in domain classes and _respond_ instead of _render_ in the controller actions.
 ]
 ---
 .left-column[

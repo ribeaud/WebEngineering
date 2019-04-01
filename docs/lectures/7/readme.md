@@ -52,6 +52,48 @@ layout: false
 ]
 .right-column[
 ![fh_rest_call_result](rest_call_result.png "REST call result")
+
+Fetch Resource URL Pattern:
+
+`http://static.flickr.com/<server>/<id>_<secret>_b.jpg`
+]
+---
+.left-column[
+  ## HTTP(S)
+  ### URL
+]
+.right-column[
+![fh_url](url.jpg "URL")
+]
+---
+.left-column[
+  ## HTTP(S)
+  ### URL
+  ### Request
+]
+.right-column[
+- **H**yper **T**ext ** T**ransfer **P**rotocol
+- Very simple
+- Line/delimiter based
+
+![fh_http_protocol](http_protocol.png "HTTP Protocol")
+]
+---
+.left-column[
+  ## HTTP(S)
+  ### URL
+  ### Request
+  ### Verbs
+]
+.right-column[
+| Verb      | Change | Use                                         |
+|-----------|--------|---------------------------------------------|
+| GET       | No     | Single or collective read,<br>may be cached |
+| PUT/PATCH | Yes    | Modify resource in place                    |
+| POST      | Yes    | Create new resource                         |
+| DELETE    | Yes    | Delete resource                             |
+| HEAD      | No     |                                             |
+| OPTIONS   | No     |                                             |
 ]
 ---
 .left-column[

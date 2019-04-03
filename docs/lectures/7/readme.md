@@ -42,8 +42,12 @@ layout: false
   ### REST client
 ]
 .right-column[
+REST client in **IntelliJ IDEA**:
+
 ![fh_rest_client](rest_client.png "REST client")
 ]
+???
+- Have a look at `rest-api.http` as well
 ---
 .left-column[
   ## REST API
@@ -88,12 +92,12 @@ Fetch Resource URL Pattern:
 .right-column[
 | Verb      | Safe | Use                                         |
 |-----------|------|---------------------------------------------|
-| GET       | No   | Single or collective read,<br>may be cached |
-| PUT/PATCH | Yes  | Modify resource in place                    |
-| POST      | Yes  | Create new resource                         |
-| DELETE    | Yes  | Delete resource                             |
-| HEAD      | No   | Retrieve metadata about the resource        |
-| OPTIONS   | No   | Available HTTP verbs for a given resource   |
+| GET       | Yes  | Single or collective read,<br>may be cached |
+| PUT/PATCH | No   | Modify resource in place                    |
+| POST      | No   | Create new resource                         |
+| DELETE    | No   | Delete resource                             |
+| HEAD      | Yes  | Retrieve metadata about the resource        |
+| OPTIONS   | Yes  | Available HTTP verbs for a given resource   |
 
 _Safe_ methods are **HTTP** methods that do not modify resources.
 
@@ -147,9 +151,9 @@ An _idempotent_ **HTTP** method is a **HTTP** method that can be called many tim
   ### Alternatives
 ]
 .right-column[
-- SOAP (WSDL - Determines operations, NOT resources)
-- CORBA (IDL)
-- EJB, \*-RPC, RMI
+- [SOAP](https://www.w3schools.com/xml/xml_soap.asp) (WSDL - Determines operations, NOT resources)
+- [CORBA](https://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture) (IDL)
+- [EJB](https://en.wikipedia.org/wiki/Enterprise_JavaBeans), \*-[RPC](https://en.wikipedia.org/wiki/Remote_procedure_call), [RMI](https://en.wikipedia.org/wiki/Java_remote_method_invocation)
 - Local services (method invocation)
 ]
 ---
@@ -160,7 +164,7 @@ An _idempotent_ **HTTP** method is a **HTTP** method that can be called many tim
   ### Grails
 ]
 .right-column[
-- http://docs.grails.org/latest/guide/webServices.html
+- https://docs.grails.org/3.2.1/guide/webServices.html
 - Note the usage of `@Resource` in domain classes and _respond_ instead of _render_ in the controller actions.
 ]
 ---
@@ -188,7 +192,7 @@ An _idempotent_ **HTTP** method is a **HTTP** method that can be called many tim
 - Best practices: https://restfulapi.net/resource-naming/
 
 **REST** in **Grails**
-- http://docs.grails.org/latest/guide/webServices.html
+- https://docs.grails.org/3.2.1/guide/webServices.html
 - http://guides.grails.org/rest-hibernate/guide/index.html
 - https://docs.grails.org/latest/guide/REST.html
 
@@ -201,21 +205,30 @@ An _idempotent_ **HTTP** method is a **HTTP** method that can be called many tim
 ]
 .right-column[
 - Show how to expose **Grails** domain classes and controller actions as **REST** endpoints with `@Resource` and `respond`.
+- With **Curl**:
+```
+curl -i -X GET http://localhost:8080/people/1 \
+      -H "Accept: application/xml"
+curl -i -X POST -H "Content-Type: application/json" \
+      -d '{"firstName":"Chris", "lastName": "Smith", \
+      "email": "c@s.com"}' localhost:8080/people
+curl -i -X PUT -H "Content-Type: application/json" \
+      -d '{"email":"chris.smith@gmail.com"}' localhost:8080/people/3
+```
 ]
+???
+- [Postman](https://www.getpostman.com/)
 ---
 .left-column[
   ## Homework
 ]
 .right-column[
-- `SearchPage.gsp`
+- `SearchRestfulController.groovy`
 ]
 ---
 .left-column[
   ## Practical work
 ]
 .right-column[
-Change the search page for the **RoomReservation** application such that a click on a link shows the results not in a new page but right in the search page itself.
-
-You will also need to prepare the respective `BookingController` if you want to fetch the booking data as **JSON**.
+- Write _integration_ tests against the **REST** API
 ]
----

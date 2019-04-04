@@ -5,7 +5,7 @@ class: center, middle, inverse
 # Web Engineering
 ## Security
 
-.footnote[<a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
+.footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
 ---
 layout: false
 .left-column[
@@ -41,7 +41,7 @@ Authorization is the process of verifying that you have access to something. Gai
 .right-column[
 The **Spring Security** plugin uses an _authority_ class to represent a user’s roles in the application.
 In general this class restricts URLs to users who have been assigned the required access rights.
-A user can be granted multiple roles to indicate various access rights in the application, and should have at least one. 
+A user can be granted multiple roles to indicate various access rights in the application, and should have at least one.
 ]
 ---
 template: inverse
@@ -67,20 +67,38 @@ See [here](https://grails-plugins.github.io/grails-spring-security-core/latest/#
 .left-column[
   ## Grails CLI
   ## s2-quickstart
-  ## feature/ security
+  ## Mappings
 ]
 .right-column[
-Checkout `feature/security` branch (after a `git fetch upstream` if needed).
-Have a look at following parts:
-- `build.gradle`
-- `BootStrap`
-- `resources.groovy`
-- `application.groovy`
-]
+You can choose among the following approaches to configuring request mappings for secure application URLs. The goal is to map URL patterns to the roles required to access those URLs.
+- `@Secured` annotations (default approach)
+- A simple Map in _application.groovy_
+- Requestmap domain class instances stored in the database
 ---
 template: inverse
 
 ## Exercises
+---
+.left-column[
+  ## Demo/Live-coding
+]
+.right-column[
+The following exercise is based on project https://github.com/ribeaud/SpringSecurity.
+
+1. `grails create-app SpringSecurity` (branch _master_)
+1. Adapt _build.gradle_ with following change:
+```groovy
+dependencies {
+   ...
+   compile 'org.grails.plugins:spring-security-core:3.2.3'
+   ...
+}
+```
+1. `./grailsw s2-quickstart springsecurity User Role` (branch _feature/s2-quickstart_)
+1. Add some controllers and implement first accesses (branch _feature/usage_)
+1. Add logout button (branch _feature/logout_)
+1. Debugging security (branch _feature/debugging_)
+]
 ---
 .left-column[
   ## Exercises
@@ -92,8 +110,10 @@ template: inverse
 - Setup a new user `admin` which has role `ROLE_ADMIN`
 - Make users manageable for principals having role `ROLE_ADMIN`
 - Write integration tests for `UserController`
-- How to beautify the login view (`login/auth.gsp`)
+- How to beautify the login view (`login/auth.gsp`)?
 ]
+???
+- See as well: https://github.com/Dierk/WebEngineering-HS18/commits/dk_security
 ---
 template: inverse
 
@@ -107,6 +127,4 @@ template: inverse
 - [Grails Basic Auth](http://guides.grails.org/grails-basicauth/guide/index.html)
 - [How to do user login, logout and signup in GRAILS 3](https://www.youtube.com/watch?v=nOxeKwGoMf4)
 - [Spring Security Core Plugin](http://grails-plugins.github.io/grails-spring-security-core/latest)
-- [Spring Security UI Plugin](https://grails-plugins.github.io/grails-spring-security-ui/latest)
-- [How to integrate it into my project?](https://github.com/Dierk/WebEngineering-HS18/commits/dk_security) (review the last commits)
 ]

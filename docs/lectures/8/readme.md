@@ -12,8 +12,9 @@ layout: false
   ## Authenti-cation
 ]
 .right-column[
-Authentication is the process of verifying who you are. When you log on to a PC with a user name and password you
-are authenticating.
+Authentication is the process of verifying who you are.
+
+When you log on to a PC with a user name and password you are _authenticating_.
 ]
 ---
 .left-column[
@@ -21,8 +22,9 @@ are authenticating.
   ## Authorization
 ]
 .right-column[
-Authorization is the process of verifying that you have access to something. Gaining access to a resource
-(e.g. directory on a hard disk) because the permissions configured on it allow you access is authorization.
+Authorization is the process of verifying that you have access to something.
+
+Gaining access to a resource (e.g. directory on a hard disk) because the permissions configured on it allow you access is _authorization_.
 ]
 ---
 .left-column[
@@ -40,7 +42,9 @@ Authorization is the process of verifying that you have access to something. Gai
 ]
 .right-column[
 The **Spring Security** plugin uses an _authority_ class to represent a user’s roles in the application.
+
 In general this class restricts URLs to users who have been assigned the required access rights.
+
 A user can be granted multiple roles to indicate various access rights in the application, and should have at least one.
 ]
 ---
@@ -70,10 +74,14 @@ See [here](https://grails-plugins.github.io/grails-spring-security-core/latest/#
   ## Mappings
 ]
 .right-column[
-You can choose among the following approaches to configuring request mappings for secure application URLs. The goal is to map URL patterns to the roles required to access those URLs.
+You can choose among the following approaches to configuring request mappings for secure application URLs.
+
+The goal is to map URL patterns to the roles required to access those URLs.
+
 - `@Secured` annotations (default approach)
 - A simple Map in _application.groovy_
 - Requestmap domain class instances stored in the database
+]
 ---
 template: inverse
 
@@ -99,13 +107,15 @@ dependencies {
 1. Add logout button (branch _feature/logout_)
 1. Debugging security (branch _feature/debugging_)
 ]
+???
+- _feature/debugging_: play with _/dbconsole_ and _passwordEncoder_
 ---
 .left-column[
   ## Exercises
 ]
 .right-column[
 - Make `/dbconsole` _publicly_ accessible
-- How are passwords stored in the database?
+- How are passwords stored in the database? (look for `UserPasswordEncoderListener`)
 - Current user and logout on _main.gsp_ using `<sec:ifLoggedIn>`
 - Setup a new user `admin` which has role `ROLE_ADMIN`
 - Make users manageable for principals having role `ROLE_ADMIN`

@@ -19,7 +19,7 @@ When you log on to a PC with a user name and password you are _authenticating_.
 ---
 .left-column[
   ## Authenti-cation
-  ## Authorization
+  ## Authori-zation
 ]
 .right-column[
 Authorization is the process of verifying that you have access to something.

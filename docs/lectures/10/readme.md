@@ -1,33 +1,25 @@
-# WebEngineering Module, Graded Exercise
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+# Web Engineering
+## Javascript
 
-## Commit Proposal
-
-Matriculation Number: <to be filled by student>
-
-Project idea short description: 
-
-
-## Project confirmation
-
-<to be filled by lecturer>
-
-
-## Project delivery <to be filled by student>
-
-How to start the project: (if other than `grailsw run-app`)
-
-How to test the project:  (if other than `grailsw test-app`)
-
-Hand-written, static HTML 
-project description:      (if other than `index.html` in project root directory)
-
-External contributions:
-
-Other comments: 
-
-I'm particular proud of:
-
-
-## Project grading 
-
-<to be filled by lecturer>
+.footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
+---
+layout: false
+.left-column[
+  ## Demo/Live-coding
+]
+.right-column[
+- Go to the static page _pictures.html_ (http://localhost:8080/static/pictures.html)
+- Work through the JavaScript solution to fetch **Flickr** photos
+]
+---
+.left-column[
+  ## Practical work
+]
+.right-column[
+- Extend the solution to fetch the next 10 photos when needed.
+]
+---

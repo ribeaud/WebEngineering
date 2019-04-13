@@ -9,7 +9,64 @@ class: center, middle, inverse
 ---
 layout: false
 .left-column[
-  ##
+  ## Overview
 ]
 .right-column[
+- **Single-person** activity
+- _Bring-your-own_ idea or any of https://flaviocopes.com/sample-app-ideas/
+- Delivery format: **Grails** application in [GitHub](https://www.github.com/). You might take any profile of the ones listed [here](https://grails.org/profiles.html). _Web_ profile is the default and preferred one.
+]
+---
+.left-column[
+  ## Timeline
+]
+.right-column[
+- 23.11. Commit proposal (template)
+- 26.11. Me accepting proposal (git commit)
+- 18.12. Delivery Deadline
+- 15.01. Grading via git commit
+]
+---
+.left-column[
+  ## Allowed
+]
+.right-column[
+- Using code from course material
+- Using code from [W3Schools](https://www.w3schools.com/) / tutorials
+- Using _external_ dependencies. Notice however that the pre-generated project already contains some.
+- Discuss with others, getting help
+]
+---
+template: inverse
+# Clear Demarcation
+---
+template: inverse
+## External code  can be used but MUST be  clearly marked
+---
+.left-column[
+  ## External code markers
+]
+.right-column[
+As appropriate:
+
+- Comment(s) in code
+- Extra commit with comment: word `EXTERNAL` and the origin
+]
+---
+.left-column[
+  ## Grading scheme
+]
+.right-column[
+- See the spreadsheet for details.
+- Maximun **50** points
+- Grade: 1.0 + _points_/10
+- Cheating attempt => **1.0**
+]
+---
+.left-column[
+  ## Git
+]
+.right-column[
+- Commit early, commit often
+- Putting all of your solution into a single commit would be extremely suspicious
 ]

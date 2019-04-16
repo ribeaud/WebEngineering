@@ -21,10 +21,10 @@ layout: false
   ## Timeline
 ]
 .right-column[
-- 23.11. Commit proposal (template)
-- 26.11. Me accepting proposal (git commit)
-- 18.12. Delivery Deadline
-- 15.01. Grading via git commit
+- 19.04. Commit proposal (template)
+- 23.04. Me accepting proposal (git commit)
+- 21.05. (inclusive) Delivery Deadline
+- 11.06. (hopefully) Grading via git commit
 ]
 ---
 .left-column[
@@ -67,6 +67,9 @@ As appropriate:
   ## Git
 ]
 .right-column[
+- **All** communication is done in git
+- We work in the github **classroom** repo
+- We work on the **master** branch
 - Commit early, commit often
 - Putting all of your solution into a single commit would be extremely suspicious
 ]

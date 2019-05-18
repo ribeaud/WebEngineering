@@ -91,6 +91,41 @@ We have following useful attributes/methods:
 - _.js_ files for **cross-page** sharing,  unit testing, [linting](https://en.wikipedia.org/wiki/Lint_%28software%29), tool support, ...
 ]
 ---
+template: inverse
+
+## Demo/Live-coding
+---
+.left-column[
+  ## Room-Reservation
+]
+.right-column[
+1. Project [RoomReservation](https://github.com/ribeaud/RoomReservation), branch _services_solution_
+1. Start the application and go to the static page _pictures.html_ (http://localhost:8080/static/pictures.html)
+1. Work through the **JavaScript** solution to fetch **Flickr** photos
+]
+---
+.left-column[
+  ## Web-Engineering-HS19
+]
+.right-column[
+
+### Revisit InPlaceCalculator
+
+1. Project [WebEngineering-HS19](https://github.com/ribeaud/WebEngineering-HS19), branch _feature/layout_
+1. Currently we do have validation on **server** side. We would to have it on **client** side.
+1. Implemented view looks as following: server page, template, taglib, layout (use of `<asset:stylesheet>`).
+1. Final result stored in _feature/javascript_ branch.
+
+### Extend integration tests
+
+1. Let the tests run
+1. Uncomment lines in `src/integration-test/groovy/mvc/InPlaceCalculatorSpec.groovy`
+1. Run the tests and see them failing
+1. onChange in-line solution such that the tests pass
+1. refactor into in-page solution with functions
+1. refactor into external .js file
+]
+---
 .left-column[
   ## Abilities
 ]
@@ -126,20 +161,3 @@ Favorite **JS** learning resources from [Joel from egghead](https://egghead.io/i
 - https://watchandcode.com/p/practical-javascript
 - https://javascript.info/
 ]
----
-.left-column[
-  ## Demo/Live-coding
-]
-.right-column[
-1. Project [RoomReservation](https://github.com/ribeaud/RoomReservation), branch _services_solution_
-1. Start the application and o to the static page _pictures.html_ (http://localhost:8080/static/pictures.html)
-1. Work through the **JavaScript** solution to fetch **Flickr** photos
-]
----
-.left-column[
-  ## Practical work
-]
-.right-column[
-- Extend the solution to fetch the next 10 photos when needed.
-]
----

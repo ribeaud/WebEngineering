@@ -44,7 +44,9 @@ To quickly try out some **JavaScript**:
   ## Document
 ]
 .right-column[
-When an **HTML** document is loaded into a web browser, it becomes a **document object**. We have following useful methods:
+When an **HTML** document is loaded into a web browser, it becomes a **document object**.
+
+We have following useful methods:
 - `document.write(html)`: Writes **HTML** expressions to a document.
 - `document.getElementById(id)`: Gets the element with the specified ID.
 - `document.querySelector(selector)`: Gets the first element found with given _selector_.
@@ -62,26 +64,31 @@ document.querySelector("div > p");
   ## Element
 ]
 .right-column[
-element.id
-element.value = newValue;
-element.innerHTML = newContent;
-element.classList.add(newStyle);
+In the **HTML** DOM, the **element object** represents an **HTML** element, like `p`, `div`, `a`, `table`, or any other **HTML** element.
+
+We have following useful attributes/methods:
+
+- `element.id // Gets the ID of an element`
+- `element.value = newValue; // Set element's value to given new one`
+- `element.innerHTML = newContent; // Sets or returns the content of an element`
+- `element.classList.add(newStyle); // Adds new style class to list of already present ones`
 ]
 ---
 .left-column[
   ## Function declaration
 ]
 .right-column[
+![fh_function_anatomy](function-anatomy.png "Function Anatomy")
 ]
 ---
 .left-column[
   ## Engineering Aspects
 ]
 .right-column[
-Where to put JS code:
-in-line only for one-liners
-in-page for local functions
-.js files for cross-page sharing,  unit testing, linting, tool support,
+#### Where to put **JavaScript** code:
+- _in-line_ only for one-liners
+- _in-page_ for **local** functions
+- _.js_ files for **cross-page** sharing,  unit testing, [linting](https://en.wikipedia.org/wiki/Lint_%28software%29), tool support, ...
 ]
 ---
 .left-column[

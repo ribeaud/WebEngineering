@@ -9,6 +9,37 @@ class: center, middle, inverse
 ---
 layout: false
 .left-column[
+  ## Story so far
+]
+.right-column[
+- Static pages: **HTML** and **CSS**
+- **MVC**: `Model`, `View`, `Controller`
+- View: static page, server page, **dynamic page** (new!)
+]
+---
+.left-column[
+  ## Request-Response
+]
+.right-column[
+  ![fh_request_response](request_response.png "Request-Response")
+]
+---
+.left-column[
+  ## Direct Manipulation
+]
+.right-column[
+  ![fh_direct_manipulation](direct_manipulation.png "Direct Manipulation")
+
+  **JavaScript** is THE [Scripting language](https://en.wikipedia.org/wiki/Scripting_language) for web browsers.
+
+  **Java** vs. **JavaScript**: what are the differences between both languages?
+]
+???
+- Compiled vs. Interpreted
+- Both can run in a browser but ...
+- Both can run on a server
+---
+.left-column[
   ## JavaScript
 ]
 .right-column[
@@ -94,6 +125,14 @@ We have following useful attributes/methods:
 template: inverse
 
 ## Demo/Live-coding
+---
+.left-column[
+  ## Exercises
+]
+.right-column[
+- https://www.w3schools.com/js/js_exercises.asp
+- https://www.w3schools.com/js/js_quiz.asp
+]
 ---
 .left-column[
   ## Room-Reservation

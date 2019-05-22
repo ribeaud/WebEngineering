@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Temperatur Converter</title>
+<script>
+function convert() {
+  // Formula: T(°F) = T(°C) × 9/5 + 32
+  const celsiusInput = document.getElementById('celsius').value;
+  if (!isNumeric(celsiusInput)) {
+    window.alert('Invalid input!');
+    return;
+  }
+  const celsius = parseFloat(celsiusInput);
+  const fahrenheit = celsius * (9 / 5)  + 32;
+  document.getElementById('fahrenheit').value = fahrenheit;
+}
+
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
+</script>
+</head>
+<body>
+<form>
+  Celsius <input type="number" id="celsius" name="celsius"><br />
+  Fahrenheit <input type="number" id="fahrenheit" name="fahrenheit"><br />
+  <button type="button" onclick="convert();">Convert</button>
+</form>
+</body>
+</html>

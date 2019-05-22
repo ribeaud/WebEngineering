@@ -1,0 +1,3 @@
+- Talk about JavaScript Object
+- We could go to ES6 only
+- Testing ohne Grails

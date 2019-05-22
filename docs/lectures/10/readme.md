@@ -9,7 +9,7 @@ class: center, middle, inverse
 ---
 layout: false
 .left-column[
-  ## Story so far
+  ## Story So Far
 ]
 .right-column[
 - Static pages: **HTML** and **CSS**
@@ -56,7 +56,7 @@ To quickly try out some **JavaScript**:
 ]
 ---
 .left-column[
-  ## Event attributes
+  ## Event Attributes
 ]
 .right-column[
 **onclick**, **onmouseover**, **onchange** (_input_ field), ...
@@ -106,7 +106,7 @@ We have following useful attributes/methods:
 ]
 ---
 .left-column[
-  ## Function declaration
+  ## Function Declaration
 ]
 .right-column[
 ![fh_function_anatomy](function-anatomy.png "Function Anatomy")
@@ -151,7 +151,7 @@ template: inverse
 ### Revisit InPlaceCalculator
 
 1. Project [WebEngineering-HS19](https://github.com/ribeaud/WebEngineering-HS19), branch _feature/layout_
-1. Currently we do have validation on **server** side. We would to have it on **client** side.
+1. Currently we do have validation on **server** side. We would like to have it on **client** side.
 1. Implemented view looks as following: server page, template, taglib, layout (use of `<asset:stylesheet>`).
 1. Final result stored in _feature/javascript_ branch.
 

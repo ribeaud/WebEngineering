@@ -160,7 +160,7 @@ template: inverse
 1. Let the tests run
 1. Uncomment lines in `src/integration-test/groovy/mvc/InPlaceCalculatorSpec.groovy`
 1. Run the tests and see them failing
-1. `_onchange` _in-line_ solution such that the tests pass
+1. `onchange` _in-line_ solution such that the tests pass
 1. refactor into _in-page_ solution with functions
 1. refactor into _external_ **.js** file
 ]

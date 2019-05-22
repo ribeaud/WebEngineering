@@ -1,0 +1,11 @@
+#!/bin/bash
+# Update and Install Software
+yum -y upgrade
+yum -y install java-1.8.0 git
+cd /home/ec2-user
+
+# Download Github Source Code RoomReservation App
+git clone -b solution https://github.com/ribeaud/RoomReservation
+cd RoomReservation
+alternatives --set java /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
+./grailsw run-app

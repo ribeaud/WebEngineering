@@ -19,7 +19,6 @@ layout: false
 ???
 - https://github.com/WebEngineering-FHNW/fs19-de-cr-graded-exercise-Humbi1992
 ---
-layout: false
 .left-column[
   ## Approaches
 ]
@@ -31,7 +30,6 @@ Prerequisite Knowledge: **HTML**, **CSS**, **JavaScript**, **Web-MVC**
 - Serve different views per capability (**MVC**)
 ]
 ---
-layout: false
 .left-column[
   ## Approaches
   ### Flexible layout
@@ -46,7 +44,6 @@ https://jsfiddle.net/86eLnadb/21/
 ???
 - https://www.smashingmagazine.com/2017/07/enhancing-css-layout-floats-flexbox-grid/
 ---
-layout: false
 .left-column[
   ## Approaches
   ### Flexible layout
@@ -71,8 +68,8 @@ max-width, max-device-width, min-width, min-device-width, (height) orientation (
 ???
 - [Media queries examples](https://www.w3schools.com/css/css3_mediaqueries_ex.asp)
 - [min-width vs. min-device-width](https://stackoverflow.com/questions/15276218/css-media-queries-min-width-and-min-device-width-conflicting)
+- [CSS Media Queries & Using Available Space](https://css-tricks.com/css-media-queries/)
 ---
-layout: false
 .left-column[
   ## Approaches
   ### Flexible layout
@@ -90,7 +87,6 @@ screen vs. window vs. page
 ```
 ]
 ---
-layout: false
 .left-column[
   ## Approaches
   ### Flexible layout
@@ -106,18 +102,38 @@ layout: false
 ![fh_request_response](request_response.png "Request - Response")
 ]
 ---
-layout: false
 .left-column[
-  ## Demo / Live-coding / Lecture
+  ## How to change the view?
+]
+.right-column[
+- Use different **CSS**
+- Select a different layout
+- Rendering a different view
+]
+---
+.left-column[
+  ## When to use
+]
+.right-column[
+#### Rule of thumb
+|                                           |                        |
+|-------------------------------------------|------------------------|
+|**CSS** _float_ (or _flexbox_, or _grid_)  | Always consider        |
+|`@media`                                   | Mostly static content  |
+|`onresize`                                 | Fine-grained control   |
+|**MVC**                                    | Default                |
+]
+---
+.left-column[
+  ## Demo / Live-coding
 ]
 .right-column[
 - How to connect with a mobile device to localhost
 - Using flexible layout
 - Using media queries
-- Using Server Pages for mobile views
+- Using **server pages** for mobile views
 ]
 ---
-layout: false
 .left-column[
   ## Practical Work
 ]
@@ -125,7 +141,6 @@ layout: false
 - Make a page of your choice web friendly. Suggestion: in the InPlaceCalculator, make labels not appear left but on top of the input field.
 ]
 ---
-layout: false
 .left-column[
   ## Abilities
 ]
@@ -133,7 +148,6 @@ layout: false
 Being able to make a web experience mobile-friendly.
 ]
 ---
-layout: false
 .left-column[
   ## Knowledge
 ]

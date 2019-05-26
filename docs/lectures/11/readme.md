@@ -37,7 +37,14 @@ layout: false
   ### Flexible layout
 ]
 .right-column[
+Responsive sites use _fluid grids_. All page elements are sized by proportion, rather than pixels. Eventually, you could use [calc](https://www.w3schools.com/cssref/func_calc.asp) method.
+
+From [float](https://www.w3schools.com/css/css_float.asp), to [flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) layout (and to [grid](https://css-tricks.com/snippets/css/complete-guide-grid/) layout)
+
+https://jsfiddle.net/86eLnadb/21/
 ]
+???
+- https://www.smashingmagazine.com/2017/07/enhancing-css-layout-floats-flexbox-grid/
 ---
 layout: false
 .left-column[
@@ -46,7 +53,24 @@ layout: false
   ### Media queries
 ]
 .right-column[
+```css
+#title { width: 50%; }
+
+@media screen and (max-width: 800px) {
+   #title { width: 100%; }
+}
+```
+```html
+<link rel="stylesheet" type="text/css" media="screen and
+(min-width: 361px) and (max-width: 480px)"
+href="landscape.css">
+```
+#### Media query attributes
+max-width, max-device-width, min-width, min-device-width, (height) orientation (portrait, landscape), [min-,max-,device-]aspect-ratio, ...
 ]
+???
+- [Media queries examples](https://www.w3schools.com/css/css3_mediaqueries_ex.asp)
+- [min-width vs. min-device-width](https://stackoverflow.com/questions/15276218/css-media-queries-min-width-and-min-device-width-conflicting)
 ---
 layout: false
 .left-column[
@@ -56,6 +80,14 @@ layout: false
   ### Dynamic in-page logic
 ]
 .right-column[
+```html
+<body onresize="adapt()">
+
+<script>
+   function adapt() { …; screen.size … }
+</script>
+screen vs. window vs. page
+```
 ]
 ---
 layout: false
@@ -67,6 +99,11 @@ layout: false
   ### View per Capability
 ]
 .right-column[
+#### Questions
+- How to detect the capability?
+- How to change the view?
+
+![fh_request_response](request_response.png "Request - Response")
 ]
 ---
 layout: false

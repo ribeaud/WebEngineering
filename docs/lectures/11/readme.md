@@ -133,9 +133,11 @@ screen vs. window vs. page
   ## How to change the view?
 ]
 .right-column[
+Using browser detection [plugin](http://plugins.grails.org/plugin/mathifonseca/browser-detection) on **server** side.
+#### Possible strategies
 - Use different **CSS**
-- Select a different layout
-- Rendering a different view
+- Select a different **Grails** _layout_
+- Rendering a different _view_
 ]
 ---
 .left-column[
@@ -171,7 +173,7 @@ screen vs. window vs. page
   ## Practical Work
 ]
 .right-column[
-- Make a page of your choice web friendly. Suggestion: in the InPlaceCalculator, make labels not appear left but on top of the input field.
+Make a page of your choice web friendly. Suggestion: in [InPlaceCalculator](https://github.com/ribeaud/WebEngineering-HS19/branches) (branch: _feature/inplacecalculator_), put label on the left of corresponding input field when there is enough place, on the top otherwise.
 ]
 ---
 .left-column[

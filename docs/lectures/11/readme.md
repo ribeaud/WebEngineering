@@ -20,6 +20,19 @@ layout: false
 - https://github.com/WebEngineering-FHNW/fs19-de-cr-graded-exercise-Humbi1992
 ---
 .left-column[
+  ## Setting The Viewport
+]
+.right-column[
+```html
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+```
+This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling.
+]
+???
+https://www.w3schools.com/html/html_responsive.asp
+---
+.left-column[
   ## Approaches
 ]
 .right-column[
@@ -35,13 +48,22 @@ Prerequisite Knowledge: **HTML**, **CSS**, **JavaScript**, **Web-MVC**
   ### Flexible layout
 ]
 .right-column[
-Responsive sites use _fluid grids_. All page elements are sized by proportion, rather than pixels. Eventually, you could use [calc](https://www.w3schools.com/cssref/func_calc.asp) method.
-
+Responsive sites use _fluid grids_. All page elements are sized by proportion, rather than pixels.
+#### Width
+```html
+<img src="img_girl.jpg" style="width:100%;">
+```
+#### Layout
 From [float](https://www.w3schools.com/css/css_float.asp), to [flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) layout (and to [grid](https://css-tricks.com/snippets/css/complete-guide-grid/) layout)
 
 https://jsfiddle.net/86eLnadb/21/
+#### Text size
+The text size can be set with a **vw** unit, which means the _viewport width_.
+#### `<picture>`
+The **HTML** `<picture>` element allows you to define different images for different browser window sizes.
 ]
 ???
+- https://www.w3schools.com/html/html_responsive.asp
 - https://www.smashingmagazine.com/2017/07/enhancing-css-layout-floats-flexbox-grid/
 ---
 .left-column[
@@ -50,6 +72,7 @@ https://jsfiddle.net/86eLnadb/21/
   ### Media queries
 ]
 .right-column[
+Change the width of element identified by ID `#title` to **100%** when the browser window is _800px_ wide or less:
 ```css
 #title { width: 50%; }
 
@@ -57,12 +80,16 @@ https://jsfiddle.net/86eLnadb/21/
    #title { width: 100%; }
 }
 ```
+For browser window width between **361px** and **400px**:
 ```html
 <link rel="stylesheet" type="text/css" media="screen and
 (min-width: 361px) and (max-width: 480px)"
 href="landscape.css">
 ```
+If you apply two rules that collide to the same elements, it will choose the last one that was declared, unless the first one has the `!important` marker or is more specific.
+
 #### Media query attributes
+
 max-width, max-device-width, min-width, min-device-width, (height) orientation (portrait, landscape), [min-,max-,device-]aspect-ratio, ...
 ]
 ???
@@ -128,11 +155,17 @@ screen vs. window vs. page
   ## Demo / Live-coding
 ]
 .right-column[
-- How to connect with a mobile device to localhost
+#### Exercises
+- [exercise.html](exercise.html)
+
+#### Possible workflows
+- How to connect with a mobile device to localhost?
 - Using flexible layout
 - Using media queries
 - Using **server pages** for mobile views
 ]
+???
+- https://www.w3schools.com/howto/howto_css_responsive_header.asp
 ---
 .left-column[
   ## Practical Work

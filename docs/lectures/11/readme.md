@@ -63,7 +63,6 @@ The text size can be set with a **vw** unit, which means the _viewport width_.
 The **HTML** `<picture>` element allows you to define different images for different browser window sizes.
 ]
 ???
-- https://www.w3schools.com/html/html_responsive.asp
 - https://www.smashingmagazine.com/2017/07/enhancing-css-layout-floats-flexbox-grid/
 ---
 .left-column[
@@ -108,10 +107,11 @@ max-width, max-device-width, min-width, min-device-width, (height) orientation (
 <body onresize="adapt()">
 
 <script>
-   function adapt() { …; screen.size … }
+   function adapt() { …; screen.width … }
 </script>
-screen vs. window vs. page
 ```
+#### [screen](https://www.w3schools.com/jsref/obj_screen.asp) vs. [window](https://www.w3schools.com/jsref/obj_window.asp)
+Understand the difference between `screen.width` and `window.innerWidth`
 ]
 ---
 .left-column[
@@ -167,7 +167,9 @@ Using browser detection [plugin](http://plugins.grails.org/plugin/mathifonseca/b
 - Using **server pages** for mobile views
 ]
 ???
+- https://www.w3schools.com/howto/howto_js_topnav.asp
 - https://www.w3schools.com/howto/howto_css_responsive_header.asp
+- https://ngrok.com/
 ---
 .left-column[
   ## Practical Work

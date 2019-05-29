@@ -64,6 +64,7 @@ The **HTML** `<picture>` element allows you to define different images for diffe
 ]
 ???
 - https://www.smashingmagazine.com/2017/07/enhancing-css-layout-floats-flexbox-grid/
+- [A pixel no longer equals a pixel](https://juiceboxinteractive.com/blog/a-pixel-is-not-a-pixel-designing-for-a-new-generation-of-mobile-devices/)
 ---
 .left-column[
   ## Approaches

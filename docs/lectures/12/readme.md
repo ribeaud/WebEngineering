@@ -49,8 +49,9 @@ Only on first deployment!
 1. Install **Java**
 1. Install **Tomcat** up to a tutorial found in the Internet (I've used `brew install tomcat`)
 1. Make sure you've set an user having role _manager-gui_ (you have to adapt `tomcat-users.xml` file)
-1. Generate the WAR (`./grailsw war`)
+1. Generate the WAR (`./grailsw war` or `./gradlew assemble`)
 1. Upload WAR file via _manager-gui_
+
 ![fh_tomcat](tomcat.png "Tomcat")
 ]
 ---
@@ -58,8 +59,9 @@ Only on first deployment!
   ## PaaS
 ]
 .right-column[
-1. `./gradlew assemble`
-1. Upload FAT jar file to a _Platform-as-a-Service_ (**PaaS**) provider, e.g. **AWS** ([Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/))
+Upload WAR file to a _Platform-as-a-Service_ (**PaaS**) provider, e.g. [Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
+
+![fh_beanstalk](beanstalk.png "Elastic Beanstalk")
 ]
 ???
 http://guides.grails.org/grails-elasticbeanstalk/guide/index.html
@@ -68,7 +70,9 @@ http://guides.grails.org/grails-elasticbeanstalk/guide/index.html
   ## IaaS
 ]
 .right-column[
-  1. Upload a WAR (or _fat_ JAR) to a provisioned/prepared VM
+1. Install **Java8** on the target VM
+1. Upload WAR to the provisioned/prepared VM using tools like [scp](https://en.wikipedia.org/wiki/Secure_copy)
+1. This WAR is executable as well. Start the application with `java -jar <my-war>`
 ]
 ---
 .left-column[
@@ -105,4 +109,3 @@ DDoS, spam, captcha, password storage, lost passwords, content encoding
 harvesting, logging, monitoring, (locale, time zones, character encodings)
 data protection, forgetful data
 ]
----

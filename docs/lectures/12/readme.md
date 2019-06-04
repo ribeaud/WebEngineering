@@ -24,8 +24,8 @@ To access the **AWS** classrom, perform following steps:
 ]
 .right-column[
 1. Upload WAR file to **Java** web server, e.g. **Tomcat** via _manager-gui_
-1. Upload _fat_ JAR file to a **PaaS** provider
-1. Upload executable to an **IaaS** provider (upload to a provided/available VM)
+1. Upload WAR file to a **PaaS** provider
+1. Upload executable WAR to an **IaaS** provider (upload to a provided/available VM)
 ]
 ---
 .left-column[
@@ -33,7 +33,7 @@ To access the **AWS** classrom, perform following steps:
 ]
 .right-column[
 ### Adapt grails-app/conf/application.yml
-~~none~~ should become **create**
+~~none~~ becomes **create**
 ```yml
 production:
   dataSource:
@@ -72,40 +72,37 @@ http://guides.grails.org/grails-elasticbeanstalk/guide/index.html
 .right-column[
 1. Install **Java8** on the target VM
 1. Upload WAR to the provisioned/prepared VM using tools like [scp](https://en.wikipedia.org/wiki/Secure_copy)
-1. This WAR is executable as well. Start the application with `java -jar <my-war>`
+1. This WAR is executable. Start the application with `java -jar <my-war>`
 ]
 ---
 .left-column[
   ## Web Atrocities
 ]
 .right-column[
-- Care for your data (download, backup)
-- Data harvesting
+- Care for your data (download, backup, accessibility/protection)
+- Data harvesting: data harvesting is a process where a small script, also known as a malicious bot, is used to automatically extract large amount of data from websites and use it for other purposes.
 - Data protection
-- Forgetful data
-- Denial of Service attacks, Spamming
-- Proper Password handling, encryption
-- Logging, Monitoring
+- Denial-of-service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) attacks, Spamming
+- Proper password handling, encryption
+- Logging, monitoring
 - Localization  formats, timezones, character encoding
+- Server updates/upgrades
+- Server security access
 ]
+???
+- [What You Need to Know about Data Harvesting and How to Prevent it](https://blog.caspio.com/what-you-need-to-know-about-data-harvesting-and-how-to-prevent-it/)
+- [7% of All Amazon S3 Servers Are Exposed, Explaining Recent Surge of Data Leaks](https://www.bleepingcomputer.com/news/security/7-percent-of-all-amazon-s3-servers-are-exposed-explaining-recent-surge-of-data-leaks/)
 ---
 .left-column[
-  ## Abilities
+## What we've learned
 ]
 .right-column[
-  Being able to deploy to an open **PaaS** provider.
-]
----
-.left-column[
-  ## Knowledge
-]
-.right-column[
+### Abilities
+
+Being able to deploy to an open **PaaS** provider.
+
+### Knowledge
+
 Knowing some of the atrocities and difficulties that come
 with being on the web.
-
-### Atrocities when running on the web
-
-DDoS, spam, captcha, password storage, lost passwords, content encoding
-harvesting, logging, monitoring, (locale, time zones, character encodings)
-data protection, forgetful data
 ]

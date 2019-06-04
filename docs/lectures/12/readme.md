@@ -33,7 +33,7 @@ To access the **AWS** classrom, perform following steps:
 ]
 .right-column[
 ### Adapt grails-app/conf/application.yml
-~~node~~ should become **create**
+~~none~~ should become **create**
 ```yml
 production:
   dataSource:
@@ -52,6 +52,37 @@ Only on first deployment!
 1. Generate the WAR (`./grailsw war`)
 1. Upload WAR file via _manager-gui_
 ![fh_tomcat](tomcat.png "Tomcat")
+]
+---
+.left-column[
+  ## PaaS
+]
+.right-column[
+1. `./gradlew assemble`
+1. Upload FAT jar file to a _Platform-as-a-Service_ (**PaaS**) provider, e.g. **AWS** ([Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/))
+]
+???
+http://guides.grails.org/grails-elasticbeanstalk/guide/index.html
+---
+.left-column[
+  ## IaaS
+]
+.right-column[
+  1. Upload a WAR (or _fat_ JAR) to a provisioned/prepared VM
+]
+---
+.left-column[
+  ## Web Atrocities
+]
+.right-column[
+- Care for your data (download, backup)
+- Data harvesting
+- Data protection
+- Forgetful data
+- Denial of Service attacks, Spamming
+- Proper Password handling, encryption
+- Logging, Monitoring
+- Localization  formats, timezones, character encoding
 ]
 ---
 .left-column[

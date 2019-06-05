@@ -29,31 +29,28 @@ To access the **AWS** classrom, perform following steps:
 ]
 ---
 .left-column[
-  ## Preparation
-]
-.right-column[
-### Adapt grails-app/conf/application.yml
-~~none~~ becomes **create**
-```yml
-production:
-  dataSource:
-    dbCreate: create
-```
-Only on first deployment!
-]
----
-.left-column[
   ## Tomcat
 ]
 .right-column[
 1. Install **Java**
-1. Install **Tomcat** up to a tutorial found in the Internet (I've used `brew install tomcat`)
-1. Make sure you've set an user having role _manager-gui_ (you have to adapt `tomcat-users.xml` file)
-1. Generate the WAR (`./grailsw war` or `./gradlew assemble`)
+1. Install **Tomcat** (_v9_ is fine) up to a tutorial found in the Internet (I've used `brew install tomcat`)
+1. Make sure you've set an user having role _manager-gui_ (you have to adapt `tomcat-users.xml` file):
+```xml
+...
+      <role rolename="manager-gui"/>
+      <user username="tomcat" password="tomcat" roles="manager-gui"/>
+</tomcat-users>
+```
+1. Increase **Tomcat** upload file size limit as suggested [here](https://tecadmin.net/increase-tomcat-upload-file-size-limit/)
+1. Generate the WAR (`./grailsw dev war`)
 1. Upload WAR file via _manager-gui_
 
 ![fh_tomcat](tomcat.png "Tomcat")
 ]
+???
+We are still using the `development` environment (and NOT the `production` one). This is for two reasons:
+- We do NOT currently have a proper database
+- Writing to the filesystem (as **H2** would do) could be problematic
 ---
 .left-column[
   ## PaaS
@@ -105,4 +102,7 @@ Being able to deploy to an open **PaaS** provider.
 
 Knowing some of the atrocities and difficulties that come
 with being on the web.
+
+### Links
+- https://docs.grails.org/latest/guide/deployment.html
 ]

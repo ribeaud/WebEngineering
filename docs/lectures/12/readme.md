@@ -61,7 +61,8 @@ Upload WAR file to a _Platform-as-a-Service_ (**PaaS**) provider, e.g. [Elastic 
 ![fh_beanstalk](beanstalk.png "Elastic Beanstalk")
 ]
 ???
-http://guides.grails.org/grails-elasticbeanstalk/guide/index.html
+- http://guides.grails.org/grails-elasticbeanstalk/guide/index.html
+- [How to deploy a Grails 3 app to AWS Beanstalk](https://medium.com/agorapulse-stories/how-to-deploy-grails-3-app-to-aws-elastic-beanstalk-with-gradle-and-travis-318d084c0f7d)
 ---
 .left-column[
   ## IaaS

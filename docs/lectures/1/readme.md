@@ -128,6 +128,8 @@ Lookup:
 - `<title>`
 - `<h1>`, `<h2>`, ...`<h6>` (_block_)
 - `<p>`
+- `<div>`
+- `<span>`
 - `<a>` (_inline_): links, or **anchors**, to other pages.
 - `<img>` (_inline_)
 - `<meta>`: describes meta data of the web page. Metadata will not be displayed on the page, but will be machine parsable.
@@ -216,6 +218,8 @@ Examples:
 ]
 ???
 - https://www.pluralsight.com/guides/semantic-html
+- http://seekbrevity.com/semantic-markup-important-web-design/
+- https://internetingishard.com/html-and-css/semantic-html/
 ---
 .left-column[
   ## DOM
@@ -226,6 +230,9 @@ Document Object Model
 ![fh_DOM](dom.png "DOM")
 ]
 ???
+- Outline Geschichte?
+- https://dev.to/ananyaneogi/html-can-do-that-c0n
+- https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65
 - https://javascript.info/dom-nodes#see-it-for-yourself
 - http://software.hixie.ch/utilities/js/live-dom-viewer/
 - https://javascript.info/article/dom-nodes/elks.html in the browser console

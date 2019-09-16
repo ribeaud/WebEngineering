@@ -20,6 +20,7 @@ Discussion
 - Avantages vs. Disadvantages?
 ]
 ???
+- https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65
 - **Avantages**:
   - MVC supports rapid and parallel development.
 - **Disadvantages**:

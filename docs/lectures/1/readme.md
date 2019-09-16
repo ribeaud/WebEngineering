@@ -68,6 +68,8 @@ The `<!DOCTYPE>` declaration is not an **HTML** tag; it is an instruction to the
 </html>
 ```
 ]
+???
+- https://dev.to/ananyaneogi/html-can-do-that-c0n
 ---
 .left-column[
   ## Web Standards
@@ -185,7 +187,6 @@ Lookup:
 ]
 ???
 - `This is <strong>my</strong> cat` vs. `This is my <strong>cat</strong>`
-- One example at https://gist.github.com/thomd/9220049
 ---
 
 .left-column[
@@ -217,6 +218,7 @@ Examples:
 - `<section>`
 ]
 ???
+- One example at https://gist.github.com/thomd/9220049
 - https://www.pluralsight.com/guides/semantic-html
 - http://seekbrevity.com/semantic-markup-important-web-design/
 - https://internetingishard.com/html-and-css/semantic-html/
@@ -230,9 +232,6 @@ Document Object Model
 ![fh_DOM](dom.png "DOM")
 ]
 ???
-- Outline Geschichte?
-- https://dev.to/ananyaneogi/html-can-do-that-c0n
-- https://hackernoon.com/from-mvc-to-modern-web-frameworks-8067ec9dee65
 - https://javascript.info/dom-nodes#see-it-for-yourself
 - http://software.hixie.ch/utilities/js/live-dom-viewer/
 - https://javascript.info/article/dom-nodes/elks.html in the browser console

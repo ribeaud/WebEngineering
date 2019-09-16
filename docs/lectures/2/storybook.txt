@@ -1,15 +1,17 @@
-Mi, 20.02.19	08:15 - 11:00 HTML
-Mi, 27.02.19	08:15 - 11:00 CSS
-Mi, 06.03.19	08:15 - 11:00 Grails, Web, MVC
-Mi, 13.03.19	08:15 - 11:00 GSP, Template, Taglib, Layout
-Mi, 20.03.19	08:15 - 11:00 Consolidation training, Testing
-Mi, 27.03.19	08:15 - 11:00 Persistence, DB-Access (GORM)
-Mi, 03.04.19	08:15 - 11:00 REST, Services
-Mi, 10.04.19	08:15 - 11:00 Role-based Security
-Mi, 17.04.19	08:15 - 11:00 Übungsvorbereitung ** Anwesenheitspflicht **
-Ferien
-Mi, 15.05.19	08:15 - 11:00 Übungsanlass
-Mi, 22.05.19	08:15 - 11:00 Javascript, Übungsabgabe
-Mi, 29.05.19	08:15 - 11:00 Responsive / Mobile Web
-Mi, 05.06.19	08:15 - 11:00 Deployment
-Mi, 12.06.19	08:15 - 11:00 Prüfungsvorbereitung
+Mo, 16.09.2019	HTML
+Mo, 23.09.2019	CSS
+Mo, 30.09.2019	Grails, Web, MVC
+Mo, 07.10.2019	GSP, Template, Taglib, Layout
+Mo, 14.10.2019	Javascript
+Mo, 21.10.2019	Consolidation training, Testing
+Mo, 28.10.2019	Persistence, DB-Access (GORM)
+Mo, 04.11.2019	REST, Services
+Mo, 11.11.2019	Role-based Security
+Mo, 18.11.2019	Übungsvorbereitung ** Anwesenheitspflicht **
+Frei
+Mo, 02.12.2019	Übungsanlass
+Mo, 09.12.2019	Responsive / Mobile Web
+Mo, 16.12.2019	Weihnachtsvorlesung, ** Übungsabgabe **
+Weihnachtsferien
+Mo, 06.01.2020	Deployment
+Mo, 13.01.2020	Prüfungsvorbereitung

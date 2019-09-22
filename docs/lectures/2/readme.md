@@ -18,7 +18,7 @@ layout: false
 - One **HTML** Page - Multiple Styles!
 ]
 ???
-- https://worldwideweb.cern.ch/browser/
+- https://worldwideweb.cern.ch/
 - Separation of concerns: **CSS** (_presentation_) vs. **HTML** (_content_)
 - https://www.w3schools.com/css/css_intro.asp
 ---
@@ -97,7 +97,7 @@ div {
 ```
 ]
 ???
-- Could be a list like `right top`
+- A list of **CSS** classes could be specified as attribute value (i.e., `right top`)
 - `*` selects **all** elements
 ---
 .left-column[
@@ -141,7 +141,7 @@ div {
 ```
 ]
 ???
-- `^=`, `$=`, `*=`, `~=`
+- `^=` (_begins with_), `$=` (_ends with_), `*=` (_contains substring_), `~=` (_contains word_)
 ---
 .left-column[
   ## Special Selectors
@@ -164,7 +164,7 @@ div:hover {
 ```
 ]
 ???
-- `:first-child`
+- Another example `:first-child`
 ---
 .left-column[
   ## Combinators
@@ -390,19 +390,6 @@ p    {color: red;}
 ]
 .right-column[
 Incrementally:
-1. _User agent_ declarations
-1. _User_ normal declarations
-1. _Author_ normal declarations
-1. _Author_ important declarations
-1. _User_ important declarations
-]
----
-.left-column[
-  ## Precendence
-  ### Sheet importance
-  ### Specificity
-]
-.right-column[
 1. _Inline_ overrides **CSS** rules in `<style>` tag and **CSS** file.
 1. A _more_ specific selector takes precedence over a _less_ specific one.
 1. Rules that appear later in the code override earlier rules if both have the same specificity.
@@ -411,6 +398,19 @@ Incrementally:
 ???
 - https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css
 - [precedence.html](precedence.html)
+---
+.left-column[
+  ## Precendence
+  ### Sheet importance
+  ### Specificity
+]
+.right-column[
+1. _User agent_ declarations
+1. _User_ normal declarations
+1. _Author_ normal declarations
+1. _Author_ important declarations
+1. _User_ important declarations
+]
 ---
 .left-column[
   ## Box Model

@@ -441,7 +441,7 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
 - For some **CSS** properties, negative lengths are allowed.
 - We have following units:
   - _Absolute_ lengths: `cm`, `mm`, `in`, `pt` (_1pt_ = 1/72 of _1in_), `px` (_1px_ = 1/96th of _1in_).red[*]
-  - _Relative_ lengths: `em`, `rem` (size of **M**), `ex` (x-height of current font), `%` (relative to parent)
+  - _Relative_ lengths: `em` (size of **M**, local font), `rem` (_root_ `em`), `ex` (x-height of current font), `%` (relative to parent), `vw` (relative to viewport width), `vh` (relative to viewport height)
 
   .footnote[.red[*] `px` are relative to the viewing device. A CSS pixel is different from a device one.]
 ]
@@ -520,16 +520,6 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
   ## Fo aspiring professionals
   ### Training 1
   ### Training 2
-]
-.right-column[
-- Take your personal solution from _Lecture 1_ and style it with **CSS**.
-]
----
-.left-column[
-  ## Fo aspiring professionals
-  ### Training 1
-  ### Training 2
-  ### Training 3
 ]
 .right-column[
 - Use `<div>`s with different background colours to create the rectangles below.

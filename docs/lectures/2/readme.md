@@ -443,7 +443,7 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
   - _Absolute_ lengths: `cm`, `mm`, `in`, `pt` (_1pt_ = 1/72 of _1in_), `px` (_1px_ = 1/96th of _1in_).red[*]
   - _Relative_ lengths: `em`, `rem` (size of **M**), `ex` (x-height of current font), `%` (relative to parent)
 
-  .footnote[.red[\*] `px` are relative to the viewing device. A **CSS** pixel is different from a device one.]
+  .footnote[.red[*] `px` are relative to the viewing device. A CSS pixel is different from a device one.]
 ]
 ???
 - https://www.w3schools.com/cssref/css_units.asp

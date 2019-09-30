@@ -513,7 +513,7 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
   ### Training 1
 ]
 .right-column[
-- If you are not yet confident with using basic **HTML** and **CSS** consider working through http://www.codecademy.com.
+- If you are not yet confident with using basic **HTML** and **CSS** consider working through http://www.codecademy.com, https://scrimba.com/ or https://codepip.com/.
 ]
 ---
 .left-column[

@@ -121,7 +121,7 @@ assert transform(list, action)
 ]
 .right-column[
 1. Make sure that you have a Java **JDK 1.8** installed. This is the on which should be specified as project SDK in **IntelliJ**.
-1. Fork and clone the boilerplate project located at https://github.com/ribeaud/WebEngineering-HS19.
+1. **Fork** and clone the boilerplate project located at https://github.com/ribeaud/WebEngineering-HS19.
 1. Register _upstream_ as following: `git remote add upstream https://github.com/ribeaud/WebEngineering-HS19.git`.
 1. **git remote -v** should display the following:
         $ git remote -v

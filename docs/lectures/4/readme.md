@@ -6,8 +6,6 @@ class: center, middle, inverse
 ## Server Pages
 
 .footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
-???
-- 30 Jahre World Wide Web
 ---
 layout: false
 .left-column[
@@ -48,7 +46,8 @@ template: inverse
 ---
 ![fh_request_response](request_response.png "Request - Response")
 ???
-https://www.youtube.com/watch?v=8ekMg88kGSs
+* https://www.youtube.com/watch?v=8ekMg88kGSs
+* https://www.youtube.com/watch?v=sxiRFwQ1RJ4
 ---
 template: inverse
 # Page structure: 4 ways!

@@ -127,8 +127,8 @@ assert transform(list, action)
         $ git remote -v
         origin https://github.com/<user>/WebEngineering-HS19.git (fetch)
         origin https://github.com/<user>/WebEngineering-HS19.git (push)
-        upstream https://github.com/<user>/WebEngineering-HS19.git (fetch)
-        upstream https://github.com/<user>/WebEngineering-HS19.git (push)
+        upstream https://github.com/ribeaud/WebEngineering-HS19.git (fetch)
+        upstream https://github.com/ribeaud/WebEngineering-HS19.git (push)
 1. Import the project into **IntelliJ IDEA** as described on project's [README.md](https://github.com/ribeaud/WebEngineering-HS19) page.
 1. Run the automatically loaded run configuration and browse to http://localhost:8080/.
 ]

@@ -121,6 +121,11 @@ We have following useful attributes/methods:
 - _in-page_ for **local** functions
 - _.js_ files for **cross-page** sharing,  unit testing, [linting](https://en.wikipedia.org/wiki/Lint_%28software%29), tool support, ...
 ]
+???
+- Where should I put `<script>` tags in **HTML** markup?
+  + https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
+  + https://stackoverflow.com/questions/30653081/why-scripts-at-the-end-of-body-tag
+  + https://blog.logrocket.com/how-browser-rendering-works-behind-the-scenes-6782b0e8fb10
 ---
 template: inverse
 
@@ -199,4 +204,5 @@ Favorite **JS** learning resources from [Joel from egghead](https://egghead.io/i
 - https://learn.co/courses/introduction-to-javascript
 - https://watchandcode.com/p/practical-javascript
 - https://javascript.info/
+- https://eloquentjavascript.net/
 ]

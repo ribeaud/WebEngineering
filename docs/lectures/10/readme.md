@@ -38,11 +38,15 @@ layout: false
 - Compiled vs. Interpreted
 - Both can run in a browser but ...
 - Both can run on a server
+- [javascript.html](javascript.html)
 ---
 .left-column[
   ## JavaScript
 ]
 .right-column[
+Version:
+- **ES6** (https://www.w3schools.com/js/js_versions.asp)
+
 Where To:
 - Code as string (`eval` method)
 - **HTML** attribute value (i.e., `onclick` attribute)
@@ -147,6 +151,23 @@ template: inverse
 1. Start the application and go to the static page _pictures.html_ (http://localhost:8080/static/pictures.html)
 1. Work through the **JavaScript** solution to fetch **Flickr** photos
 ]
+---
+.left-column[
+  ## T Converter
+]
+.right-column[
+
+### Temperatur Converter
+
+1. Write a simple temperature converter using **HTML**, **CSS** and **JavaScript** only (one page, no **Grails**).
+1. This converter converts **Celsius** into **Fahrenheit**.
+
+### Possible extensions
+
+1. Make a **Grails** application out of it: conversion and validation happens now on server side.
+]
+???
+- [TemperatureConverter.html](TemperatureConverter.html)
 ---
 .left-column[
   ## Web-Engineering-HS19

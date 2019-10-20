@@ -31,13 +31,14 @@ layout: false
   ![fh_direct_manipulation](direct_manipulation.png "Direct Manipulation")
 
   **JavaScript** is THE [Scripting language](https://en.wikipedia.org/wiki/Scripting_language) for web browsers.
-
   **Java** vs. **JavaScript**: what are the differences between both languages?
 ]
 ???
 - Compiled vs. Interpreted
 - Both can run in a browser but ...
 - Both can run on a server
+- **Java** is a _strongly_, _statically_ typed, **JavaScript** is _dynamically_ typed
+- [Why is JavaScript called JavaScript?|https://stackoverflow.com/questions/2018731/why-is-javascript-called-javascript-since-it-has-nothing-to-do-with-java]
 - [javascript.html](javascript.html)
 ---
 .left-column[

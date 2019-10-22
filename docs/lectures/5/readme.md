@@ -111,6 +111,10 @@ $("ul.things li", 2)
 ]
 ???
 - https://entwicklertag.de/karlsruhe/2015/sites/entwicklertag.de.karlsruhe.2015/files/folien/20150520_final_spock_geb_sd.pdf
+- [GebConfig.groovy](https://github.com/geb/geb-example-gradle/blob/master/src/test/resources/GebConfig.groovy)
+- https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver
+- https://sites.google.com/a/chromium.org/chromedriver/downloads
+- http://chromedriver.storage.googleapis.com/index.html
 ---
 .left-column[
   ## Big Picture

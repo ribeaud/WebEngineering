@@ -143,7 +143,7 @@ Controller actions and views are created transparently behind the scenes. And we
 1. Static scaffolding
   - `./grailsw create-scaffold-controller Person`
   - ...
-1. Viewing the current status of the _embedded_ database via **/dbconsole**
+1. Viewing the current status of the _embedded_ database via **/h2-console**
 
   ![fh_250_dbconsole](dbconsole.png "DB console")
 

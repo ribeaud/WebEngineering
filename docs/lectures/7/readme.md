@@ -164,7 +164,7 @@ An _idempotent_ **HTTP** method is a **HTTP** method that can be called many tim
   ### Grails
 ]
 .right-column[
-- https://docs.grails.org/3.2.1/guide/webServices.html
+- https://docs.grails.org/latest/guide/REST.html
 - Note the usage of `@Resource` in domain classes and _respond_ instead of _render_ in the controller actions.
 ]
 ---
@@ -192,7 +192,6 @@ An _idempotent_ **HTTP** method is a **HTTP** method that can be called many tim
 - Best practices: https://restfulapi.net/resource-naming/
 
 **REST** in **Grails**
-- https://docs.grails.org/3.2.1/guide/webServices.html
 - http://guides.grails.org/rest-hibernate/guide/index.html
 - https://docs.grails.org/latest/guide/REST.html
 

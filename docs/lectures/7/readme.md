@@ -34,7 +34,7 @@ layout: false
 ]
 .right-column[
 - https://github.com/public-apis/public-apis
-- Auth: **No** vs **apiKey** vs [OAuth|https://en.wikipedia.org/wiki/OAuth]
+- Auth: **No** vs **apiKey** vs [OAuth](https://en.wikipedia.org/wiki/OAuth)
 ]
 ---
 .left-column[
@@ -56,7 +56,7 @@ REST client in **IntelliJ IDEA**:
 ![fh_rest_client](rest_client.png "REST client")
 ]
 ???
-- Have a look at [rest-api.http|https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html] as well
+- Have a look at [rest-api.http](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html) as well
 - Chrome Apps/Plugins: Advanced REST client, Postman
 ---
 .left-column[

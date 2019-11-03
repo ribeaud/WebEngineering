@@ -30,6 +30,15 @@ layout: false
 ]
 ---
 .left-column[
+  ## Public APIs
+]
+.right-column[
+- https://github.com/public-apis/public-apis
+- Auth: **No** vs **apiKey** vs [OAuth|https://en.wikipedia.org/wiki/OAuth]
+]
+---
+.left-column[
+  ## Public APIs
   ## REST API
 ]
 .right-column[
@@ -47,7 +56,8 @@ REST client in **IntelliJ IDEA**:
 ![fh_rest_client](rest_client.png "REST client")
 ]
 ???
-- Have a look at `rest-api.http` as well
+- Have a look at [rest-api.http|https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html] as well
+- Chrome Apps/Plugins: Advanced REST client, Postman
 ---
 .left-column[
   ## REST API
@@ -104,8 +114,8 @@ _Safe_ methods are **HTTP** methods that do not modify resources.
 An _idempotent_ **HTTP** method is a **HTTP** method that can be called many times without different outcomes. It would not matter if the method is called only once, or ten times over. The result should be the same.
 ]
 ???
-- https://spring.io/understanding/REST
 - http://restcookbook.com/HTTP%20Methods/idempotency/
+- Difference between **PUT** and **PATCH**. **PUT** replaces the whole entity. **PATCH** only a subset (Also, another difference is that when you want to update a resource with PUT request, you have to send the full payload as the request whereas with PATCH, you only send the parameters which you want to update).
 ---
 .left-column[
   ## HTTP(S)
@@ -148,19 +158,6 @@ An _idempotent_ **HTTP** method is a **HTTP** method that can be called many tim
 .left-column[
   ## REST
   ### Issues
-  ### Alternatives
-]
-.right-column[
-- [SOAP](https://www.w3schools.com/xml/xml_soap.asp) (WSDL - Determines operations, NOT resources)
-- [CORBA](https://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture) (IDL)
-- [EJB](https://en.wikipedia.org/wiki/Enterprise_JavaBeans), \*-[RPC](https://en.wikipedia.org/wiki/Remote_procedure_call), [RMI](https://en.wikipedia.org/wiki/Java_remote_method_invocation)
-- Local services (method invocation)
-]
----
-.left-column[
-  ## REST
-  ### Issues
-  ### Alternatives
   ### Grails
 ]
 .right-column[

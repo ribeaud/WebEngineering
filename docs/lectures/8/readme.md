@@ -94,11 +94,11 @@ template: inverse
 The following exercise is based on project https://github.com/ribeaud/SpringSecurity.
 
 1. `grails create-app SpringSecurity` (branch _master_)
-1. Adapt _build.gradle_ with following change:
+1. Adapt _build.gradle_ with following change (without it **s2-quickstart** plugin will NOT be available):
 ```groovy
 dependencies {
    ...
-   compile 'org.grails.plugins:spring-security-core:3.2.3'
+   compile 'org.grails.plugins:spring-security-core:4.0.0.RC2'
    ...
 }
 ```

@@ -41,12 +41,15 @@ Gaining access to a resource (e.g. directory on a hard disk) because the permiss
   ## Role
 ]
 .right-column[
-The **Spring Security** plugin uses an _authority_ class to represent a user’s roles in the application.
+The **Spring Security** plugin uses an _authority_ class to represent a user’s role in the application
+(consider _authority_ and _role_ as the same concept for now).
 
 In general this class restricts URLs to users who have been assigned the required access rights.
 
 A user can be granted multiple roles to indicate various access rights in the application, and should have at least one.
 ]
+???
+- https://www.baeldung.com/spring-security-granted-authority-vs-role
 ---
 template: inverse
 
@@ -64,7 +67,7 @@ https://docs.grails.org/latest/guide/gettingStarted.html
   ## s2-quickstart
 ]
 .right-column[
-Creates a user and role class (and optionally a requestmap class) in the specified package.
+Creates a user and role class (and optionally a `Requestmap` class) in the specified package.
 See [here](https://grails-plugins.github.io/grails-spring-security-core/latest/#s2-quickstart).
 ]
 ---
@@ -108,13 +111,13 @@ dependencies {
 1. Debugging security (branch _feature/debugging_)
 ]
 ???
-- _feature/debugging_: play with _/dbconsole_ and _passwordEncoder_
+- _feature/debugging_: play with _/h2-console_ and _passwordEncoder_
 ---
 .left-column[
   ## Exercises
 ]
 .right-column[
-- Make `/dbconsole` _publicly_ accessible
+- Make `/h2-console` _publicly_ accessible
 - How are passwords stored in the database? (look for `UserPasswordEncoderListener`)
 - Current user and logout on _main.gsp_ using `<sec:ifLoggedIn>`
 - Setup a new user `admin` which has role `ROLE_ADMIN`

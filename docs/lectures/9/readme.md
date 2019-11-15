@@ -21,10 +21,10 @@ layout: false
   ## Timeline
 ]
 .right-column[
-- 19.04. Commit proposal (template)
-- 23.04. Me accepting proposal (git commit)
-- 21.05. (inclusive) Delivery Deadline
-- 11.06. (hopefully) Grading via git commit
+- 18.11. Commit proposal (template)
+- 22.11. Me accepting proposal (git commit)
+- 16.12. (exclusive) Delivery Deadline
+- 13.01. (hopefully) Grading via git commit
 ]
 ---
 .left-column[

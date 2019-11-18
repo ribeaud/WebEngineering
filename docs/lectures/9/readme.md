@@ -13,14 +13,14 @@ layout: false
 ]
 .right-column[
 - **Single-person** activity
-- _Bring-your-own_ idea or any of https://flaviocopes.com/sample-app-ideas/. Think _10mn_ alone about a **disturbing factor**. Idea implementation/realisation should take around 4 * 6h = **24h** in total.
+- _Bring-your-own_ idea or any of https://flaviocopes.com/sample-app-ideas/. Think _10mn_ alone about a **disturbing factor**. Idea implementation/realisation should take around 4 \* 6h = **24h** in total.
 - Delivery format: **Grails** application in [GitHub](https://www.github.com/). You might take any profile of the ones listed [here](https://grails.org/profiles.html). _Web_ profile is the default and preferred one.
 
 ### Support
 
-1. Spend _20mn_ on a problem. If you do NOT solve it. Go to next.
-1. Try to solve the problem with a colleague. Spend 20mn together on that problem.
-1. Get in touch with me: tag me (@ribeaud) on **GitHub**.
+1. Spend _20mn_ on a problem. If you do NOT solve it, go to next point.
+1. Try to solve the problem with a colleague. Spend 20mn together on that problem. If you do NOT solve it, go to next point.
+1. Get in touch with me: tag me (@ribeaud) on **GitHub**. If I do NOT respond in the next 2-3 days, remind me via email. During that time, work on a different part of your project.
 ]
 ---
 .left-column[

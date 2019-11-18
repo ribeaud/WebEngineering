@@ -69,6 +69,8 @@ As appropriate:
 - Grade: 1.0 + _points_/10
 - Cheating attempt => **1.0**
 ]
+???
+- Materialized Scaffold: https://docs.grails.org/4.0.0/guide/commandLine.html
 ---
 .left-column[
   ## Git

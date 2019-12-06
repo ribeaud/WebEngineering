@@ -16,8 +16,6 @@ layout: false
 
 ![fh_responsive_design](responsive_design.jpg "Responsive Design")
 ]
-???
-- https://github.com/WebEngineering-FHNW/fs19-de-cr-graded-exercise-Humbi1992
 ---
 .left-column[
   ## Setting The Viewport

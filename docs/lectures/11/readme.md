@@ -166,7 +166,11 @@ Using browser detection [plugin](http://plugins.grails.org/plugin/mathifonseca/b
 - Using **server pages** for mobile views
 ]
 ???
-- https://www.w3schools.com/howto/howto_js_topnav.asp
+- For the exercise, possible solutions/extensions are:
+  - Keeping **float** (see https://www.w3schools.com/)
+  - Changing to another layout manager
+  - [Responsive Topnav](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp)
+- https://www.w3schools.com/howto/howto_js_topnav.asp (see [Float Clearing](https://css-tricks.com/the-css-overflow-property/) to understand the role of `overflow:hidden`)
 - https://www.w3schools.com/howto/howto_css_responsive_header.asp
 - https://ngrok.com/
 ---

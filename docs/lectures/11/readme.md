@@ -6,6 +6,8 @@ class: center, middle, inverse
 ## Mobile Web
 
 .footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
+???
+- [The Muppet Show: Rowlf - "It's Not Where You Start"](https://www.youtube.com/watch?v=MVHPpW8ryvA)
 ---
 layout: false
 .left-column[
@@ -167,11 +169,10 @@ Using browser detection [plugin](http://plugins.grails.org/plugin/mathifonseca/b
 ]
 ???
 - For the exercise, possible solutions/extensions are:
-  - Keeping **float** (see https://www.w3schools.com/)
+  - Keeping **float** (see [here](https://www.w3schools.com/howto/howto_css_responsive_header.asp) for a solution)
   - Changing to another layout manager
   - [Responsive Topnav](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp)
 - https://www.w3schools.com/howto/howto_js_topnav.asp (see [Float Clearing](https://css-tricks.com/the-css-overflow-property/) to understand the role of `overflow:hidden`)
-- https://www.w3schools.com/howto/howto_css_responsive_header.asp
 - https://ngrok.com/
 ---
 .left-column[

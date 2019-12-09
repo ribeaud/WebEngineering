@@ -112,7 +112,11 @@ max-width, max-device-width, min-width, min-device-width, (height) orientation (
 </script>
 ```
 #### [screen](https://www.w3schools.com/jsref/obj_screen.asp) vs. [window](https://www.w3schools.com/jsref/obj_window.asp)
-Understand the difference between `screen.width` and `window.innerWidth`
+Understand the difference between `screen.width` and `window.innerWidth`.
+
+#### Window matchMedia() method
+
+See explanation at [w3schools](https://www.w3schools.com/jsref/met_win_matchmedia.asp).
 ]
 ---
 .left-column[

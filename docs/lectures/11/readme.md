@@ -159,7 +159,7 @@ Using browser detection [plugin](http://plugins.grails.org/plugin/mathifonseca/b
 ]
 .right-column[
 #### Exercises
-- [exercise.html](exercise.html)
+- [exercise.html](exercise_orig.html)
 
 #### Possible workflows
 - How to connect with a mobile device to localhost?

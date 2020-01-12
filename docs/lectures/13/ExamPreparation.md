@@ -19,15 +19,21 @@ to indicate navigation, header, and footer. Why?
 * https://www.w3schools.com/css/tryit.asp?filename=trycss_boxmodel_width.
 When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
 * Margins collapse: http://jsfiddle.net/blinkmacalahan/RHrxL/
+* **Further topics** NOT part of the exam
 
 ### MVC
-* Integration tests vs. Unit tests
-* https://github.com/ribeaud/WebEngineering-HS18/blob/feature/inplacecalculator/src/integration-test/groovy/mvc/CalculatorSpec.groovy
+* **Integration** tests vs. **Unit** tests
+* https://github.com/ribeaud/WebEngineering-HS19/blob/feature/integration-test/src/integration-test/groovy/mvc/InPlaceCalculatorSpec.groovy
 
 ### Server Pages
 * **Template**: der View muss eine Tabelle mit einer fixen Anzahl von Spalten darstellen. Alle Zeilen haben die gleich Struktur (bing!), die Werte sind aber unterschiedlich.
 * **Layout**: https://gsp.grails.org/latest/guide/layouts.html
 * **Taglib**: http://guides.grails.org/grails-taglib-wyswyg-trix/guide/index.html
+* **Validation** Techniken and **Internationalization** NOT part of the exam.
+
+### Persistence
+* Domain classes
+* 3-tier web application
 
 ### REST
 * https://medium.com/@suhas_chatekar/why-you-should-use-the-recommended-http-methods-in-your-rest-apis-981359828bf7

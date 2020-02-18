@@ -307,4 +307,5 @@ Document Object Model
 
 - Use semantic elements in [non_semantic.html](non_semantic.html)
 ![fh_semantic](semantic.jpg "Semantic")
+- Investigate the new **HTML5** attributes like _placeholder_ and the new **email**, **url**, and **tel** input types
 ]

@@ -295,3 +295,16 @@ Document Object Model
 - https://www.w3schools.com/html/html_exercises.asp
 - https://www.w3schools.com/html/html_quiz.asp
 ]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+  ### Assignment 3
+]
+.right-column[
+### Assignment 3
+
+- Use semantic elements in [non_semantic.html](non_semantic.html)
+![fh_semantic](semantic.jpg "Semantic")
+]

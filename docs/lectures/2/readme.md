@@ -509,7 +509,7 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
 ]
 ---
 .left-column[
-  ## Fo aspiring professionals
+  ## For aspiring professionals
   ### Training 1
 ]
 .right-column[
@@ -517,35 +517,17 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
 ]
 ---
 .left-column[
-  ## Fo aspiring professionals
+  ## For aspiring professionals
   ### Training 1
   ### Training 2
 ]
 .right-column[
-- Use `<div>`s with different background colours to create the rectangles below.
-- Use only **CSS** (and no external dependencies) to create the following layout
-
-        Header, 1/4, 1/4, 1/4, 1/4
-        +-----------------------------------------------+
-        |           |           |           |           |
-        +-----------------------------------------------+
-        | Content, Golden Ratio       |                 |
-        |          ~ 61.8, 38.2       |                 |
-        |                             |                 |
-        |                             |                 |
-        |                             |                 |
-        |                             |                 |
-        +-----------------------------------------------+
-        |           |                       |           |
-        |           |                       |           |
-        |           |                       |           |
-        +-----------------------------------------------+
-        Footer, 1/4, 2/4, 1/4
-
-- Can you make it so that it fills the full browser page?
-- Can you make it so that the proportions remain when the browser resizes?
+- Have a look at [modern.html](modern.html) page.
+- Can you do it with **CSS** flex layout?
 - Can you do it with **CSS** grid layout?
 ]
+???
+- https://medium.com/actualize-network/modern-css-explained-for-dinosaurs-5226febe3525
 ---
 .left-column[
   ## Abilities

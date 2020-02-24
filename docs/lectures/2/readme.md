@@ -416,7 +416,7 @@ Incrementally:
   ## Box Model
 ]
 .right-column[
-![fh_500_box_model](box_model.png "Box Model")
+![fh_300_box_model](box_model.png "Box Model")
 
 Total width = Margin left + Border left + Padding left + Content Width + Padding right + Border right + Margin right
 ]
@@ -441,7 +441,7 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
 - For some **CSS** properties, negative lengths are allowed.
 - We have following units:
   - _Absolute_ lengths: `cm`, `mm`, `in`, `pt` (_1pt_ = 1/72 of _1in_), `px` (_1px_ = 1/96th of _1in_).red[*]
-  - _Relative_ lengths: `em` (size of **M**, local font), `rem` (_root_ `em`), `ex` (x-height of current font), `%` (relative to parent), `vw` (relative to viewport width), `vh` (relative to viewport height)
+  - _Relative_ lengths: `em` (size of **M**, local font), `rem` (_root_ `em`), `ex` (x-height of current font), `%` (relative to parent), `vw` (relative to 1% of the viewport width), `vh` (relative to 1% of the viewport height)
 
   .footnote[.red[*] `px` are relative to the viewing device. A CSS pixel is different from a device one.]
 ]
@@ -469,7 +469,7 @@ Total width = Margin left + Border left + Padding left + Content Width + Padding
 - Display: `inline`, `block`, `none`, ...
 - Position: `static`, `relative`, `absolute`, `fixed`, ...
 - float, clear: `left`, `right`, ...
-- CSS Preprocessors: **Sass**, **SCSS**, **Less**, ...
+- CSS Preprocessors: [Sass](https://sass-lang.com/), [Less](http://lesscss.org/), ...
 ]
 ???
 - [display.html](display.html)

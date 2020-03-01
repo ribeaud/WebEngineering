@@ -120,15 +120,8 @@ assert transform(list, action)
   ### Assignment 1
 ]
 .right-column[
-1. Make sure that you have a Java **JDK 1.8** installed. This is the on which should be specified as project SDK in **IntelliJ**.
-1. **Fork** and clone the boilerplate project located at https://github.com/ribeaud/WebEngineering-HS19.
-1. Register _upstream_ as following: `git remote add upstream https://github.com/ribeaud/WebEngineering-HS19.git`.
-1. **git remote -v** should display the following:
-        $ git remote -v
-        origin https://github.com/<user>/WebEngineering-HS19.git (fetch)
-        origin https://github.com/<user>/WebEngineering-HS19.git (push)
-        upstream https://github.com/ribeaud/WebEngineering-HS19.git (fetch)
-        upstream https://github.com/ribeaud/WebEngineering-HS19.git (push)
+1. Make sure that you have a Java **JDK 12** installed. This is the on which should be specified as project SDK in **IntelliJ**.
+1. **Import/Fork** and **clone** the classroom project **GradeCalculator**.
 1. Import the project into **IntelliJ IDEA** as described on project's [README.md](https://github.com/ribeaud/WebEngineering-HS19) page.
 1. Run the automatically loaded run configuration and browse to http://localhost:8080/.
 ]
@@ -138,7 +131,6 @@ assert transform(list, action)
 1. Explain what we see at http://localhost:8080/.
 1. _CalculatorController_ has been generated via `grails create-controller Calculator`
 1. Create corresponding view and run the application
-1. This is the state of branch _feature/calculator_
 ---
 .left-column[
   ## Testing
@@ -190,14 +182,10 @@ assert transform(list, action)
 ### Assignment 2
 ]
 .right-column[
-Checkout branch _feature/calculator_ (`git checkout feature/calculator`) and have a look at:
-- `http://localhost:8080/static/GradeCalculator.html`
-- `src/main/resources/public/GradeCalculator.html`
-- `src/test/groovy/mvc/CalculatorControllerSpec.groovy`
-- `src/integration-test/groovy/mvc/CalculatorSpec.groovy` (note line 26 with _placeholder goes here_)
-- `grails-app/controllers/mvc/CalculatorController.groovy`
-- `grails-app/views/calculator/CalculatorOutput.gsp` (note the _output_ placeholder)
-Use `${result}` in **CalculatorOutput.gsp** to put that calculated result in the right place. Verify that the test is still green.
+- Create the input form at `src/main/resources/public/GradeCalculator.html`
+- Create the controller at `grails-app/controllers/mvc/CalculatorController.groovy`
+- Create calculation output at `grails-app/views/calculator/CalculatorOutput.gsp` (note the _output_ placeholder). Use `${result}` in **CalculatorOutput.gsp** to put that calculated result in the right place.
+- Create/adapt the controller unit test `src/test/groovy/mvc/CalculatorControllerSpec.groovy`
 ]
 ---
 .left-column[

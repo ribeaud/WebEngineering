@@ -120,7 +120,7 @@ assert transform(list, action)
   ### Assignment 1
 ]
 .right-column[
-1. Make sure that you have a Java **JDK 12** installed. This is the on which should be specified as project SDK in **IntelliJ**.
+1. Make sure that you have **JDK 12** installed. This is the version which should be specified as project SDK in **IntelliJ**.
 1. **Import/Fork** and **clone** the classroom project **GradeCalculator**.
 1. Import the project into **IntelliJ IDEA** as described on project's [README.md](https://github.com/ribeaud/WebEngineering-HS19) page.
 1. Run the automatically loaded run configuration and browse to http://localhost:8080/.
@@ -183,8 +183,8 @@ assert transform(list, action)
 ]
 .right-column[
 - Create the input form at `src/main/resources/public/GradeCalculator.html`
-- Create the controller at `grails-app/controllers/mvc/CalculatorController.groovy`
-- Create calculation output at `grails-app/views/calculator/CalculatorOutput.gsp` (note the _output_ placeholder). Use `${result}` in **CalculatorOutput.gsp** to put that calculated result in the right place.
+- Create the **controller** at `grails-app/controllers/mvc/CalculatorController.groovy`
+- Create the calculation output at `grails-app/views/calculator/CalculatorOutput.gsp`
 - Create/adapt the controller unit test `src/test/groovy/mvc/CalculatorControllerSpec.groovy`
 ]
 ---

@@ -85,7 +85,7 @@ Age: ${person.age} <br/>
   - Avoids _in-page_ code duplication
   - Parts of a page - as a page
 - [Documentation](https://gsp.grails.org/latest/guide/viewsAndTemplates.html)
-- Branch _feature/templating_
+<!--- - Branch _feature/templating_--->
 - Convention: _underscore_ before the name of a view
 - Example:
   - `_bookTemplate.gsp`:
@@ -110,7 +110,7 @@ Age: ${person.age} <br/>
 - **Global** composition.
 - Parts of content - as a method
 - [Documentation](https://gsp.grails.org/latest/guide/taglibs.html)
-- Branch _feature/taglib_
+<!--- - Branch _feature/taglib_ --->
 - **Groovy** class that ends with the convention `TagLib`
 - Example:
   - `grails-app/taglib/SimpleTagLib.groovy`:
@@ -138,7 +138,7 @@ class SimpleTagLib {
 - **Inverse** composition ([Sitemesh](http://sitemesh.org/))
 - Imposed embedding - as a page
 - [Documentation](https://gsp.grails.org/latest/guide/layouts.html)
-- Branch _feature/layout_
+<!--- - Branch _feature/layout_ --->
 - Example:
   - `grails-apps/views/layouts/main.gsp`:
 ```gsp
@@ -174,7 +174,7 @@ class SimpleTagLib {
 ]
 .right-column[
 - [https://docs.grails.org/latest/guide/validation.html](documentation)
-- Branch _feature/validation_
+<!--- - Branch _feature/validation_ --->
 - _Imperative_:
 ```groovy
 if (0.0 == model.en) {
@@ -202,7 +202,7 @@ static constraints = {
 ]
 .right-column[
 - [http://docs.grails.org/latest/guide/i18n.html](documentation)
-- Branch _feature/i18n_
+<!--- - Branch _feature/i18n_ --->
 - Understanding _message bundles_
 - Changing _locales_
 - `<g:message code="my.localized.content" args="${ ['Juan', 'lunes'] }" />`

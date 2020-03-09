@@ -213,13 +213,10 @@ static constraints = {
   ### Assignment 1
 ]
 .right-column[
-1. Ensure that you're synchronized with _upstream_: `git fetch upstream`.
-1. `git checkout feature/inplacecalculator` and have a look at all the artifacts. Write an _unit_ resp. _integration_ test.
-1. `git checkout feature/validation` and have a look at all the artifacts. Adapt, extend current tests.
-1. `git checkout feature/templating` and have a look at all the artifacts. Are the tests still green? If NOT, fix them!
-1. `git checkout feature/taglib` and have a look at all the artifacts.
-1. `git checkout feature/layout` and have a look at all the artifacts.
-1. `git checkout feature/i18n` and have a look at all the artifacts.
+1. Implement validation (*imperative* vs. *declarative*)
+1. Use templating to remove local redundancy. What is redundant in the input form?
+1. Let's write our first **taglib**.
+1. Let's use our own **layout**!
 ]
 ---
 .left-column[
@@ -229,12 +226,6 @@ static constraints = {
 ]
 .right-column[
 Make a **Fahrenheit** to **Celsius** converter.
-
-You best make a copy of each artifact that we used for the **InPlaceCalculator**
-(_model_, _view_, _controller_, tests, _form_row.gsp_ as template).
-Just copy the file into the same directory as the original and rename accordingly.
-
-You can reuse the _form_ layout.
 
 You can make use of the following conversion functions:
 

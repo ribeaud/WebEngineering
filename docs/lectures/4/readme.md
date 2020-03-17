@@ -215,7 +215,7 @@ static constraints = {
 .right-column[
 1. Implement validation (*imperative* vs. *declarative*)
 1. Use templating to remove local redundancy. What is redundant in the input form?
-1. Let's write our first **taglib**.
+1. Let's write our first **taglib**!
 1. Let's use our own **layout**!
 ]
 ---

@@ -3,228 +3,169 @@ layout: true
 class: center, middle, inverse
 ---
 # Web Engineering
-## Services
+## Persistence
 
 .footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
 ---
 layout: false
 .left-column[
-  ## 3-tier architecture
+  ## Web MVC, Server Pages
 ]
 .right-column[
-![fh_three_tier_architecture](three_tier_architecture.png "Three Tier Architecture")
-]
----
-.left-column[
-  ## Server with service
-]
-.right-column[
-![fh_server_with_service](server_with_service.png "Server With Service")
-]
----
-.left-column[
-  ## Smart UI with service
-]
-.right-column[
-![fh_smart_ui_with_service](smart_ui_with_service.png "Smart UI With Service")
-]
----
-.left-column[
-  ## Public APIs
-]
-.right-column[
-- https://github.com/public-apis/public-apis
-- Auth: **No** vs **apiKey** vs [OAuth](https://en.wikipedia.org/wiki/OAuth)
-]
----
-.left-column[
-  ## Public APIs
-  ## REST API
-]
-.right-column[
-- https://www.flickr.com/services/api/request.rest.html
-- Get a key (for now use following one `865ae530a7dbb28c085dee3ef95e9986`)
-]
----
-.left-column[
-  ## REST call
-  ### REST client
-]
-.right-column[
-REST client in **IntelliJ IDEA**:
-
-![fh_rest_client](rest_client.png "REST client")
+![fh_from](from.png "Web MVC, Server Pages")
 ]
 ???
-- Have a look at [rest-api.http](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html) as well
-- Chrome Apps/Plugins: Advanced REST client, Postman
+**MVC** is an architectural pattern commonly used for developing user interfaces that divides an application into three interconnected parts.
 ---
+layout: false
 .left-column[
-  ## REST API
-  ### REST client
-  ### Response
+  ## 3-tier WebApp
 ]
 .right-column[
-![fh_rest_call_result](rest_call_result.png "REST call result")
-
-Fetch Resource URL Pattern:
-
-`http://static.flickr.com/<server>/<id>_<secret>_b.jpg`
-]
----
-.left-column[
-  ## HTTP(S)
-  ### URL
-]
-.right-column[
-![fh_url](url.jpg "URL")
-]
----
-.left-column[
-  ## HTTP(S)
-  ### URL
-  ### Request
-]
-.right-column[
-- **H**yper **T**ext ** T**ransfer **P**rotocol
-- Very simple
-- Line/delimiter based
-
-![fh_http_protocol](http_protocol.png "HTTP Protocol")
-]
----
-.left-column[
-  ## HTTP(S)
-  ### URL
-  ### Request
-  ### Verbs
-]
-.right-column[
-| Verb      | Safe | Use                                         |
-|-----------|------|---------------------------------------------|
-| GET       | Yes  | Single or collective read,<br>may be cached |
-| PUT/PATCH | No   | Modify resource in place                    |
-| POST      | No   | Create new resource                         |
-| DELETE    | No   | Delete resource                             |
-| HEAD      | Yes  | Retrieve metadata about the resource        |
-| OPTIONS   | Yes  | Available HTTP verbs for a given resource   |
-
-_Safe_ methods are **HTTP** methods that do not modify resources.
-
-An _idempotent_ **HTTP** method is a **HTTP** method that can be called many times without different outcomes. It would not matter if the method is called only once, or ten times over. The result should be the same.
+![fh_to](to.png "3-tier architecture")
 ]
 ???
-- http://restcookbook.com/HTTP%20Methods/idempotency/
-- Difference between **PUT** and **PATCH**. **PUT** replaces the whole entity. **PATCH** only a subset (Also, another difference is that when you want to update a resource with PUT request, you have to send the full payload as the request whereas with PATCH, you only send the parameters which you want to update).
+Multilayered architecture is a client–server architecture in which presentation, application processing, and data management functions are physically separated.
 ---
 .left-column[
-  ## HTTP(S)
-  ### URL
-  ### Request
-  ### Verbs
-  ### Status codes
+  ## Domain classes
 ]
 .right-column[
-- **2XX**: Success
-- **3XX**: Redirection
-- **4XX**: Client error
-- **5XX**: Server error
-]
-???
-- https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
----
-.left-column[
-  ## REST
-]
-.right-column[
-**Re**presentational **S**tate **T**ransfer
+```Groovy
+package mvc
 
-- Resource addressing by **URL**, resources easily understood directory structure **URIs**.
-- Uniform operations by **HTTP** verbs
-- Self-containment (no conversational state), stateless interactions store no client context on the server between requests.
-- Choice of format (**XML**, **JSON**, ...)
+class Room {
+
+    String name
+    int    max
+
+    String toString() {
+        "$name ($max)"   // Groovy :-)
+    }
+
+    static constraints = {
+        name(blank: false)
+        max(min: 1)
+    }
+}
+```
 ]
 ---
 .left-column[
-  ## REST
-  ### Issues
+  ## CRUD methods
 ]
 .right-column[
-- Easy to get started - easy to get lost.
-- Type safety, Versioning, Documentation (https://swagger.io)
-- Addressing Operations (like _search_) as Resources
+**GORM** Data Services will implement queries for you using a number of different strategies and conventions.
+
+| Method Stem                                    | Description                                                |
+| -----------------------------------------------|------------------------------------------------------------|
+| count*                                         | Count the number of results                                |
+| countBy*                                       | Dynamic Finder Count the number of results                 |
+| delete*                                        | Delete an instance for the given arguments                 |
+| find\*, get\*, list\* or retrieve\*            | Query for the given parameters                             |
+| findBy\*, listBy\*, findAllBy\* or getBy\*     | Dynamic finder query for given parameters                  |
+| save\*, store\*, or persist\*                  | Save a new instance                                        |
+| update\*                                       | Updates an existing instance. First parameter should be id |
+
+```Groovy
+new Room(name: "5.3A17", max: 40).save()
+Room.list()
+Room.findAllByCapacityGreaterThan(20)
+def firstRoom = Room.get(1)
+firstRoom.delete()
+```
 ]
 ---
 .left-column[
-  ## REST
-  ### Issues
-  ### Grails
+  ## Grails ORM
 ]
 .right-column[
-- https://docs.grails.org/latest/guide/REST.html
-- Note the usage of `@Resource` in domain classes and _respond_ instead of _render_ in the controller actions.
+- [Object Relational Mapping (GORM)](http://docs.grails.org/latest/guide/GORM.html)
+- [GORM for Hibernate](http://gorm.grails.org/latest/hibernate/manual/)
+- Domain classes serve as [DAO](https://en.wikipedia.org/wiki/Data_access_object)/[DTO](https://en.wikipedia.org/wiki/Data_transfer_object)/Model
+- Database is set up automatically
+- Dynamic finder methods simplify usage
+- Keep it simple
+]
+---
+.left-column[
+  ## Scaffolding
+]
+.right-column[
+```Groovy
+package mvc
+
+class PersonController {
+    static scaffold = Person
+}
+```
+Controller actions and views are created transparently behind the scenes. And we can selectively override
+
+]
+---
+.left-column[
+  ## Testing
+]
+.right-column[
+- Refer to https://testing.grails.org/latest/guide/index.html
+- `HibernateSpec`: Specification for **Hibernate** tests (`... extends HibernateSpec`)
+- `DomainUnitTest`: _trait_ for domain model testing (`... extends Specification implements DomainUnitTest<...>`). Similar to `ControllerUnitTest`.
 ]
 ---
 .left-column[
   ## Abilities
 ]
 .right-column[
-- Being able to use simple services from both client (smart view) and server (controller).
-- Implementing the full range of **REST** services for a persistent **Grails** domain model.
+- From a greenfield, being able to use a relational database with _create-read-update-delete_ (**CRUD**)
+  functionality in a webapp.
+- Use of simple entities, _many-to-one_, and _many-to-many_ relations.
 ]
 ---
 .left-column[
   ## Knowledge
 ]
 .right-column[
-- Understanding **REST** principles on top of **HTTP** verbs.
-]
----
-.left-column[
-  ## Resources
-]
-.right-column[
-**REST**
-- By **Roy Fielding**: http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
-- Best practices: https://restfulapi.net/resource-naming/
-
-**REST** in **Grails**
-- http://guides.grails.org/rest-hibernate/guide/index.html
-- https://docs.grails.org/latest/guide/REST.html
-
-**REST** docs usage
-- https://github.com/jlstrater/grails-spring-restdocs-example
+- Understanding **Grails** domain classes as simple entities.
+- Understanding **Grails** domain classes with references as relations.
+- Understanding dynamic finder methods.
 ]
 ---
 .left-column[
   ## Demo/Live-coding
 ]
 .right-column[
-- Show how to expose **Grails** domain classes and controller actions as **REST** endpoints with `@Resource` and `respond`.
-- With **Curl**:
-```
-curl -i -X GET http://localhost:8080/people/1 \
-      -H "Accept: application/xml"
-curl -i -X POST -H "Content-Type: application/json" \
-      -d '{"firstName":"Chris", "lastName": "Smith", \
-      "email": "c@s.com"}' localhost:8080/people
-curl -i -X PUT -H "Content-Type: application/json" \
-      -d '{"email":"chris.smith@gmail.com"}' localhost:8080/people/3
-```
+1. Creating a room reservation system:
+  - `grails create-app RoomReservation`
+1. Domain classes: `Room`, `Person`, `Booking` (very simple)
+  - `./grailsw create-domain-class Room`
+  - `./grailsw create-domain-class Person`
+  - ...
+1. Static scaffolding
+  - `./grailsw create-scaffold-controller Person`
+  - ...
+1. Viewing the current status of the _embedded_ database via **/h2-console**
+
+  ![fh_250_dbconsole](dbconsole.png "DB console")
+
+1. Setting up bootstrap data
+1. Use Controller actions to interact with the domain model
 ]
-???
-- [Postman](https://www.getpostman.com/)
+---
+.left-column[
+  ## Practical Work
+]
+.right-column[
+- Create an action that displays all bookings of a given person
+- Create an action that displays all available rooms for a requested time slot today
+]
 ---
 .left-column[
   ## Homework
 ]
 .right-column[
-- `SearchRestfulController.groovy`
-]
----
-.left-column[
-  ## Practical work
-]
-.right-column[
-- Write _integration_ tests against the **REST** API
+Finish the practical work (https://github.com/ribeaud/RoomReservation)
+
+Build on the practical work from above to create a full Web **MVC**-Cycle (_without_ scaffolding) that shows:
+- All bookings from today until eternity for a given person
+- All available rooms for a requested day and time slot
 ]

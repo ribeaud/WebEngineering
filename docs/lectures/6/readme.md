@@ -3,169 +3,192 @@ layout: true
 class: center, middle, inverse
 ---
 # Web Engineering
-## Persistence
+## Testing, Consolidation
 
 .footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
 ---
 layout: false
 .left-column[
-  ## Web MVC, Server Pages
+  ## Testing
+  ### Unit
 ]
 .right-column[
-![fh_from](from.png "Web MVC, Server Pages")
+- Tests a small piece of code
+- Simulates the rest of pieces (via **Mock** for instance)
+- Very quick
+- Independent of the environment
+- Example: `CalculatorControllerSpec`: implements [ControllerUnitTest](https://testing.grails.org/latest/api/grails/testing/web/controllers/ControllerUnitTest.html) (**Grails** integration), extends [Specification](http://spockframework.org/spock/docs/1.3/all_in_one.html#_specification) (**Spock** integration).
 ]
 ???
-**MVC** is an architectural pattern commonly used for developing user interfaces that divides an application into three interconnected parts.
+- https://testing.grails.org/latest/guide/index.html
 ---
-layout: false
 .left-column[
-  ## 3-tier WebApp
+  ## Testing
+  ### Unit
+  ### Spock
 ]
 .right-column[
-![fh_to](to.png "3-tier architecture")
+In **Spock**, you write _specifications_. Every test class must extend from `spock.lang.Specification`. It is a testing and a specification framework.
+
+[Blocks](http://spockframework.org/spock/docs/1.0/spock_primer.html) (inspired by [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development)):
+
+![fh_350_blocks](blocks.png "Blocks")
+
+Sometimes `given:` is used instead of `setup:`. It is an alias.
 ]
 ???
-Multilayered architecture is a client–server architecture in which presentation, application processing, and data management functions are physically separated.
+- https://www.pluralsight.com/guides/introduction-to-testing-with-bdd-and-the-spock-framework
 ---
 .left-column[
-  ## Domain classes
+  ## Testing
+  ### Unit
+  ### Spock
 ]
 .right-column[
-```Groovy
-package mvc
+- Describe test:
+```groovy
+import spock.lang.Specification
+class HelloWorldTest extends Specification {
 
-class Room {
+      def "scenario 1"() {
+        given: "An integer with value 5"
+        def i = 5
 
-    String name
-    int    max
+        when: "This integer is multiplied by 2"
+        i = i * 2
 
-    String toString() {
-        "$name ($max)"   // Groovy :-)
-    }
-
-    static constraints = {
-        name(blank: false)
-        max(min: 1)
-    }
+        then: "The final value is 10"
+        assert i != 5
+        i == 10
+      }
 }
 ```
-]
----
-.left-column[
-  ## CRUD methods
-]
-.right-column[
-**GORM** Data Services will implement queries for you using a number of different strategies and conventions.
-
-| Method Stem                                    | Description                                                |
-| -----------------------------------------------|------------------------------------------------------------|
-| count*                                         | Count the number of results                                |
-| countBy*                                       | Dynamic Finder Count the number of results                 |
-| delete*                                        | Delete an instance for the given arguments                 |
-| find\*, get\*, list\* or retrieve\*            | Query for the given parameters                             |
-| findBy\*, listBy\*, findAllBy\* or getBy\*     | Dynamic finder query for given parameters                  |
-| save\*, store\*, or persist\*                  | Save a new instance                                        |
-| update\*                                       | Updates an existing instance. First parameter should be id |
-
-```Groovy
-new Room(name: "5.3A17", max: 40).save()
-Room.list()
-Room.findAllByCapacityGreaterThan(20)
-def firstRoom = Room.get(1)
-firstRoom.delete()
+- [Data Driven Testing](http://spockframework.org/spock/docs/1.3/all_in_one.html#_data_driven_testing)
+- _Fixture_ methods are responsible for setting up and cleaning up the environment in which feature methods are run.
+```groovy
+def setup() {}       // run before every feature method
+def cleanup() {}     // run after every feature method
+def setupSpec() {}   // run before the first feature method
+def cleanupSpec() {} // run after the last feature method
 ```
 ]
+???
+- @Unroll
+- http://jakubdziworski.github.io/java/groovy/spock/2016/05/14/spock-cheatsheet.html
 ---
 .left-column[
-  ## Grails ORM
+  ## Testing
+  ### Unit
+  ### Spock
+  ### Integration
 ]
 .right-column[
-- [Object Relational Mapping (GORM)](http://docs.grails.org/latest/guide/GORM.html)
-- [GORM for Hibernate](http://gorm.grails.org/latest/hibernate/manual/)
-- Domain classes serve as [DAO](https://en.wikipedia.org/wiki/Data_access_object)/[DTO](https://en.wikipedia.org/wiki/Data_transfer_object)/Model
-- Database is set up automatically
-- Dynamic finder methods simplify usage
-- Keep it simple
-]
----
-.left-column[
-  ## Scaffolding
-]
-.right-column[
-```Groovy
-package mvc
-
-class PersonController {
-    static scaffold = Person
-}
-```
-Controller actions and views are created transparently behind the scenes. And we can selectively override
-
+- Tests a complete functionality
+- Starts the app
+- Slow
+- Depends on the environment
 ]
 ---
 .left-column[
   ## Testing
+  ### Unit
+  ### Spock
+  ### Integration
+  ### Geb
 ]
 .right-column[
-- Refer to https://testing.grails.org/latest/guide/index.html
-- `HibernateSpec`: Specification for **Hibernate** tests (`... extends HibernateSpec`)
-- `DomainUnitTest`: _trait_ for domain model testing (`... extends Specification implements DomainUnitTest<...>`). Similar to `ControllerUnitTest`.
+- Browser automation solution, **WebDriver** based
+- Integration with **Spock**, **TestNG** or **JUnit**
+- **jQuery** syntax:
+```groovy
+// CSS 3 selectors
+$("div.some-class p:first[title='something']")
+// Find via index and/or attribute matching
+$("h1", 2, class: "heading")
+$("p", name: "description")
+$("ul.things li", 2)
+```
+]
+???
+- https://entwicklertag.de/karlsruhe/2015/sites/entwicklertag.de.karlsruhe.2015/files/folien/20150520_final_spock_geb_sd.pdf
+- [GebConfig.groovy](https://github.com/geb/geb-example-gradle/blob/master/src/test/resources/GebConfig.groovy)
+- https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver
+- https://sites.google.com/a/chromium.org/chromedriver/downloads
+- http://chromedriver.storage.googleapis.com/index.html
+---
+.left-column[
+  ## Big Picture
+]
+.right-column[
+![fh_big_picture](big_picture.png "Big Picture")
+![fh_cicd](cicd.png "CI - CD")
+]
+???
+https://dzone.com/articles/learn-how-to-setup-a-cicd-pipeline-from-scratch
+---
+.left-column[
+  ## Consolidation
+]
+.right-column[
+- **Abilities**: Make a full web solution
+- **Knowledge**: Consolidate the knowledge about **HTML**, **CSS**, **Web MVC**, **Server Pages**
 ]
 ---
 .left-column[
-  ## Abilities
+  ## Consolidation
+  ### Resources
 ]
 .right-column[
-- From a greenfield, being able to use a relational database with _create-read-update-delete_ (**CRUD**)
-  functionality in a webapp.
-- Use of simple entities, _many-to-one_, and _many-to-many_ relations.
-]
----
-.left-column[
-  ## Knowledge
-]
-.right-column[
-- Understanding **Grails** domain classes as simple entities.
-- Understanding **Grails** domain classes with references as relations.
-- Understanding dynamic finder methods.
-]
----
-.left-column[
-  ## Demo/Live-coding
-]
-.right-column[
-1. Creating a room reservation system:
-  - `grails create-app RoomReservation`
-1. Domain classes: `Room`, `Person`, `Booking` (very simple)
-  - `./grailsw create-domain-class Room`
-  - `./grailsw create-domain-class Person`
-  - ...
-1. Static scaffolding
-  - `./grailsw create-scaffold-controller Person`
-  - ...
-1. Viewing the current status of the _embedded_ database via **/h2-console**
+[Mathologer](https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg): Times tables, [Mandelbrot](https://en.wikipedia.org/wiki/Mandelbrot_set) and the heart of **Mathematics**
 
-  ![fh_250_dbconsole](dbconsole.png "DB console")
-
-1. Setting up bootstrap data
-1. Use Controller actions to interact with the domain model
+![fh_video](video.png "Times Tables, Mandelbrot and the Heart of Mathematics")
+- https://www.youtube.com/watch?v=qhbuKbxJsk8
+- https://github.com/ribeaud/Mathologer
+]
+---
+.left-column[
+  ## Consolidation
+  ### Resources
+  ### Multiplication Table
+]
+.right-column[
+![fh_multiplication_table](multiplication_table.png "Multiplication Table")
+]
+---
+.left-column[
+  ## Consolidation
+  ### Resources
+  ### Multiplication Table
+  ### Examples
+]
+.right-column[
+![fh_examples](examples.png "Examples")
+]
+---
+.left-column[
+  ## Demo/Code Walkthrough
+]
+.right-column[
+- Visit the **TODOs** in the code:
+  - `MultiplicationCircleController`
+  - `multiplicationCircle/show.gsp`
+  - `integration-test/MultiplicationCircleSpec`
+  - `test/MultiplicationCircleControllerSpec`
 ]
 ---
 .left-column[
   ## Practical Work
 ]
 .right-column[
-- Create an action that displays all bookings of a given person
-- Create an action that displays all available rooms for a requested time slot today
+- Make the counting-down for the segment count work, incl. the test
+- Add a _tableBase_ such that we can show the circle for many bases
 ]
 ---
 .left-column[
   ## Homework
 ]
 .right-column[
-Finish the practical work (https://github.com/ribeaud/RoomReservation)
-
-Build on the practical work from above to create a full Web **MVC**-Cycle (_without_ scaffolding) that shows:
-- All bookings from today until eternity for a given person
-- All available rooms for a requested day and time slot
+- Finish the practical work
+- Work through the resources (see above)
 ]
+

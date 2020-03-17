@@ -3,141 +3,228 @@ layout: true
 class: center, middle, inverse
 ---
 # Web Engineering
-## Security
+## Services
 
 .footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
 ---
 layout: false
 .left-column[
-  ## Authenti-cation
+  ## 3-tier architecture
 ]
 .right-column[
-Authentication is the process of verifying who you are.
-
-When you log on to a PC with a user name and password you are _authenticating_.
+![fh_three_tier_architecture](three_tier_architecture.png "Three Tier Architecture")
 ]
 ---
 .left-column[
-  ## Authenti-cation
-  ## Authori-zation
+  ## Server with service
 ]
 .right-column[
-Authorization is the process of verifying that you have access to something.
-
-Gaining access to a resource (e.g. directory on a hard disk) because the permissions configured on it allow you access is _authorization_.
+![fh_server_with_service](server_with_service.png "Server With Service")
 ]
 ---
 .left-column[
-  ## User
+  ## Smart UI with service
 ]
 .right-column[
-- `username`
-- `password`
-- `...`
+![fh_smart_ui_with_service](smart_ui_with_service.png "Smart UI With Service")
 ]
 ---
 .left-column[
-  ## User
-  ## Role
+  ## Public APIs
 ]
 .right-column[
-The **Spring Security** plugin uses an _authority_ class to represent a user’s role in the application
-(consider _authority_ and _role_ as the same concept for now).
+- https://github.com/public-apis/public-apis
+- Auth: **No** vs **apiKey** vs [OAuth](https://en.wikipedia.org/wiki/OAuth)
+]
+---
+.left-column[
+  ## Public APIs
+  ## REST API
+]
+.right-column[
+- https://www.flickr.com/services/api/request.rest.html
+- Get a key (for now use following one `865ae530a7dbb28c085dee3ef95e9986`)
+]
+---
+.left-column[
+  ## REST call
+  ### REST client
+]
+.right-column[
+REST client in **IntelliJ IDEA**:
 
-In general this class restricts URLs to users who have been assigned the required access rights.
-
-A user can be granted multiple roles to indicate various access rights in the application, and should have at least one.
+![fh_rest_client](rest_client.png "REST client")
 ]
 ???
-- https://www.baeldung.com/spring-security-granted-authority-vs-role
+- Have a look at [rest-api.http](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html) as well
+- Chrome Apps/Plugins: Advanced REST client, Postman
 ---
-template: inverse
+.left-column[
+  ## REST API
+  ### REST client
+  ### Response
+]
+.right-column[
+![fh_rest_call_result](rest_call_result.png "REST call result")
 
-## grails s2-quickstart
----
-.left-column[
-  ## Grails CLI
-]
-.right-column[
-https://docs.grails.org/latest/guide/gettingStarted.html
-]
----
-.left-column[
-  ## Grails CLI
-  ## s2-quickstart
-]
-.right-column[
-Creates a user and role class (and optionally a `Requestmap` class) in the specified package.
-See [here](https://grails-plugins.github.io/grails-spring-security-core/latest/#s2-quickstart).
+Fetch Resource URL Pattern:
+
+`http://static.flickr.com/<server>/<id>_<secret>_b.jpg`
 ]
 ---
 .left-column[
-  ## Grails CLI
-  ## s2-quickstart
-  ## Mappings
+  ## HTTP(S)
+  ### URL
 ]
 .right-column[
-You can choose among the following approaches to configuring request mappings for secure application URLs.
-
-The goal is to map URL patterns to the roles required to access those URLs.
-
-- `@Secured` annotations (default approach)
-- A simple Map in _application.groovy_
-- Requestmap domain class instances stored in the database
+![fh_url](url.jpg "URL")
 ]
 ---
-template: inverse
+.left-column[
+  ## HTTP(S)
+  ### URL
+  ### Request
+]
+.right-column[
+- **H**yper **T**ext ** T**ransfer **P**rotocol
+- Very simple
+- Line/delimiter based
 
-## Exercises
+![fh_http_protocol](http_protocol.png "HTTP Protocol")
+]
+---
+.left-column[
+  ## HTTP(S)
+  ### URL
+  ### Request
+  ### Verbs
+]
+.right-column[
+| Verb      | Safe | Use                                         |
+|-----------|------|---------------------------------------------|
+| GET       | Yes  | Single or collective read,<br>may be cached |
+| PUT/PATCH | No   | Modify resource in place                    |
+| POST      | No   | Create new resource                         |
+| DELETE    | No   | Delete resource                             |
+| HEAD      | Yes  | Retrieve metadata about the resource        |
+| OPTIONS   | Yes  | Available HTTP verbs for a given resource   |
+
+_Safe_ methods are **HTTP** methods that do not modify resources.
+
+An _idempotent_ **HTTP** method is a **HTTP** method that can be called many times without different outcomes. It would not matter if the method is called only once, or ten times over. The result should be the same.
+]
+???
+- http://restcookbook.com/HTTP%20Methods/idempotency/
+- Difference between **PUT** and **PATCH**. **PUT** replaces the whole entity. **PATCH** only a subset (Also, another difference is that when you want to update a resource with PUT request, you have to send the full payload as the request whereas with PATCH, you only send the parameters which you want to update).
+---
+.left-column[
+  ## HTTP(S)
+  ### URL
+  ### Request
+  ### Verbs
+  ### Status codes
+]
+.right-column[
+- **2XX**: Success
+- **3XX**: Redirection
+- **4XX**: Client error
+- **5XX**: Server error
+]
+???
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+---
+.left-column[
+  ## REST
+]
+.right-column[
+**Re**presentational **S**tate **T**ransfer
+
+- Resource addressing by **URL**, resources easily understood directory structure **URIs**.
+- Uniform operations by **HTTP** verbs
+- Self-containment (no conversational state), stateless interactions store no client context on the server between requests.
+- Choice of format (**XML**, **JSON**, ...)
+]
+---
+.left-column[
+  ## REST
+  ### Issues
+]
+.right-column[
+- Easy to get started - easy to get lost.
+- Type safety, Versioning, Documentation (https://swagger.io)
+- Addressing Operations (like _search_) as Resources
+]
+---
+.left-column[
+  ## REST
+  ### Issues
+  ### Grails
+]
+.right-column[
+- https://docs.grails.org/latest/guide/REST.html
+- Note the usage of `@Resource` in domain classes and _respond_ instead of _render_ in the controller actions.
+]
+---
+.left-column[
+  ## Abilities
+]
+.right-column[
+- Being able to use simple services from both client (smart view) and server (controller).
+- Implementing the full range of **REST** services for a persistent **Grails** domain model.
+]
+---
+.left-column[
+  ## Knowledge
+]
+.right-column[
+- Understanding **REST** principles on top of **HTTP** verbs.
+]
+---
+.left-column[
+  ## Resources
+]
+.right-column[
+**REST**
+- By **Roy Fielding**: http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
+- Best practices: https://restfulapi.net/resource-naming/
+
+**REST** in **Grails**
+- http://guides.grails.org/rest-hibernate/guide/index.html
+- https://docs.grails.org/latest/guide/REST.html
+
+**REST** docs usage
+- https://github.com/jlstrater/grails-spring-restdocs-example
+]
 ---
 .left-column[
   ## Demo/Live-coding
 ]
 .right-column[
-The following exercise is based on project https://github.com/ribeaud/SpringSecurity.
-
-1. `grails create-app SpringSecurity` (branch _master_)
-1. Adapt _build.gradle_ with following change (without it **s2-quickstart** plugin will NOT be available):
-```groovy
-dependencies {
-   ...
-   compile 'org.grails.plugins:spring-security-core:4.0.0.RC2'
-   ...
-}
+- Show how to expose **Grails** domain classes and controller actions as **REST** endpoints with `@Resource` and `respond`.
+- With **Curl**:
 ```
-1. `./grailsw s2-quickstart springsecurity User Role` (branch _feature/s2-quickstart_)
-1. Add some controllers and implement first accesses (branch _feature/usage_)
-1. Add logout button (branch _feature/logout_)
-1. Debugging security (branch _feature/debugging_)
+curl -i -X GET http://localhost:8080/people/1 \
+      -H "Accept: application/xml"
+curl -i -X POST -H "Content-Type: application/json" \
+      -d '{"firstName":"Chris", "lastName": "Smith", \
+      "email": "c@s.com"}' localhost:8080/people
+curl -i -X PUT -H "Content-Type: application/json" \
+      -d '{"email":"chris.smith@gmail.com"}' localhost:8080/people/3
+```
 ]
 ???
-- _feature/debugging_: play with _/h2-console_ and _passwordEncoder_
+- [Postman](https://www.getpostman.com/)
 ---
 .left-column[
-  ## Exercises
+  ## Homework
 ]
 .right-column[
-- Make `/h2-console` _publicly_ accessible
-- How are passwords stored in the database? (look for `UserPasswordEncoderListener`)
-- Current user and logout on _main.gsp_ using `<sec:ifLoggedIn>`
-- Setup a new user `admin` which has role `ROLE_ADMIN`
-- Make users manageable for principals having role `ROLE_ADMIN`
-- Write integration tests for `UserController`
-- How to beautify the login view (`login/auth.gsp`)?
+- `SearchRestfulController.groovy`
 ]
-???
-- See as well: https://github.com/Dierk/WebEngineering-HS18/commits/dk_security
----
-template: inverse
-
-## Links
 ---
 .left-column[
-  ## Links
+  ## Practical work
 ]
 .right-column[
-- [Eine kurze Frage an T-Mobile Österreich endete für den Mobilfunkanbieter im Fiasko](https://www.watson.ch/digital/online-sicherheit/521968741-eine-frage-an-den-t-mobile-kundendienst-endete-fuer-den-mobilfunkanbieter-im-fiasko)
-- [Grails Basic Auth](http://guides.grails.org/grails-basicauth/guide/index.html)
-- [How to do user login, logout and signup in GRAILS 3](https://www.youtube.com/watch?v=nOxeKwGoMf4)
-- [Spring Security Core Plugin](http://grails-plugins.github.io/grails-spring-security-core/latest)
+- Write _integration_ tests against the **REST** API
 ]

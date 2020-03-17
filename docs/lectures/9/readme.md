@@ -3,82 +3,141 @@ layout: true
 class: center, middle, inverse
 ---
 # Web Engineering
-## Graded Exercise
+## Security
 
 .footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
 ---
 layout: false
 .left-column[
-  ## Overview
+  ## Authenti-cation
 ]
 .right-column[
-- **Single-person** activity
-- _Bring-your-own_ idea or any of https://flaviocopes.com/sample-app-ideas/. Think about _10mn_ on a **disturbing factor**.
-- Idea implementation/realisation should take around 4 \* 6h = **24h** in total.
-- Delivery format: **Grails** application in [GitHub](https://www.github.com/). You might take any profile of the ones listed [here](https://grails.org/profiles.html). _Web_ profile is the default and preferred one.
+Authentication is the process of verifying who you are.
 
-### Support
+When you log on to a PC with a user name and password you are _authenticating_.
+]
+---
+.left-column[
+  ## Authenti-cation
+  ## Authori-zation
+]
+.right-column[
+Authorization is the process of verifying that you have access to something.
 
-1. Spend _20mn_ on a problem. If you do NOT solve it, go to next point.
-1. Try to solve the problem with a colleague. Spend 20mn together on that problem. If you do NOT solve it, go to next point.
-1. Get in touch with me: tag me (@ribeaud) on **GitHub** in a comment. If I do NOT respond in the next 2-3 days, remind me via email. During that time, work on a different part of your project. Do NOT loose time!
+Gaining access to a resource (e.g. directory on a hard disk) because the permissions configured on it allow you access is _authorization_.
 ]
 ---
 .left-column[
-  ## Timeline
+  ## User
 ]
 .right-column[
-- 18.11. Commit proposal (template)
-- 22.11. Me accepting proposal (git commit)
-- 16.12. (exclusive) Delivery Deadline
-- 13.01. (hopefully) Grading via git commit
+- `username`
+- `password`
+- `...`
 ]
 ---
 .left-column[
-  ## Allowed
+  ## User
+  ## Role
 ]
 .right-column[
-- Using code from course material
-- Using code from [W3Schools](https://www.w3schools.com/) / tutorials
-- Using _external_ dependencies. Notice however that the pre-generated project already contains some.
-- Discuss with others, getting help
-]
----
-template: inverse
-# Clear Demarcation
----
-template: inverse
-## External code  can be used but MUST be  clearly marked
----
-.left-column[
-  ## External code markers
-]
-.right-column[
-As appropriate:
+The **Spring Security** plugin uses an _authority_ class to represent a user’s role in the application
+(consider _authority_ and _role_ as the same concept for now).
 
-- Comment(s) in code
-- Extra commit with comment: word `EXTERNAL` and the origin
-]
----
-.left-column[
-  ## Grading scheme
-]
-.right-column[
-- See the spreadsheet for details.
-- Maximun **50** points
-- Grade: 1.0 + _points_/10
-- Cheating attempt => **1.0**
+In general this class restricts URLs to users who have been assigned the required access rights.
+
+A user can be granted multiple roles to indicate various access rights in the application, and should have at least one.
 ]
 ???
-- Materialized Scaffold: https://docs.grails.org/4.0.0/guide/commandLine.html
+- https://www.baeldung.com/spring-security-granted-authority-vs-role
+---
+template: inverse
+
+## grails s2-quickstart
 ---
 .left-column[
-  ## Git
+  ## Grails CLI
 ]
 .right-column[
-- **All** communication is done in git
-- We work in the github **classroom** repo
-- We work on the **master** branch
-- Commit early, commit often
-- Putting all of your solution into a single commit would be extremely suspicious
+https://docs.grails.org/latest/guide/gettingStarted.html
+]
+---
+.left-column[
+  ## Grails CLI
+  ## s2-quickstart
+]
+.right-column[
+Creates a user and role class (and optionally a `Requestmap` class) in the specified package.
+See [here](https://grails-plugins.github.io/grails-spring-security-core/latest/#s2-quickstart).
+]
+---
+.left-column[
+  ## Grails CLI
+  ## s2-quickstart
+  ## Mappings
+]
+.right-column[
+You can choose among the following approaches to configuring request mappings for secure application URLs.
+
+The goal is to map URL patterns to the roles required to access those URLs.
+
+- `@Secured` annotations (default approach)
+- A simple Map in _application.groovy_
+- Requestmap domain class instances stored in the database
+]
+---
+template: inverse
+
+## Exercises
+---
+.left-column[
+  ## Demo/Live-coding
+]
+.right-column[
+The following exercise is based on project https://github.com/ribeaud/SpringSecurity.
+
+1. `grails create-app SpringSecurity` (branch _master_)
+1. Adapt _build.gradle_ with following change (without it **s2-quickstart** plugin will NOT be available):
+```groovy
+dependencies {
+   ...
+   compile 'org.grails.plugins:spring-security-core:4.0.0.RC2'
+   ...
+}
+```
+1. `./grailsw s2-quickstart springsecurity User Role` (branch _feature/s2-quickstart_)
+1. Add some controllers and implement first accesses (branch _feature/usage_)
+1. Add logout button (branch _feature/logout_)
+1. Debugging security (branch _feature/debugging_)
+]
+???
+- _feature/debugging_: play with _/h2-console_ and _passwordEncoder_
+---
+.left-column[
+  ## Exercises
+]
+.right-column[
+- Make `/h2-console` _publicly_ accessible
+- How are passwords stored in the database? (look for `UserPasswordEncoderListener`)
+- Current user and logout on _main.gsp_ using `<sec:ifLoggedIn>`
+- Setup a new user `admin` which has role `ROLE_ADMIN`
+- Make users manageable for principals having role `ROLE_ADMIN`
+- Write integration tests for `UserController`
+- How to beautify the login view (`login/auth.gsp`)?
+]
+???
+- See as well: https://github.com/Dierk/WebEngineering-HS18/commits/dk_security
+---
+template: inverse
+
+## Links
+---
+.left-column[
+  ## Links
+]
+.right-column[
+- [Eine kurze Frage an T-Mobile Österreich endete für den Mobilfunkanbieter im Fiasko](https://www.watson.ch/digital/online-sicherheit/521968741-eine-frage-an-den-t-mobile-kundendienst-endete-fuer-den-mobilfunkanbieter-im-fiasko)
+- [Grails Basic Auth](http://guides.grails.org/grails-basicauth/guide/index.html)
+- [How to do user login, logout and signup in GRAILS 3](https://www.youtube.com/watch?v=nOxeKwGoMf4)
+- [Spring Security Core Plugin](http://grails-plugins.github.io/grails-spring-security-core/latest)
 ]

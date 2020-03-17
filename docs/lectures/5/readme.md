@@ -46,10 +46,9 @@ layout: false
 ]
 .right-column[
 Version:
-- **ES2018 (ES9)** (https://www.w3schools.com/js/js_versions.asp)
+- **ES2018 (ES9)**
 
 Where To:
-- Code as string (`eval` method)
 - **HTML** attribute value (i.e., `onclick` attribute)
 - Text content  of `<script>` element
 - External **.js** file
@@ -59,6 +58,8 @@ To quickly try out some **JavaScript**:
 - Write a small **HTML** file
 - https://jsfiddle.net/
 ]
+???
+- https://www.w3schools.com/js/js_versions.asp
 ---
 .left-column[
   ## Event Attributes
@@ -214,11 +215,9 @@ Basic **JavaScript** objects for use in the browser:
 - https://www.w3schools.com/js/
 - https://www.codecademy.com/learn/learn-javascript
 
-Favorite **JS** learning resources from [Joel from egghead](https://egghead.io/instructors/joel-hooks):
+Some **JS** learning resources:
 - https://learnvanillajs.com/roadmap/
-- https://learnjavascript.online/
-- https://learn.co/courses/introduction-to-javascript
-- https://watchandcode.com/p/practical-javascript
 - https://javascript.info/
 - https://eloquentjavascript.net/
+- https://justjavascript.com/
 ]

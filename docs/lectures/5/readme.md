@@ -38,7 +38,7 @@ layout: false
 - Both can run in a browser but ...
 - Both can run on a server
 - **Java** is a _strongly_, _statically_ typed, **JavaScript** is _dynamically_ typed
-- [Why is JavaScript called JavaScript?|https://stackoverflow.com/questions/2018731/why-is-javascript-called-javascript-since-it-has-nothing-to-do-with-java]
+- [Why is JavaScript called JavaScript?](https://stackoverflow.com/questions/2018731/why-is-javascript-called-javascript-since-it-has-nothing-to-do-with-java)
 - [javascript.html](javascript.html)
 ---
 .left-column[
@@ -46,7 +46,7 @@ layout: false
 ]
 .right-column[
 Version:
-- **ES6** (https://www.w3schools.com/js/js_versions.asp)
+- **ES2018 (ES9)** (https://www.w3schools.com/js/js_versions.asp)
 
 Where To:
 - Code as string (`eval` method)
@@ -75,6 +75,8 @@ To quickly try out some **JavaScript**:
 </html>
 ```
 ]
+???
+- https://codeburst.io/javascript-wtf-is-es6-es8-es-2017-ecmascript-dca859e4821c
 ---
 .left-column[
   ## Document
@@ -145,7 +147,18 @@ template: inverse
 ]
 ---
 .left-column[
-  ## Room-Reservation
+  ## Exercises
+  ### Assignment 1
+]
+.right-column[
+1. Erstellen Sie in Ihrem Projekt einen neuen Branch namens _javascript_.
+1. Implementieren Sie die Mittelwertberechnung in **JavaScript**.
+]
+---
+.left-column[
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
 ]
 .right-column[
 1. Project [RoomReservation](https://github.com/ribeaud/RoomReservation), branch _services_solution_
@@ -154,7 +167,10 @@ template: inverse
 ]
 ---
 .left-column[
-  ## T Converter
+  ## Exercises
+  ### Assignment 1
+  ### Assignment 2
+  ### Assignment 3
 ]
 .right-column[
 
@@ -169,28 +185,6 @@ template: inverse
 ]
 ???
 - [TemperatureConverter.html](TemperatureConverter.html)
----
-.left-column[
-  ## Web-Engineering-HS19
-]
-.right-column[
-
-### Revisit InPlaceCalculator
-
-1. Project [WebEngineering-HS19](https://github.com/ribeaud/WebEngineering-HS19), branch _feature/layout_
-1. Currently we do have validation on **server** side. We would like to have it on **client** side.
-1. Implemented view looks as following: server page, template, taglib, layout (use of `<asset:stylesheet>`).
-1. Final result stored in _feature/javascript_ branch.
-
-### Extend integration tests
-
-1. Let the tests run
-1. Uncomment lines in `src/integration-test/groovy/mvc/InPlaceCalculatorSpec.groovy`
-1. Run the tests and see them failing
-1. `onchange` _in-line_ solution such that the tests pass
-1. refactor into _in-page_ solution with functions
-1. refactor into _external_ **.js** file
-]
 ---
 .left-column[
   ## Abilities

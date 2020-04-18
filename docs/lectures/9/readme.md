@@ -96,22 +96,21 @@ template: inverse
 .right-column[
 The following exercise is based on project https://github.com/ribeaud/SpringSecurity.
 
-1. `grails create-app SpringSecurity` (branch _master_)
 1. Adapt _build.gradle_ with following change (without it **s2-quickstart** plugin will NOT be available):
 ```groovy
 dependencies {
    ...
-   compile 'org.grails.plugins:spring-security-core:4.0.0.RC2'
+   compile 'org.grails.plugins:spring-security-core:4.0.0'
    ...
 }
 ```
-1. `./grailsw s2-quickstart springsecurity User Role` (branch _feature/s2-quickstart_)
-1. Add some controllers and implement first accesses (branch _feature/usage_)
-1. Add logout button (branch _feature/logout_)
-1. Debugging security (branch _feature/debugging_)
+1. `./grailsw s2-quickstart roomreservation User Role` (branch _s2-quickstart_)
+1. Add some controllers and implement first accesses (branch _security_usage_)
+1. Add logout button (branch _security_logout_)
+1. Debugging security (branch _security_debugging_)
 ]
 ???
-- _feature/debugging_: play with _/h2-console_ and _passwordEncoder_
+- _security_debugging_: play with _/h2-console_ and _passwordEncoder_
 ---
 .left-column[
   ## Exercises

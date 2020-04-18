@@ -94,7 +94,7 @@ template: inverse
   ## Demo/Live-coding
 ]
 .right-column[
-The following exercise is based on project https://github.com/ribeaud/SpringSecurity.
+The following exercise is based on project https://github.com/ribeaud/RoomReservation.
 
 1. Adapt _build.gradle_ with following change (without it **s2-quickstart** plugin will NOT be available):
 ```groovy
@@ -121,7 +121,6 @@ dependencies {
 - Current user and logout on _main.gsp_ using `<sec:ifLoggedIn>`
 - Setup a new user `admin` which has role `ROLE_ADMIN`
 - Make users manageable for principals having role `ROLE_ADMIN`
-- Write integration tests for `UserController`
 - How to beautify the login view (`login/auth.gsp`)?
 ]
 ???

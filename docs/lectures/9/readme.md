@@ -94,7 +94,7 @@ template: inverse
   ## Demo/Live-coding
 ]
 .right-column[
-The following exercise is based on project https://github.com/ribeaud/RoomReservation.
+The following exercise is based on project https://github.com/ribeaud/RoomReservation (branch _solution_ as starting point).
 
 1. Adapt _build.gradle_ with following change (without it **s2-quickstart** plugin will NOT be available):
 ```groovy

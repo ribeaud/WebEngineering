@@ -20,7 +20,7 @@ layout: false
 ### Support
 
 1. Spend _20mn_ on a problem. If you do NOT solve it, go to next point.
-1. Try to solve the problem with a colleague. Spend 20mn together on that problem. If you do NOT solve it, go to next point.
+1. Try to solve the problem with a colleague. Spend _20mn_ together on that problem. If you do NOT solve it, go to next point.
 1. Get in touch with me: tag me (@ribeaud) on **GitHub** in a comment. If I do NOT respond in the next 2-3 days, remind me via email. During that time, work on a different part of your project. Do NOT loose time!
 ]
 ---
@@ -28,10 +28,10 @@ layout: false
   ## Timeline
 ]
 .right-column[
-- 18.11. Commit proposal (template)
-- 22.11. Me accepting proposal (git commit)
-- 16.12. (exclusive) Delivery Deadline
-- 13.01. (hopefully) Grading via git commit
+- 1.5. Commit proposal (template)
+- 5.5. Me accepting proposal (git commit)
+- 26.5. (exclusive) Delivery Deadline
+- 16.6. (hopefully) Grading via git commit
 ]
 ---
 .left-column[

@@ -222,6 +222,7 @@ Examples:
 - https://www.pluralsight.com/guides/semantic-html
 - http://seekbrevity.com/semantic-markup-important-web-design/
 - https://internetingishard.com/html-and-css/semantic-html/
+- http://glaforge.appspot.com/article/covid-learning-html-semantic-tags
 ---
 .left-column[
   ## DOM

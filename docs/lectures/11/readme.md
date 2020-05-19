@@ -183,7 +183,7 @@ Using browser detection [plugin](http://plugins.grails.org/plugin/mathifonseca/b
   ## Practical Work
 ]
 .right-column[
-Make a page of your choice web friendly. Suggestion: in [InPlaceCalculator](https://github.com/ribeaud/WebEngineering-HS19/branches) (branch: _feature/inplacecalculator_), put label on the left of corresponding input field when there is enough place, on the top otherwise.
+Make a page of your choice web friendly. Suggestion: in [gradecalculator-webec-fs20-*](https://github.com/WebEngineering-FHNW/gradecalculator-webec-fs20-ribeaud) (branch: _in_place_calculator_) project, put label on the left of corresponding input field when there is enough place, on the top otherwise.
 ]
 ---
 .left-column[

@@ -9,7 +9,7 @@ class: center, middle, inverse
 ---
 layout: false
 .left-column[
-  ## Three Options
+  ## Four Options
 ]
 .right-column[
 1. Upload WAR file to **Java** web server, e.g. **Tomcat** via _manager-gui_

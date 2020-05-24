@@ -7,18 +7,6 @@ class: center, middle, inverse
 
 .footnote[<a href="mailto:dierk.koenig@fhnw.ch">Prof. Dierk König</a><br /><a href="mailto:christian.ribeaud@fhnw.ch">Christian Ribeaud</a>]
 ---
-layout: false
-.left-column[
-  ## Classroom (lecturer)
-]
-.right-column[
-To access the **AWS** classrom, perform following steps:
-1. Login to https://awseducate.com/.
-1. Click on **MY CLASSROOMS**. This link is ONLY present on the dashboard (click on the top-left corner if you've already used the navigation bar).<br />![fh_250_my_classrooms](my_classrooms.png "My Classrooms")
-1. Go to the appropriate classroom.<br />![fh_250_go_to_classroom](go_to_classroom.png "Go To Classroom")
-1. Select your class. You will find there the link to **AWS** console.<br />![fh_250_my_classes](my_classes.png "My Classes").
-]
----
 .left-column[
   ## Three Options
 ]
@@ -26,6 +14,7 @@ To access the **AWS** classrom, perform following steps:
 1. Upload WAR file to **Java** web server, e.g. **Tomcat** via _manager-gui_
 1. Upload WAR file to a **PaaS** provider
 1. Upload executable WAR to an **IaaS** provider (upload to a provided/available VM)
+1. Using **Docker**. Either with a _Java_ or a _Tomcat_ image, or as _Grails_ container (see [here](https://guides.grails.org/grails-as-docker-container/guide/index.html) for instructions).
 ]
 ---
 .left-column[
@@ -44,6 +33,7 @@ To access the **AWS** classrom, perform following steps:
 1. Increase **Tomcat** upload file size limit as suggested [here](https://tecadmin.net/increase-tomcat-upload-file-size-limit/)
 1. Generate the WAR (`./grailsw dev war`)
 1. Upload WAR file via _manager-gui_
+1. When starting **Tomcat**, make sure that the right **Java** version is picked up.
 
 ![fh_tomcat](tomcat.png "Tomcat")
 ]
@@ -68,7 +58,7 @@ Upload WAR file to a _Platform-as-a-Service_ (**PaaS**) provider, e.g. [Elastic 
   ## IaaS
 ]
 .right-column[
-1. Install **Java8** on the target VM
+1. Install **Java12** on the target VM
 1. Upload WAR to the provisioned/prepared VM using tools like [scp](https://en.wikipedia.org/wiki/Secure_copy)
 1. This WAR is executable. Start the application with `java -jar <my-war>`
 ]
